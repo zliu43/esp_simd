@@ -1,0 +1,5 @@
+1. Finish int8 function
+2. Repackage the simd functions and organize by datatype
+3. Double check comments
+4. Double check all accumulator registers are zeroed before use
+5. Rewrite test cases
