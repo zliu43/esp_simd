@@ -1,0 +1,253 @@
+Command: /Users/mliu/.espressif/python_env/idf5.5_py3.9_env/bin/python /Users/mliu/esp/v5.5/esp-idf/tools/idf_monitor.py -p /dev/cu.usbmodem1101 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /Users/mliu/Desktop/Projects/Working/build/Working.elf /Users/mliu/Desktop/Projects/Working/build/bootloader/bootloader.elf -m '/Users/mliu/.espressif/python_env/idf5.5_py3.9_env/bin/python' '/Users/mliu/esp/v5.5/esp-idf/tools/idf.py'
+i_flash: flasESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048839
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x159c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f48
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 10 2025 10:40:38[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=08e34h ( 36404) map[0m
+[0;32mI (93) esp_image: segment 1: paddr=00018e5c vaddr=3fc92400 size=028c8h ( 10440) load[0m
+[0;32mI (96) esp_image: segment 2: paddr=0001b72c vaddr=40374000 size=048ech ( 18668) load[0m
+[0;32mI (105) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=16d00h ( 93440) map[0m
+[0;32mI (125) esp_image: segment 4: paddr=00036d28 vaddr=403788ec size=09a24h ( 39460) load[0m
+[0;32mI (134) esp_image: segment 5: paddr=00040754 vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (140) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (141) boot: Disabling RNG early entropy source...[0m
+[0;32mI (152) cpu_start: Multicore app[0m
+[0;32mI (161) cpu_start: Pro cpu start user code[0m
+[0;32mI (161) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (161) app_init: Application information:[0m
+[0;32mI (162) app_init: Project name:     Working[0m
+[0;32mI (165) app_init: App version:      1[0m
+[0;32mI (168) app_init: Compile time:     Sep 10 2025 10:40:33[0m
+[0;32mI (174) app_init: ELF file SHA256:  c68d2b4c7...[0m
+[0;32mI (178) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (182) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (186) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (190) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (194) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (200) heap_init: At 3FC95538 len 000541D8 (336 KiB): RAM[0m
+[0;32mI (205) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (210) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (215) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (221) spi_flash: detected chip: gd[0m
+[0;32mI (224) spi_flash: flash io: dio[0m
+[0;33mW (227) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (239) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (246) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (253) main_task: Started on CPU0[0m
+[0;32mI (263) main_task: Calling app_main()[0m
+[0;32mI (263) vector_test_and:: DTYPE_INT8[0m
+[0;32mI (263) fill_test_vector: Seed set: 124[0m
+[0;32mI (293) vector_test_and: vector_time: 171[0m
+[0;32mI (293) vector_test_and: scalar_time: 833[0m
+[0;32mI (293) vector_test_and:: DTYPE_INT16[0m
+[0;32mI (293) fill_test_vector: Seed set: 124[0m
+[0;32mI (323) vector_test_and: vector_time: 181[0m
+[0;32mI (323) vector_test_and: scalar_time: 812[0m
+[0;32mI (323) vector_test_and:: DTYPE_INT32[0m
+[0;32mI (323) fill_test_vector: Seed set: 124[0m
+[0;32mI (363) vector_test_and: vector_time: 184[0m
+[0;32mI (363) vector_test_and: scalar_time: 679[0m
+[0;32mI (363) vector_test_and_alias:: DTYPE_INT32[0m
+[0;32mI (363) fill_test_vector: Seed set: 124[0m
+[0;32mI (463) vector_test_and_alias: vector_time: 184[0m
+[0;32mI (463) vector_test_and_alias: scalar_time: 677[0m
+[0;32mI (463) vector_test_and:: DTYPE_FLOAT32[0m
+[0;32mI (473) fill_test_vector: Seed set: 124[0m
+[0;32mI (623) vector_test_and: vector_time: 180[0m
+[0;32mI (623) vector_test_and: scalar_time: 677[0m
+[0;32mI (623) vector_test_and_alias:: DTYPE_FLOAT32[0m
+[0;32mI (623) fill_test_vector: Seed set: 124[0m
+[0;32mI (733) vector_test_and_alias: vector_time: 184[0m
+[0;32mI (733) vector_test_and_alias: scalar_time: 677[0m
+[0;32mI (733) vector_test_or:: DTYPE_INT8[0m
+[0;32mI (733) fill_test_vector: Seed set: 124[0m
+[0;32mI (763) vector_test_or: vector_time: 176[0m
+[0;32mI (763) vector_test_or: scalar_time: 817[0m
+[0;32mI (763) vector_test_or:: DTYPE_INT16[0m
+[0;32mI (763) fill_test_vector: Seed set: 124[0m
+[0;32mI (793) vector_test_or: vector_time: 183[0m
+[0;32mI (793) vector_test_or: scalar_time: 860[0m
+[0;32mI (793) vector_test_or:: DTYPE_INT32[0m
+[0;32mI (793) fill_test_vector: Seed set: 124[0m
+[0;32mI (833) vector_test_or: vector_time: 185[0m
+[0;32mI (833) vector_test_or: scalar_time: 680[0m
+[0;32mI (833) vector_test_or_alias:: DTYPE_INT32[0m
+[0;32mI (833) fill_test_vector: Seed set: 124[0m
+[0;32mI (943) vector_test_and_alias: vector_time: 184[0m
+[0;32mI (943) vector_test_and_alias: scalar_time: 677[0m
+[0;32mI (943) vector_test_or:: DTYPE_FLOAT32[0m
+[0;32mI (943) fill_test_vector: Seed set: 124[0m
+[0;32mI (1093) vector_test_or: vector_time: 192[0m
+[0;32mI (1093) vector_test_or: scalar_time: 677[0m
+[0;32mI (1093) vector_test_or_alias:: DTYPE_FLOAT32[0m
+[0;32mI (1093) fill_test_vector: Seed set: 125[0m
+[0;32mI (1213) vector_test_and_alias: vector_time: 200[0m
+[0;32mI (1213) vector_test_and_alias: scalar_time: 752[0m
+[0;32mI (1213) vector_test_xor:: DTYPE_INT8[0m
+[0;32mI (1223) fill_test_vector: Seed set: 125[0m
+[0;32mI (1253) vector_test_xor: vector_time: 178[0m
+[0;32mI (1253) vector_test_xor: scalar_time: 788[0m
+[0;32mI (1253) vector_test_xor:: DTYPE_INT16[0m
+[0;32mI (1253) fill_test_vector: Seed set: 125[0m
+[0;32mI (1283) vector_test_xor: vector_time: 175[0m
+[0;32mI (1283) vector_test_xor: scalar_time: 773[0m
+[0;32mI (1283) vector_test_xor:: DTYPE_INT32[0m
+[0;32mI (1283) fill_test_vector: Seed set: 125[0m
+[0;32mI (1323) vector_test_xor: vector_time: 198[0m
+[0;32mI (1323) vector_test_xor: scalar_time: 753[0m
+[0;32mI (1323) vector_test_xor_alias:: DTYPE_INT32[0m
+[0;32mI (1323) fill_test_vector: Seed set: 125[0m
+[0;32mI (1443) vector_test_xor_alias: vector_time: 199[0m
+[0;32mI (1443) vector_test_xor_alias: scalar_time: 752[0m
+[0;32mI (1443) vector_test_xor:: DTYPE_FLOAT32[0m
+[0;32mI (1443) fill_test_vector: Seed set: 125[0m
+[0;32mI (1623) vector_test_xor: vector_time: 198[0m
+[0;32mI (1623) vector_test_xor: scalar_time: 752[0m
+[0;32mI (1623) vector_test_xor_alias:: DTYPE_FLOAT32[0m
+[0;32mI (1623) fill_test_vector: Seed set: 125[0m
+[0;32mI (1743) vector_test_xor_alias: vector_time: 197[0m
+[0;32mI (1743) vector_test_xor_alias: scalar_time: 752[0m
+[0;32mI (1743) vector_test_not:: DTYPE_INT8[0m
+[0;32mI (1743) fill_test_vector: Seed set: 125[0m
+[1;31mE (1743) vector_assert_eq: Mismatch found at 1, vec1: -29, vec2 -78[0m
+[1;31mE (1753) vector_assert_eq: Mismatch found at 2, vec1: 100, vec2 -52[0m
+[1;31mE (1753) vector_assert_eq: Mismatch found at 3, vec1: -59, vec2 -125[0m
+[1;31mE (1763) vector_assert_eq: Mismatch found at 4, vec1: -4, vec2 54[0m
+[1;31mE (1773) vector_assert_eq: Mismatch found at 5, vec1: -74, vec2 124[0m
+[1;31mE (1773) vector_assert_eq: Mismatch found at 6, vec1: -9, vec2 125[0m
+[1;31mE (1783) vector_assert_eq: Mismatch found at 7, vec1: 118, vec2 0[0m
+[1;31mE (1783) vector_assert_eq: Mismatch found at 8, vec1: -11, vec2 -86[0m
+[1;31mE (1793) vector_assert_eq: Mismatch found at 9, vec1: -90, vec2 11[0m
+[1;31mE (1793) vector_assert_eq: Mismatch found at 10, vec1: 87, vec2 -122[0m
+[1;31mE (1803) vector_assert_eq: Mismatch found at 11, vec1: 118, vec2 2[0m
+[1;31mE (1813) vector_assert_eq: Mismatch found at 12, vec1: -95, vec2 100[0m
+[1;31mE (1813) vector_assert_eq: Mismatch found at 13, vec1: -73, vec2 21[0m
+[1;31mE (1823) vector_assert_eq: Mismatch found at 14, vec1: -85, vec2 90[0m
+[1;31mE (1823) vector_assert_eq: Mismatch found at 15, vec1: -114, vec2 -128[0m
+[1;31mE (1833) vector_assert_eq: Mismatch found at 16, vec1: 21, vec2 18[0m
+[1;31mE (1843) vector_assert_eq: Mismatch found at 17, vec1: -120, vec2 17[0m
+[1;31mE (1843) vector_assert_eq: Mismatch found at 18, vec1: 64, vec2 53[0m
+[1;31mE (1853) vector_assert_eq: Mismatch found at 19, vec1: -107, vec2 -128[0m
+[1;31mE (1863) vector_assert_eq: Mismatch found at 20, vec1: 29, vec2 70[0m
+[1;31mE (1863) vector_assert_eq: Mismatch found at 21, vec1: -92, vec2 -32[0m
+[1;31mE (1873) vector_assert_eq: Mismatch found at 22, vec1: -110, vec2 44[0m
+[1;31mE (1873) vector_assert_eq: Mismatch found at 23, vec1: 86, vec2 -128[0m
+[1;31mE (1883) vector_assert_eq: Mismatch found at 24, vec1: 101, vec2 -113[0m
+[1;31mE (1893) vector_assert_eq: Mismatch found at 25, vec1: -39, vec2 16[0m
+[1;31mE (1893) vector_assert_eq: Mismatch found at 26, vec1: 96, vec2 37[0m
+[1;31mE (1903) vector_assert_eq: Mismatch found at 27, vec1: -98, vec2 1[0m
+[1;31mE (1903) vector_assert_eq: Mismatch found at 28, vec1: 121, vec2 -120[0m
+[1;31mE (1913) vector_assert_eq: Mismatch found at 29, vec1: 85, vec2 -100[0m
+[1;31mE (1923) vector_assert_eq: Mismatch found at 30, vec1: -66, vec2 -50[0m
+
+assert failed: vector_test_not vector_bitwise_test.c:371 (vector_assert_eq(vec1, vec1_copy))
+
+
+Backtrace: 0x403759bd:0x3fc977d0 0x403796ad:0x3fc977f0 0x4037fe0d:0x3fc97810 0x42007125:0x3fc97930 0x4200645e:0x3fc97970 0x420064c2:0x3fc97990 0x420164a8:0x3fc979b0 0x40379e99:0x3fc979e0
+
+
+
+
+ELF file SHA256: c68d2b4c7
+
+Rebooting...
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0xc (RTC_SW_CPU_RST),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x403758fc
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x159c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f48
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 10 2025 10:40:38[0m
+[0;32mI (24) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=08e34h ( 36404) map[0m
+[0;32mI (92) esp_image: segment 1: paddr=00018e5c vaddr=3fc92400 size=028c8h ( 10440) load[0m
+[0;32mI (95) esp_image: segment 2: paddr=0001b72c vaddr=40374000 size=048ech ( 18668) load[0m
+[0;32mI (105) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=16d00h ( 93440) map[0m
+[0;32mI (125) esp_image: segment 4: paddr=00036d28 vaddr=403788ec size=09a24h ( 39460) load[0m
+[0;32mI (134) esp_image: segment 5: paddr=00040754 vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (140) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (140) boot: Disabling RNG early entropy source...[0m
+[0;32mI (151) cpu_start: Multicore app[0m
+[0;32mI (161) cpu_start: Pro cpu start user code[0m
+[0;32mI (161) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (161) app_init: Application information:[0m
+[0;32mI (161) app_init: Project name:     Working[0m
+[0;32mI (165) app_init: App version:      1[0m
+[0;32mI (168) app_init: Compile time:     Sep 10 2025 10:40:33[0m
+[0;32mI (173) app_init: ELF file SHA256:  c68d2b4c7...[0m
+[0;32mI (177) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (181) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (185) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (189) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (193) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (200) heap_init: At 3FC95538 len 000541D8 (336 KiB): RAM[0m
+[0;32mI (205) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (210) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (215) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (221) spi_flash: detected chip: gd[0m
+[0;32mI (224) spi_flash: flash io: dio[0m
+[0;33mW (226) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (239) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (245) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (252) main_task: Started on CPU0[0m
+[0;32mI (262) main_task: Calling app_main()[0m
+[0;32mI (262) vector_test_and:: DTYPE_INT8[0m
+[0;32mI (262) fill_test_vector: Seed set: 126[0m
+[0;32mI (292) vector_test_and: vector_time: 183[0m
+[0;32mI (292) vector_test_and: scalar_time: 830[0m
+[0;32mI (292) vector_test_and:: DTYPE_INT16[0m
+[0;32mI (292) fill_test_vector: Seed set: 126[0m
+[0;32mI (322) vector_test_and: vector_time: 177[0m
+[0;32mI (322) vector_test_and: scalar_time: 808[0m
+[0;32mI (322) vector_test_and:: DTYPE_INT32[0m
+[0;32mI (322) fill_test_vector: Seed set: 126[0m
+[0;32mI (362) vector_test_and: vector_time: 206[0m
+[0;32mI (362) vector_test_and: scalar_time: 816[0m
+[0;32mI (362) vector_test_and_alias:: DTYPE_INT32[0m
+[0;32mI (362) fill_test_vector: Seed set: 126[0m
+[0;32mI (492) vector_test_and_alias: vector_time: 205[0m
+[0;32mI (492) vector_test_and_alias: scalar_time: 813[0m
+[0;32mI (492) vector_test_and:: DTYPE_FLOAT32[0m
+[0;32mI (502) fill_test_vector: Seed set: 126[0m
+[0;32mI (692) vector_test_and: vector_time: 200[0m
+[0;32mI (692) vector_test_and: scalar_time: 814[0m
+[0;32mI (692) vector_test_and_alias:: DTYPE_FLOAT32[0m
+[0;32mI (692) fill_test_vector: Seed set: 126[0m

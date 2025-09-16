@@ -1,0 +1,272 @@
+Command: /Users/mliu/.espressif/python_env/idf5.5_py3.9_env/bin/python /Users/mliu/esp/v5.5/esp-idf/tools/idf_monitor.py -p /dev/cu.usbmodem1101 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /Users/mliu/Desktop/Projects/Working/build/Working.elf /Users/mliu/Desktop/Projects/Working/build/bootloader/bootloader.elf -m '/Users/mliu/.espressif/python_env/idf5.5_py3.9_env/bin/python' '/Users/mliu/esp/v5.5/esp-idf/tools/idf.py'
+ng the size iESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048836
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x159c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f48
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 10 2025 10:40:38[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=08e74h ( 36468) map[0m
+[0;32mI (93) esp_image: segment 1: paddr=00018e9c vaddr=3fc92400 size=028c8h ( 10440) load[0m
+[0;32mI (96) esp_image: segment 2: paddr=0001b76c vaddr=40374000 size=048ach ( 18604) load[0m
+[0;32mI (105) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=16d0ch ( 93452) map[0m
+[0;32mI (125) esp_image: segment 4: paddr=00036d34 vaddr=403788ac size=09a64h ( 39524) load[0m
+[0;32mI (134) esp_image: segment 5: paddr=000407a0 vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (140) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (141) boot: Disabling RNG early entropy source...[0m
+[0;32mI (152) cpu_start: Multicore app[0m
+[0;32mI (161) cpu_start: Pro cpu start user code[0m
+[0;32mI (161) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (161) app_init: Application information:[0m
+[0;32mI (161) app_init: Project name:     Working[0m
+[0;32mI (165) app_init: App version:      1[0m
+[0;32mI (168) app_init: Compile time:     Sep 10 2025 10:40:33[0m
+[0;32mI (174) app_init: ELF file SHA256:  8359ca3a9...[0m
+[0;32mI (178) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (182) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (186) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (190) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (194) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (200) heap_init: At 3FC95538 len 000541D8 (336 KiB): RAM[0m
+[0;32mI (205) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (210) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (215) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (221) spi_flash: detected chip: gd[0m
+[0;32mI (224) spi_flash: flash io: dio[0m
+[0;33mW (227) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (239) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (246) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (253) main_task: Started on CPU0[0m
+[0;32mI (263) main_task: Calling app_main()[0m
+[0;32mI (263) vector_test_and:: DTYPE_INT8[0m
+[0;32mI (263) fill_test_vector: Seed set: 2725[0m
+[0;32mI (293) vector_test_and: vector_time: 188[0m
+[0;32mI (293) vector_test_and: scalar_time: 890[0m
+[0;32mI (293) vector_test_and:: DTYPE_INT16[0m
+[0;32mI (293) fill_test_vector: Seed set: 2725[0m
+[0;32mI (323) vector_test_and: vector_time: 179[0m
+[0;32mI (323) vector_test_and: scalar_time: 877[0m
+[0;32mI (323) vector_test_and:: DTYPE_INT32[0m
+[0;32mI (333) fill_test_vector: Seed set: 2725[0m
+[0;32mI (373) vector_test_and: vector_time: 202[0m
+[0;32mI (373) vector_test_and: scalar_time: 865[0m
+[0;32mI (373) vector_test_and_alias:: DTYPE_INT32[0m
+[0;32mI (373) fill_test_vector: Seed set: 2725[0m
+[0;32mI (513) vector_test_and_alias: vector_time: 200[0m
+[0;32mI (513) vector_test_and_alias: scalar_time: 866[0m
+[0;32mI (513) vector_test_and:: DTYPE_FLOAT32[0m
+[0;32mI (513) fill_test_vector: Seed set: 2725[0m
+[0;32mI (723) vector_test_and: vector_time: 198[0m
+[0;32mI (723) vector_test_and: scalar_time: 864[0m
+[0;32mI (723) vector_test_and_alias:: DTYPE_FLOAT32[0m
+[0;32mI (723) fill_test_vector: Seed set: 2725[0m
+[0;32mI (863) vector_test_and_alias: vector_time: 198[0m
+[0;32mI (863) vector_test_and_alias: scalar_time: 864[0m
+[0;32mI (863) vector_test_or:: DTYPE_INT8[0m
+[0;32mI (863) fill_test_vector: Seed set: 2726[0m
+[0;32mI (893) vector_test_or: vector_time: 192[0m
+[0;32mI (893) vector_test_or: scalar_time: 842[0m
+[0;32mI (893) vector_test_or:: DTYPE_INT16[0m
+[0;32mI (893) fill_test_vector: Seed set: 2726[0m
+[0;32mI (923) vector_test_or: vector_time: 182[0m
+[0;32mI (923) vector_test_or: scalar_time: 892[0m
+[0;32mI (923) vector_test_or:: DTYPE_INT32[0m
+[0;32mI (923) fill_test_vector: Seed set: 2726[0m
+[0;32mI (963) vector_test_or: vector_time: 202[0m
+[0;32mI (963) vector_test_or: scalar_time: 770[0m
+[0;32mI (963) vector_test_or_alias:: DTYPE_INT32[0m
+[0;32mI (963) fill_test_vector: Seed set: 2726[0m
+[0;32mI (1093) vector_test_and_alias: vector_time: 206[0m
+[0;32mI (1093) vector_test_and_alias: scalar_time: 770[0m
+[0;32mI (1093) vector_test_or:: DTYPE_FLOAT32[0m
+[0;32mI (1093) fill_test_vector: Seed set: 2726[0m
+[0;32mI (1273) vector_test_or: vector_time: 201[0m
+[0;32mI (1273) vector_test_or: scalar_time: 770[0m
+[0;32mI (1273) vector_test_or_alias:: DTYPE_FLOAT32[0m
+[0;32mI (1273) fill_test_vector: Seed set: 2726[0m
+[0;32mI (1393) vector_test_and_alias: vector_time: 204[0m
+[0;32mI (1393) vector_test_and_alias: scalar_time: 770[0m
+[0;32mI (1403) vector_test_xor:: DTYPE_INT8[0m
+[0;32mI (1403) fill_test_vector: Seed set: 2726[0m
+[0;32mI (1433) vector_test_xor: vector_time: 181[0m
+[0;32mI (1433) vector_test_xor: scalar_time: 843[0m
+[0;32mI (1433) vector_test_xor:: DTYPE_INT16[0m
+[0;32mI (1433) fill_test_vector: Seed set: 2726[0m
+[0;32mI (1463) vector_test_xor: vector_time: 176[0m
+[0;32mI (1463) vector_test_xor: scalar_time: 844[0m
+[0;32mI (1463) vector_test_xor:: DTYPE_INT32[0m
+[0;32mI (1463) fill_test_vector: Seed set: 2726[0m
+[0;32mI (1503) vector_test_xor: vector_time: 201[0m
+[0;32mI (1503) vector_test_xor: scalar_time: 772[0m
+[0;32mI (1503) vector_test_xor_alias:: DTYPE_INT32[0m
+[0;32mI (1503) fill_test_vector: Seed set: 2726[0m
+[0;32mI (1623) vector_test_xor_alias: vector_time: 199[0m
+[0;32mI (1623) vector_test_xor_alias: scalar_time: 771[0m
+[0;32mI (1623) vector_test_xor:: DTYPE_FLOAT32[0m
+[0;32mI (1633) fill_test_vector: Seed set: 2726[0m
+[0;32mI (1813) vector_test_xor: vector_time: 208[0m
+[0;32mI (1813) vector_test_xor: scalar_time: 772[0m
+[0;32mI (1813) vector_test_xor_alias:: DTYPE_FLOAT32[0m
+[0;32mI (1813) fill_test_vector: Seed set: 2727[0m
+[0;32mI (1933) vector_test_xor_alias: vector_time: 197[0m
+[0;32mI (1933) vector_test_xor_alias: scalar_time: 776[0m
+[0;32mI (1933) vector_test_not:: DTYPE_INT8[0m
+[0;32mI (1943) fill_test_vector: Seed set: 2727[0m
+[1;31mE (1943) vector_assert_eq: Mismatch found at 0, vec1: -21, vec2 -97[0m
+[1;31mE (1943) vector_assert_eq: Mismatch found at 1, vec1: -36, vec2 63[0m
+[1;31mE (1953) vector_assert_eq: Mismatch found at 2, vec1: 115, vec2 28[0m
+[1;31mE (1963) vector_assert_eq: Mismatch found at 3, vec1: -9, vec2 -65[0m
+[1;31mE (1963) vector_assert_eq: Mismatch found at 4, vec1: -115, vec2 38[0m
+[1;31mE (1973) vector_assert_eq: Mismatch found at 5, vec1: 56, vec2 35[0m
+[1;31mE (1973) vector_assert_eq: Mismatch found at 6, vec1: -55, vec2 104[0m
+[1;31mE (1983) vector_assert_eq: Mismatch found at 7, vec1: 123, vec2 63[0m
+[1;31mE (1993) vector_assert_eq: Mismatch found at 8, vec1: -39, vec2 80[0m
+[1;31mE (1993) vector_assert_eq: Mismatch found at 9, vec1: -73, vec2 -102[0m
+[1;31mE (2003) vector_assert_eq: Mismatch found at 10, vec1: -40, vec2 98[0m
+[1;31mE (2003) vector_assert_eq: Mismatch found at 11, vec1: -51, vec2 63[0m
+[1;31mE (2013) vector_assert_eq: Mismatch found at 12, vec1: -103, vec2 -92[0m
+[1;31mE (2023) vector_assert_eq: Mismatch found at 13, vec1: -23, vec2 -65[0m
+[1;31mE (2023) vector_assert_eq: Mismatch found at 14, vec1: 56, vec2 -97[0m
+[1;31mE (2033) vector_assert_eq: Mismatch found at 15, vec1: -20, vec2 -66[0m
+[1;31mE (2033) vector_assert_eq: Mismatch found at 16, vec1: 78, vec2 100[0m
+[1;31mE (2043) vector_assert_eq: Mismatch found at 17, vec1: 17, vec2 -115[0m
+[1;31mE (2053) vector_assert_eq: Mismatch found at 19, vec1: 81, vec2 62[0m
+[1;31mE (2053) vector_assert_eq: Mismatch found at 20, vec1: 3, vec2 -22[0m
+[1;31mE (2063) vector_assert_eq: Mismatch found at 21, vec1: 93, vec2 17[0m
+[1;31mE (2063) vector_assert_eq: Mismatch found at 22, vec1: 117, vec2 -51[0m
+[1;31mE (2073) vector_assert_eq: Mismatch found at 23, vec1: -101, vec2 -66[0m
+[1;31mE (2083) vector_assert_eq: Mismatch found at 24, vec1: 126, vec2 -96[0m
+[1;31mE (2083) vector_assert_eq: Mismatch found at 25, vec1: 18, vec2 69[0m
+[1;31mE (2093) vector_assert_eq: Mismatch found at 26, vec1: -61, vec2 -111[0m
+[1;31mE (2093) vector_assert_eq: Mismatch found at 27, vec1: 27, vec2 -66[0m
+[1;31mE (2103) vector_assert_eq: Mismatch found at 28, vec1: -86, vec2 -18[0m
+[1;31mE (2113) vector_assert_eq: Mismatch found at 29, vec1: 93, vec2 -70[0m
+[1;31mE (2113) vector_assert_eq: Mismatch found at 30, vec1: 84, vec2 124[0m
+[1;31mE (2123) vector_assert_eq: Mismatch found at 31, vec1: -28, vec2 63[0m
+[1;31mE (2123) vector_assert_eq: Mismatch found at 32, vec1: -27, vec2 16[0m
+[1;31mE (2133) vector_assert_eq: Mismatch found at 33, vec1: -10, vec2 -27[0m
+[1;31mE (2143) vector_assert_eq: Mismatch found at 34, vec1: -35, vec2 26[0m
+[1;31mE (2143) vector_assert_eq: Mismatch found at 35, vec1: -70, vec2 63[0m
+[1;31mE (2153) vector_assert_eq: Mismatch found at 36, vec1: -94, vec2 -60[0m
+[1;31mE (2153) vector_assert_eq: Mismatch found at 37, vec1: 64, vec2 3[0m
+[1;31mE (2163) vector_assert_eq: Mismatch found at 38, vec1: 86, vec2 -54[0m
+[1;31mE (2173) vector_assert_eq: Mismatch found at 39, vec1: -46, vec2 62[0m
+[1;31mE (2173) vector_assert_eq: Mismatch found at 40, vec1: 50, vec2 76[0m
+[1;31mE (2183) vector_assert_eq: Mismatch found at 41, vec1: 21, vec2 -77[0m
+[1;31mE (2183) vector_assert_eq: Mismatch found at 42, vec1: -72, vec2 34[0m
+[1;31mE (2193) vector_assert_eq: Mismatch found at 43, vec1: -26, vec2 63[0m
+[1;31mE (2203) vector_assert_eq: Mismatch found at 44, vec1: 49, vec2 114[0m
+[1;31mE (2203) vector_assert_eq: Mismatch found at 45, vec1: -120, vec2 -101[0m
+[1;31mE (2213) vector_assert_eq: Mismatch found at 46, vec1: 89, vec2 109[0m
+[1;31mE (2213) vector_assert_eq: Mismatch found at 47, vec1: 8, vec2 63[0m
+[1;31mE (2223) vector_assert_eq: Mismatch found at 48, vec1: 16, vec2 -90[0m
+[1;31mE (2233) vector_assert_eq: Mismatch found at 50, vec1: 113, vec2 80[0m
+[1;31mE (2233) vector_assert_eq: Mismatch found at 51, vec1: 20, vec2 -65[0m
+[1;31mE (2243) vector_assert_eq: Mismatch found at 52, vec1: -89, vec2 75[0m
+[1;31mE (2243) vector_assert_eq: Mismatch found at 53, vec1: 75, vec2 88[0m
+[1;31mE (2253) vector_assert_eq: Mismatch found at 54, vec1: -39, vec2 0[0m
+[1;31mE (2263) vector_assert_eq: Mismatch found at 55, vec1: -55, vec2 -65[0m
+[1;31mE (2263) vector_assert_eq: Mismatch found at 56, vec1: 80, vec2 96[0m
+[1;31mE (2273) vector_assert_eq: Mismatch found at 57, vec1: -34, vec2 -39[0m
+[1;31mE (2273) vector_assert_eq: Mismatch found at 58, vec1: -97, vec2 -17[0m
+[1;31mE (2283) vector_assert_eq: Mismatch found at 59, vec1: 4, vec2 61[0m
+[1;31mE (2293) vector_assert_eq: Mismatch found at 60, vec1: 126, vec2 24[0m
+[1;31mE (2293) vector_assert_eq: Mismatch found at 61, vec1: 28, vec2 -57[0m
+[1;31mE (2303) vector_assert_eq: Mismatch found at 62, vec1: 47, vec2 89[0m
+[1;31mE (2303) vector_assert_eq: Mismatch found at 63, vec1: -4, vec2 63[0m
+[1;31mE (2313) vector_assert_eq: Mismatch found at 64, vec1: -91, vec2 104[0m
+[1;31mE (2323) vector_assert_eq: Mismatch found at 65, vec1: -35, vec2 -99[0m
+[1;31mE (2323) vector_assert_eq: Mismatch found at 66, vec1: -70, vec2 -50[0m
+[1;31mE (2333) vector_assert_eq: Mismatch found at 67, vec1: -102, vec2 63[0m
+[1;31mE (2333) vector_assert_eq: Mismatch found at 68, vec1: -32, vec2 23[0m
+[1;31mE (2343) vector_assert_eq: Mismatch found at 69, vec1: -100, vec2 0[0m
+[1;31mE (2353) vector_assert_eq: Mismatch found at 70, vec1: 66, vec2 0[0m
+[1;31mE (2353) vector_assert_eq: Mismatch found at 71, vec1: -3, vec2 0[0m
+[1;31mE (2363) vector_assert_eq: Mismatch found at 72, vec1: 3, vec2 36[0m
+[1;31mE (2363) vector_assert_eq: Mismatch found at 73, vec1: -119, vec2 -105[0m
+[1;31mE (2373) vector_assert_eq: Mismatch found at 74, vec1: -21, vec2 -50[0m
+[1;31mE (2383) vector_assert_eq: Mismatch found at 75, vec1: 22, vec2 63[0m
+[1;31mE (2383) vector_assert_eq: Mismatch found at 76, vec1: 99, vec2 36[0m
+[1;31mE (2393) vector_assert_eq: Mismatch found at 77, vec1: -70, vec2 -105[0m
+[1;31mE (2393) vector_assert_eq: Mismatch found at 78, vec1: -106, vec2 -50[0m
+[1;31mE (2403) vector_assert_eq: Mismatch found at 79, vec1: -97, vec2 63[0m
+[1;31mE (2413) vector_assert_eq: Mismatch found at 80, vec1: 74, vec2 8[0m
+[1;31mE (2413) vector_assert_eq: Mismatch found at 81, vec1: 52, vec2 -99[0m
+[1;31mE (2423) vector_assert_eq: Mismatch found at 82, vec1: 56, vec2 -50[0m
+[1;31mE (2423) vector_assert_eq: Mismatch found at 83, vec1: -115, vec2 63[0m
+[1;31mE (2433) vector_assert_eq: Mismatch found at 84, vec1: -85, vec2 -5[0m
+[1;31mE (2443) vector_assert_eq: Mismatch found at 85, vec1: -126, vec2 79[0m
+[1;31mE (2443) vector_assert_eq: Mismatch found at 86, vec1: -99, vec2 0[0m
+[1;31mE (2453) vector_assert_eq: Mismatch found at 87, vec1: -107, vec2 0[0m
+[1;31mE (2453) vector_assert_eq: Mismatch found at 88, vec1: -51, vec2 104[0m
+[1;31mE (2463) vector_assert_eq: Mismatch found at 89, vec1: -52, vec2 -99[0m
+[1;31mE (2473) vector_assert_eq: Mismatch found at 90, vec1: -71, vec2 -50[0m
+[1;31mE (2473) vector_assert_eq: Mismatch found at 91, vec1: 45, vec2 63[0m
+[1;31mE (2483) vector_assert_eq: Mismatch found at 92, vec1: 62, vec2 -73[0m
+[1;31mE (2483) vector_assert_eq: Mismatch found at 93, vec1: -37, vec2 0[0m
+[1;31mE (2493) vector_assert_eq: Mismatch found at 94, vec1: -46, vec2 0[0m
+[1;31mE (2503) vector_assert_eq: Mismatch found at 95, vec1: 73, vec2 0[0m
+[1;31mE (2503) vector_assert_eq: Mismatch found at 96, vec1: -25, vec2 -36[0m
+[1;31mE (2513) vector_assert_eq: Mismatch found at 97, vec1: -39, vec2 -48[0m
+[1;31mE (2513) vector_assert_eq: Mismatch found at 98, vec1: 75, vec2 -90[0m
+[1;31mE (2523) vector_assert_eq: Mismatch found at 99, vec1: -90, vec2 -66[0m
+[1;31mE (2533) vector_assert_eq: Mismatch found at 100, vec1: -65, vec2 34[0m
+[1;31mE (2533) vector_assert_eq: Mismatch found at 101, vec1: -97, vec2 -1[0m
+[1;31mE (2543) vector_assert_eq: Mismatch found at 102, vec1: -26, vec2 116[0m
+[1;31mE (2543) vector_assert_eq: Mismatch found at 103, vec1: -66, vec2 63[0m
+[1;31mE (2553) vector_assert_eq: Mismatch found at 104, vec1: -93, vec2 -96[0m
+[1;31mE (2563) vector_assert_eq: Mismatch found at 105, vec1: -2, vec2 109[0m
+[1;31mE (2563) vector_assert_eq: Mismatch found at 106, vec1: -32, vec2 -61[0m
+[1;31mE (2573) vector_assert_eq: Mismatch found at 107, vec1: -49, vec2 -68[0m
+[1;31mE (2573) vector_assert_eq: Mismatch found at 108, vec1: 83, vec2 104[0m
+[1;31mE (2583) vector_assert_eq: Mismatch found at 109, vec1: -16, vec2 4[0m
+[1;31mE (2593) vector_assert_eq: Mismatch found at 110, vec1: 25, vec2 4[0m
+[1;31mE (2593) vector_assert_eq: Mismatch found at 111, vec1: 14, vec2 -65[0m
+[1;31mE (2603) vector_assert_eq: Mismatch found at 112, vec1: 52, vec2 28[0m
+[1;31mE (2603) vector_assert_eq: Mismatch found at 113, vec1: 73, vec2 -99[0m
+[1;31mE (2613) vector_assert_eq: Mismatch found at 114, vec1: 103, vec2 38[0m
+[1;31mE (2623) vector_assert_eq: Mismatch found at 115, vec1: 90, vec2 63[0m
+[1;31mE (2623) vector_assert_eq: Mismatch found at 116, vec1: -29, vec2 -94[0m
+[1;31mE (2633) vector_assert_eq: Mismatch found at 117, vec1: -74, vec2 -66[0m
+[1;31mE (2643) vector_assert_eq: Mismatch found at 118, vec1: 121, vec2 118[0m
+[1;31mE (2643) vector_assert_eq: Mismatch found at 119, vec1: -101, vec2 -65[0m
+[1;31mE (2653) vector_assert_eq: Mismatch found at 120, vec1: -78, vec2 -72[0m
+[1;31mE (2653) vector_assert_eq: Mismatch found at 121, vec1: -119, vec2 -118[0m
+[1;31mE (2663) vector_assert_eq: Mismatch found at 123, vec1: 52, vec2 -67[0m
+[1;31mE (2673) vector_assert_eq: Mismatch found at 124, vec1: -112, vec2 -76[0m
+[1;31mE (2673) vector_assert_eq: Mismatch found at 125, vec1: -93, vec2 51[0m
+[1;31mE (2683) vector_assert_eq: Mismatch found at 126, vec1: -74, vec2 2[0m
+[1;31mE (2683) vector_assert_eq: Mismatch found at 127, vec1: 15, vec2 63[0m
+[1;31mE (2693) vector_assert_eq: Mismatch found at 128, vec1: 107, vec2 73[0m
+[1;31mE (2703) vector_assert_eq: Mismatch found at 129, vec1: -120, vec2 70[0m
+[1;31mE (2703) vector_assert_eq: Mismatch found at 130, vec1: -66, vec2 60[0m
+[1;31mE (2713) vector_assert_eq: Mismatch found at 131, vec1: -31, vec2 -65[0m
+[1;31mE (2723) vector_assert_eq: Mismatch found at 132, vec1: 117, vec2 124[0m
+[1;31mE (2723) vector_assert_eq: Mismatch found at 133, vec1: 42, vec2 48[0m
+[1;31mE (2733) vector_assert_eq: Mismatch found at 134, vec1: -80, vec2 36[0m
+[1;31mE (2733) vector_assert_eq: Mismatch found at 135, vec1: -71, vec2 63[0m
+[1;31mE (2743) vector_assert_eq: Mismatch found at 136, vec1: -76, vec2 -40[0m
+[1;31mE (2753) vector_assert_eq: Mismatch found at 137, vec1: -52, vec2 -99[0m
+[1;31mE (2753) vector_assert_eq: Mismatch found at 138, vec1: -124, vec2 -50[0m
+
+assert failed: vector_test_not vector_bitwise_test.c:371 (vector_assert_eq(vec1, vec1_copy))
+
+

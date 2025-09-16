@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/Users/mliu/Desktop/Projects/Working/build/CMakeFiles/bootloader
+/Users/mliu/Desktop/Projects/Working/build/CMakeFiles/bootloader.rule
+/Users/mliu/Desktop/Projects/Working/build/CMakeFiles/bootloader-complete.rule
+/Users/mliu/Desktop/Projects/Working/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/Users/mliu/Desktop/Projects/Working/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/Users/mliu/Desktop/Projects/Working/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/Users/mliu/Desktop/Projects/Working/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/Users/mliu/Desktop/Projects/Working/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/Users/mliu/Desktop/Projects/Working/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/Users/mliu/Desktop/Projects/Working/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
