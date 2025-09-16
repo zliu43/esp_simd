@@ -1,0 +1,30 @@
+#include "vector.h"
+
+void vector_test_add(bool verbose, dtype type);
+void vector_test_add_alias(bool verbose, dtype type);
+void vector_test_sub(bool verbose, dtype type);
+void vector_test_sub_alias(bool verbose, dtype type);
+void vector_test_add_scalar(bool verbose, dtype type);
+void vector_test_add_scalar_f32(bool verbose, dtype type);
+void vector_test_add_scalar_alias(bool verbose, dtype type);
+void vector_test_add_scalar_f32_alias(bool verbose, dtype type);
+void vector_test_mul_shift(bool verbose, dtype type);
+void vector_test_mul_shift_alias(bool verbose, dtype type);
+void vector_test_sum(bool verbose, dtype type);
+void vector_test_sum_f32(bool verbose, dtype type);
+void vector_test_mul_scalar_shift(bool verbose, dtype type); 
+void vector_test_dotp(bool verbose, dtype type);
+void vector_test_dotp_f32(bool verbose, dtype type);
+void vector_test_abs(bool verbose, dtype type);
+void vector_test_ceil(bool verbose, dtype type);
+void vector_test_ceil_f32(bool verbose, dtype type);
+void vector_test_floor(bool verbose, dtype type);
+void vector_test_floor_f32(bool verbose, dtype type); 
+void vector_test_neg(bool verbose, dtype type);
+void vector_test_mac(bool verbose, dtype type);
+void vector_test_mac_f32(bool verbose, dtype type);
+void vector_test_zeros(bool verbose, dtype type);
+void vector_test_ones(bool verbose, dtype type);
+void vector_test_fill(bool verbose, dtype type);
+void vector_test_fill_f32(bool verbose, dtype type);
+void vector_test_copy(bool verbose, dtype type);

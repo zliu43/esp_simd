@@ -1,0 +1,2 @@
+file(GLOB VEC_I8_ASM CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/*i8.S")
+target_sources(esp_simd PRIVATE ${VEC_I8_ASM})
