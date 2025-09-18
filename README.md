@@ -17,20 +17,65 @@ The xTensa LX7 core on the ESP32-S3 includes custom SIMD instructions, but they 
 
 ---
 
+
+## 📊 Performance
+
+We benchmarked a set of vector math operations (add, sub, mul, dot product, sum, and bitwise ops) across `int8`, `int16`, `int32`, and `float32` data types. Runtimes were aggregated from 32 runs on random vectors of length 1–256.  
+
+SIMD (vectorized) execution consistently outperforms scalar execution, with **speedups ranging from ~2× to nearly 10×** depending on the operation and data type.  
+- Integer arithmetic (especially 32-bit add/sub) shows the largest gains (≈9–10×).  
+- Floating-point operations achieve more modest improvements (≈1.5–4×).  
+- Memory-bound ops (copy/fill/zero/ones) also benefit, though with smaller absolute times.  
+
+| Operation        | DType    | SIMD (vector_time) | Scalar (scalar_time) | Speedup (Scalar ÷ SIMD) |
+|------------------|----------|--------------------|-----------------------|--------------------------|
+| **Add**          | INT8     | 199                | 1227                  | **6.2×**                |
+|                  | INT16    | 185                | 1214                  | **6.6×**                |
+|                  | INT32    | 193                | 1864                  | **9.7×**                |
+|                  | FLOAT32  | 267                | 957                   | **3.6×**                |
+| **Sub**          | INT8     | 192                | 1134                  | **5.9×**                |
+|                  | INT32    | 184                | 1666                  | **9.1×**                |
+|                  | FLOAT32  | 262                | 890                   | **3.4×**                |
+| **Mul (shift)**  | INT8     | 193                | 1167                  | **6.0×**                |
+|                  | INT32    | 588                | 2275                  | **3.9×**                |
+|                  | FLOAT32  | 279                | 1057                  | **3.8×**                |
+| **Dot Product**  | INT8     | 186                | 923                   | **5.0×**                |
+|                  | INT32    | 404                | 815                   | **2.0×**                |
+|                  | FLOAT32  | 367                | 583                   | **1.6×**                |
+| **Sum**          | INT8     | 147                | 662                   | **4.5×**                |
+|                  | INT32    | 159                | 1163                  | **7.3×**                |
+|                  | FLOAT32  | 267                | 595                   | **2.2×**                |
+| **Bitwise AND**  | INT8     | 186                | 820                   | **4.4×**                |
+|                  | INT32    | 207                | 864                   | **4.2×**                |
+|                  | FLOAT32  | 203                | 861                   | **4.2×**                |
+
+---
+
+
 ## 📦 Installation
 Using esp-idf:
-Clone the repository into your project’s `components` directory:
+Clone the repository into your project’s `components` directory. 
+If your project does not have components directory, create the folder on the top level directory, (i.e same level as 'main' and 'build').
+e.g. project-name/components
 
 ```bash
 git clone https://github.com/zliu43/esp_simd.git components/esp_simd
 ```
-Using Arduino:
-Clone the repository into your Arduino `libraries` folder:
+
+Add esp_simd to the REQUIRES field in the CMakeLists.txt in 'main':
+e.g. project-name/main/CMakeLists.txt
 
 ```bash
-git clone https://github.com/zliu43/esp_simd.git ~/Documents/Arduino/libraries/esp_simd
+idf_component_register(SRCS "hello_world_main.c"
+                       PRIV_REQUIRES spi_flash esp_simd
+                       INCLUDE_DIRS "")
 ```
-Note: On Windows, the path is typically C:\Users\<YourName>\Documents\Arduino\libraries\
+
+Using Arduino:
+Go to https://github.com/zliu43/esp_simd and download the library as a zip folder.
+
+Go to Sketch > Include Library > Add .ZIP Library...
+
 ---
 
 ## 🚀 Usage Example
