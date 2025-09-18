@@ -4,15 +4,6 @@
 #include "esp_heap_caps.h"  
 #include "esp_log.h"
 
-#define VECTOR_STACK_INIT(name, length, dtype_enum)                      \ 
-    alignas(16) uint8_t name##_buf[(length) * sizeof_dtype(dtype_enum)]; \ 
-    vector_t name = {                                                    \
-        .data = (void *)(name##_buf),                                    \
-        .type = (dtype_enum),                                            \
-        .size = (length),                                                \
-        .owns_data = false                                               \
-    }
-
 
 vector_t *vector_create(size_t size, dtype type) {
     if (type < DTYPE_INT8 || type > DTYPE_FLOAT32) { return NULL;}
@@ -39,6 +30,16 @@ vector_status_t vector_ok(vector_t *vec) {
     return VECTOR_SUCCESS;                                                                  
 }
 
+vector_status_t vector_free_data(vector_t *vec) { 
+    if (vec && vec->owns_data) {
+        if (vec->data) { 
+            heap_caps_free(vec->data);
+            vec->data = NULL;
+        }
+    } 
+    return VECTOR_SUCCESS;
+} 
+
 vector_status_t vector_destroy(vector_t *vec) { 
     if (vec && vec->owns_data) {
         if (vec->data) { 
@@ -46,8 +47,7 @@ vector_status_t vector_destroy(vector_t *vec) {
             vec->data = NULL;
         }
     }
-    free(vec);  
-    vec = NULL;
+    free(vec);   
     return VECTOR_SUCCESS;
 }
 

@@ -1,0 +1,150 @@
+Command: ninja all
+[1/18] Performing build step for 'bootloader'
+[1/1] cd /Users/mliu/Desktop/Projects/Working/build/bootloader/esp-idf/esptool_py && /Users/mliu/.espressif/python_env/idf5.5_py3.9_env/bin/python /Users/mliu/esp/v5.5/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/mliu/Desktop/Projects/Working/build/bootloader/bootloader.bin
+Bootloader binary size 0x5260 bytes. 0x2da0 bytes (36%) free.
+[2/18] No install step for 'bootloader'
+[3/18] Completed 'bootloader'
+[4/18] Building C object esp-idf/esp_simd/CMakeFiles/__idf_esp_simd.dir/src/vector/vector.c.obj
+[5/18] Building C object esp-idf/esp_simd/CMakeFiles/__idf_esp_simd.dir/src/vector/vector_extra_functions.c.obj
+[6/18] Building C object esp-idf/esp_simd/CMakeFiles/__idf_esp_simd.dir/src/vector/vector_bitwise_functions.c.obj
+[7/18] Building C object esp-idf/esp_simd/CMakeFiles/__idf_esp_simd.dir/src/vector/vector_compare_functions.c.obj
+[8/18] Building C object esp-idf/esp_simd/CMakeFiles/__idf_esp_simd.dir/test/vector_test_helper.c.obj
+[9/18] Building C object esp-idf/esp_simd/CMakeFiles/__idf_esp_simd.dir/src/vector/vector_basic_functions.c.obj
+[10/18] Building C object esp-idf/esp_simd/CMakeFiles/__idf_esp_simd.dir/test/vector_bitwise_test.c.obj
+[11/18] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj 
+/Users/mliu/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.5-dirty\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/Users/mliu/Desktop/Projects/Working/build/config -I/Users/mliu/Desktop/Projects/Working/main -I/Users/mliu/esp/v5.5/esp-idf/components/newlib/platform_include -I/Users/mliu/esp/v5.5/esp-idf/components/freertos/config/include -I/Users/mliu/esp/v5.5/esp-idf/components/freertos/config/include/freertos -I/Users/mliu/esp/v5.5/esp-idf/components/freertos/config/xtensa/include -I/Users/mliu/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/Users/mliu/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/Users/mliu/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/Users/mliu/esp/v5.5/esp-idf/components/freertos/esp_additions/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_hw_support/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_hw_support/include/soc -I/Users/mliu/esp/v5.5/esp-idf/components/esp_hw_support/include/soc/esp32s3 -I/Users/mliu/esp/v5.5/esp-idf/components/esp_hw_support/dma/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_hw_support/ldo/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_hw_support/debug_probe/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_hw_support/mspi_timing_tuning/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_hw_support/power_supply/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_hw_support/port/esp32s3/. -I/Users/mliu/esp/v5.5/esp-idf/components/esp_hw_support/port/esp32s3/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/. -I/Users/mliu/esp/v5.5/esp-idf/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/include -I/Users/mliu/esp/v5.5/esp-idf/components/heap/include -I/Users/mliu/esp/v5.5/esp-idf/components/heap/tlsf -I/Users/mliu/esp/v5.5/esp-idf/components/log/include -I/Users/mliu/esp/v5.5/esp-idf/components/soc/include -I/Users/mliu/esp/v5.5/esp-idf/components/soc/esp32s3 -I/Users/mliu/esp/v5.5/esp-idf/components/soc/esp32s3/include -I/Users/mliu/esp/v5.5/esp-idf/components/soc/esp32s3/register -I/Users/mliu/esp/v5.5/esp-idf/components/hal/platform_port/include -I/Users/mliu/esp/v5.5/esp-idf/components/hal/esp32s3/include -I/Users/mliu/esp/v5.5/esp-idf/components/hal/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_rom/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_rom/esp32s3/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_rom/esp32s3/include/esp32s3 -I/Users/mliu/esp/v5.5/esp-idf/components/esp_rom/esp32s3 -I/Users/mliu/esp/v5.5/esp-idf/components/esp_common/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_system/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_system/port/soc -I/Users/mliu/esp/v5.5/esp-idf/components/esp_system/port/include/private -I/Users/mliu/esp/v5.5/esp-idf/components/xtensa/esp32s3/include -I/Users/mliu/esp/v5.5/esp-idf/components/xtensa/include -I/Users/mliu/esp/v5.5/esp-idf/components/xtensa/deprecated_include -I/Users/mliu/Desktop/Projects/Working/components/esp_simd/include -I/Users/mliu/Desktop/Projects/Working/components/esp_simd/include/vector -I/Users/mliu/Desktop/Projects/Working/components/esp_simd/test -I/Users/mliu/esp/v5.5/esp-idf/components/driver/deprecated -I/Users/mliu/esp/v5.5/esp-idf/components/driver/i2c/include -I/Users/mliu/esp/v5.5/esp-idf/components/driver/touch_sensor/include -I/Users/mliu/esp/v5.5/esp-idf/components/driver/twai/include -I/Users/mliu/esp/v5.5/esp-idf/components/driver/touch_sensor/esp32s3/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_pm/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_ringbuf/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_driver_gpio/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_driver_pcnt/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_driver_gptimer/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_driver_spi/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_driver_mcpwm/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_driver_ana_cmpr/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_driver_i2s/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_driver_sdmmc/include -I/Users/mliu/esp/v5.5/esp-idf/components/sdmmc/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_driver_sdspi/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_driver_sdio/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_driver_dac/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_driver_rmt/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_driver_tsens/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_driver_sdm/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_driver_i2c/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_driver_uart/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_driver_ledc/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_driver_parlio/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_driver_usb_serial_jtag/include -I/Users/mliu/esp/v5.5/esp-idf/components/esp_driver_twai/include -I/Users/mliu/Desktop/Projects/Working/managed_components/espressif__led_strip/include -I/Users/mliu/Desktop/Projects/Working/managed_components/espressif__led_strip/interface -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/Users/mliu/Desktop/Projects/Working=. -fmacro-prefix-map=/Users/mliu/esp/v5.5/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -c /Users/mliu/Desktop/Projects/Working/main/main.c
+/Users/mliu/Desktop/Projects/Working/main/main.c: In function 'test_basic':
+/Users/mliu/Desktop/Projects/Working/main/main.c:8:5: error: implicit declaration of function 'vector_test_add'; did you mean 'vector_destroy'? [-Wimplicit-function-declaration]
+    8 |     vector_test_add(true, DTYPE_INT8);
+      |     ^~~~~~~~~~~~~~~
+      |     vector_destroy
+/Users/mliu/Desktop/Projects/Working/main/main.c:14:5: error: implicit declaration of function 'vector_test_add_alias' [-Wimplicit-function-declaration]
+   14 |     vector_test_add_alias(true, DTYPE_FLOAT32);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+/Users/mliu/Desktop/Projects/Working/main/main.c:22:5: error: implicit declaration of function 'vector_test_sub'; did you mean 'vector_destroy'? [-Wimplicit-function-declaration]
+   22 |     vector_test_sub(true, DTYPE_INT8);
+      |     ^~~~~~~~~~~~~~~
+      |     vector_destroy
+/Users/mliu/Desktop/Projects/Working/main/main.c:24:5: error: implicit declaration of function 'vector_test_sub_alias' [-Wimplicit-function-declaration]
+   24 |     vector_test_sub_alias(true, DTYPE_INT8);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+/Users/mliu/Desktop/Projects/Working/main/main.c:40:5: error: implicit declaration of function 'vector_test_add_scalar' [-Wimplicit-function-declaration]
+   40 |     vector_test_add_scalar(true, DTYPE_INT8);
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+/Users/mliu/Desktop/Projects/Working/main/main.c:42:5: error: implicit declaration of function 'vector_test_add_scalar_alias' [-Wimplicit-function-declaration]
+   42 |     vector_test_add_scalar_alias(true, DTYPE_INT8);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mliu/Desktop/Projects/Working/main/main.c:52:5: error: implicit declaration of function 'vector_test_add_scalar_f32' [-Wimplicit-function-declaration]
+   52 |     vector_test_add_scalar_f32(true, DTYPE_FLOAT32);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mliu/Desktop/Projects/Working/main/main.c:54:5: error: implicit declaration of function 'vector_test_add_scalar_f32_alias' [-Wimplicit-function-declaration]
+   54 |     vector_test_add_scalar_f32_alias(true, DTYPE_FLOAT32);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mliu/Desktop/Projects/Working/main/main.c:58:5: error: implicit declaration of function 'vector_test_mul_shift' [-Wimplicit-function-declaration]
+   58 |     vector_test_mul_shift(true, DTYPE_INT8);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+/Users/mliu/Desktop/Projects/Working/main/main.c:66:5: error: implicit declaration of function 'vector_test_mul_shift_alias' [-Wimplicit-function-declaration]
+   66 |     vector_test_mul_shift_alias(true, DTYPE_INT8);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mliu/Desktop/Projects/Working/main/main.c:77:5: error: implicit declaration of function 'vector_test_sum'; did you mean 'vector_destroy'? [-Wimplicit-function-declaration]
+   77 |     vector_test_sum(true, DTYPE_INT8);
+      |     ^~~~~~~~~~~~~~~
+      |     vector_destroy
+/Users/mliu/Desktop/Projects/Working/main/main.c:83:5: error: implicit declaration of function 'vector_test_sum_f32' [-Wimplicit-function-declaration]
+   83 |     vector_test_sum_f32(true, DTYPE_FLOAT32);
+      |     ^~~~~~~~~~~~~~~~~~~
+/Users/mliu/Desktop/Projects/Working/main/main.c:88:5: error: implicit declaration of function 'vector_test_mul_scalar_shift' [-Wimplicit-function-declaration]
+   88 |     vector_test_mul_scalar_shift(true, DTYPE_INT8);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/mliu/Desktop/Projects/Working/main/main.c:98:5: error: implicit declaration of function 'vector_test_dotp'; did you mean 'vector_destroy'? [-Wimplicit-function-declaration]
+   98 |     vector_test_dotp(true, DTYPE_INT8);
+      |     ^~~~~~~~~~~~~~~~
+      |     vector_destroy
+/Users/mliu/Desktop/Projects/Working/main/main.c:104:5: error: implicit declaration of function 'vector_test_dotp_f32' [-Wimplicit-function-declaration]
+  104 |     vector_test_dotp_f32(true, DTYPE_FLOAT32);
+      |     ^~~~~~~~~~~~~~~~~~~~
+/Users/mliu/Desktop/Projects/Working/main/main.c:108:5: error: implicit declaration of function 'vector_test_abs'; did you mean 'vector_destroy'? [-Wimplicit-function-declaration]
+  108 |     vector_test_abs(true, DTYPE_INT8);
+      |     ^~~~~~~~~~~~~~~
+      |     vector_destroy
+/Users/mliu/Desktop/Projects/Working/main/main.c:118:5: error: implicit declaration of function 'vector_test_ceil'; did you mean 'vector_destroy'? [-Wimplicit-function-declaration]
+  118 |     vector_test_ceil(true, DTYPE_INT8);
+      |     ^~~~~~~~~~~~~~~~
+      |     vector_destroy
+/Users/mliu/Desktop/Projects/Working/main/main.c:124:5: error: implicit declaration of function 'vector_test_ceil_f32' [-Wimplicit-function-declaration]
+  124 |     vector_test_ceil_f32(true, DTYPE_FLOAT32);
+      |     ^~~~~~~~~~~~~~~~~~~~
+/Users/mliu/Desktop/Projects/Working/main/main.c:128:5: error: implicit declaration of function 'vector_test_floor'; did you mean 'vector_destroy'? [-Wimplicit-function-declaration]
+  128 |     vector_test_floor(true, DTYPE_INT8);
+      |     ^~~~~~~~~~~~~~~~~
+      |     vector_destroy
+/Users/mliu/Desktop/Projects/Working/main/main.c:134:5: error: implicit declaration of function 'vector_test_floor_f32' [-Wimplicit-function-declaration]
+  134 |     vector_test_floor_f32(true, DTYPE_FLOAT32);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+/Users/mliu/Desktop/Projects/Working/main/main.c:138:5: error: implicit declaration of function 'vector_test_neg'; did you mean 'vector_destroy'? [-Wimplicit-function-declaration]
+  138 |     vector_test_neg(true, DTYPE_INT8);
+      |     ^~~~~~~~~~~~~~~
+      |     vector_destroy
+/Users/mliu/Desktop/Projects/Working/main/main.c:149:5: error: implicit declaration of function 'vector_test_mac'; did you mean 'vector_destroy'? [-Wimplicit-function-declaration]
+  149 |     vector_test_mac(true, DTYPE_INT8);
+      |     ^~~~~~~~~~~~~~~
+      |     vector_destroy
+/Users/mliu/Desktop/Projects/Working/main/main.c:155:5: error: implicit declaration of function 'vector_test_mac_f32' [-Wimplicit-function-declaration]
+  155 |     vector_test_mac_f32(true, DTYPE_FLOAT32);
+      |     ^~~~~~~~~~~~~~~~~~~
+/Users/mliu/Desktop/Projects/Working/main/main.c:160:5: error: implicit declaration of function 'vector_test_zeros'; did you mean 'vector_destroy'? [-Wimplicit-function-declaration]
+  160 |     vector_test_zeros(true, DTYPE_INT8);
+      |     ^~~~~~~~~~~~~~~~~
+      |     vector_destroy
+/Users/mliu/Desktop/Projects/Working/main/main.c:170:5: error: implicit declaration of function 'vector_test_ones'; did you mean 'vector_destroy'? [-Wimplicit-function-declaration]
+  170 |     vector_test_ones(true, DTYPE_INT8);
+      |     ^~~~~~~~~~~~~~~~
+      |     vector_destroy
+/Users/mliu/Desktop/Projects/Working/main/main.c:180:5: error: implicit declaration of function 'vector_test_fill'; did you mean 'vector_destroy'? [-Wimplicit-function-declaration]
+  180 |     vector_test_fill(true, DTYPE_INT8);
+      |     ^~~~~~~~~~~~~~~~
+      |     vector_destroy
+/Users/mliu/Desktop/Projects/Working/main/main.c:186:5: error: implicit declaration of function 'vector_test_fill_f32' [-Wimplicit-function-declaration]
+  186 |     vector_test_fill_f32(true, DTYPE_FLOAT32);
+      |     ^~~~~~~~~~~~~~~~~~~~
+/Users/mliu/Desktop/Projects/Working/main/main.c:190:5: error: implicit declaration of function 'vector_test_copy'; did you mean 'vector_destroy'? [-Wimplicit-function-declaration]
+  190 |     vector_test_copy(true, DTYPE_INT8);
+      |     ^~~~~~~~~~~~~~~~
+      |     vector_destroy
+/Users/mliu/Desktop/Projects/Working/main/main.c: In function 'test_bitwise':
+/Users/mliu/Desktop/Projects/Working/main/main.c:202:5: error: implicit declaration of function 'vector_test_and'; did you mean 'vector_destroy'? [-Wimplicit-function-declaration]
+  202 |     vector_test_and(true, DTYPE_INT8);
+      |     ^~~~~~~~~~~~~~~
+      |     vector_destroy
+/Users/mliu/Desktop/Projects/Working/main/main.c:208:5: error: implicit declaration of function 'vector_test_and_alias' [-Wimplicit-function-declaration]
+  208 |     vector_test_and_alias(true, DTYPE_FLOAT32);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+/Users/mliu/Desktop/Projects/Working/main/main.c:216:5: error: implicit declaration of function 'vector_test_or'; did you mean 'vector_destroy'? [-Wimplicit-function-declaration]
+  216 |     vector_test_or(true, DTYPE_INT8);
+      |     ^~~~~~~~~~~~~~
+      |     vector_destroy
+/Users/mliu/Desktop/Projects/Working/main/main.c:222:5: error: implicit declaration of function 'vector_test_or_alias' [-Wimplicit-function-declaration]
+  222 |     vector_test_or_alias(true, DTYPE_FLOAT32);
+      |     ^~~~~~~~~~~~~~~~~~~~
+/Users/mliu/Desktop/Projects/Working/main/main.c:230:5: error: implicit declaration of function 'vector_test_xor'; did you mean 'vector_destroy'? [-Wimplicit-function-declaration]
+  230 |     vector_test_xor(true, DTYPE_INT8);
+      |     ^~~~~~~~~~~~~~~
+      |     vector_destroy
+/Users/mliu/Desktop/Projects/Working/main/main.c:236:5: error: implicit declaration of function 'vector_test_xor_alias' [-Wimplicit-function-declaration]
+  236 |     vector_test_xor_alias(true, DTYPE_FLOAT32);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+/Users/mliu/Desktop/Projects/Working/main/main.c:244:5: error: implicit declaration of function 'vector_test_not'; did you mean 'vector_destroy'? [-Wimplicit-function-declaration]
+  244 |     vector_test_not(true, DTYPE_INT8);
+      |     ^~~~~~~~~~~~~~~
+      |     vector_destroy
+In file included from /Users/mliu/Desktop/Projects/Working/main/main.c:1:
+/Users/mliu/Desktop/Projects/Working/main/main.c: In function 'app_main':
+/Users/mliu/Desktop/Projects/Working/main/main.c:259:23: warning: unused variable 'vec1' [-Wunused-variable]
+  259 |     VECTOR_STACK_INIT(vec1,512, DTYPE_INT32);
+      |                       ^~~~
+/Users/mliu/Desktop/Projects/Working/components/esp_simd/include/vector.h:31:14: note: in definition of macro 'VECTOR_STACK_INIT'
+   31 |     vector_t name = {                                                    \
+      |              ^~~~
+[12/18] Building C object esp-idf/esp_simd/CMakeFiles/__idf_esp_simd.dir/test/vector_basic_test.c.obj
+ninja: build stopped: subcommand failed.

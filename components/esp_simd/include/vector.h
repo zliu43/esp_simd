@@ -3,6 +3,7 @@
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdint.h>
+#include <stdalign.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -23,6 +24,16 @@ extern "C" {
 #if ESP_SIMD_ENABLE_EXTRA
 #include "vector/vector_extra_functions.h"
 #endif
+ 
+// Macro to help initialize vector on stack.
+#define VECTOR_STACK_INIT(name, length, dtype_enum)                      \
+    alignas(16) uint8_t name##_buf[(length) * sizeof_dtype(dtype_enum)]; \
+    vector_t name = {                                                    \
+        .data = (void *)(name##_buf),                                    \
+        .type = (dtype_enum),                                            \
+        .size = (length),                                                \
+        .owns_data = false                                               \
+    }
  
 typedef enum {
     VECTOR_SUCCESS = 0,
@@ -96,6 +107,18 @@ vector_t *vector_create(size_t size, dtype type);
  * @retval VECTOR_TYPE_MISMATCH     @p vec->type is invalid/unsupported.
  */
 vector_status_t vector_ok(vector_t *vec);
+
+/**
+ * @brief Frees the data buffer of a vector_t if owns_data is true
+ *
+ * If @p vec->owns_data is true, frees the data buffer and sets it to NULL. 
+ *
+ * @param vec  Vector pointer (may be NULL).
+ * @retval VECTOR_SUCCESS  Destruction completed (no-op if @p vec->owns_data is False).
+ *
+ * @post On return, the vector memory is released; 
+ */
+vector_status_t vector_free_data(vector_t *vec);
 
 /**
  * @brief Destroy a vector_t and optionally its data buffer.

@@ -1,4 +1,4 @@
-#include "vector.h"
+#include "vector.h" 
 #include "vector_basic_test.h"
 #include "vector_bitwise_test.h"
 #include "esp_task_wdt.h"   
@@ -253,9 +253,8 @@ void test_bitwise(void){
 }
 
 void app_main(void)
-{
-    esp_task_wdt_deinit();
-
-    //test_basic();
-    test_bitwise();
+{ 
+    VECTOR_STACK_INIT(vec1, 8, DTYPE_INT32);
+    int32_t* vec1_data = (int32_t*)vec1.data;
+    vec1_data[1] = 4;
 }

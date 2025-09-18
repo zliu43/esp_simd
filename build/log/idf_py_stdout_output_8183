@@ -1,0 +1,58 @@
+Command: ninja flash
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /Users/mliu/Desktop/Projects/Working/build/bootloader/esp-idf/esptool_py && /Users/mliu/.espressif/python_env/idf5.5_py3.9_env/bin/python /Users/mliu/esp/v5.5/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/mliu/Desktop/Projects/Working/build/bootloader/bootloader.bin
+Bootloader binary size 0x5260 bytes. 0x2da0 bytes (36%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating esp-idf/esp_system/ld/sections.ld
+[7/10] Linking CXX executable Working.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.9.0
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated /Users/mliu/Desktop/Projects/Working/build/Working.bin
+[9/10] cd /Users/mliu/Desktop/Projects/Working/build/esp-idf/esptool_py && /Users/mliu/.espressif/python_env/idf5.5_py3.9_env/bin/python /Users/mliu/esp/v5.5/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/mliu/Desktop/Projects/Working/build/partition_table/partition-table.bin /Users/mliu/Desktop/Projects/Working/build/Working.bin
+Working.bin binary size 0x2bfb0 bytes. Smallest app partition is 0x100000 bytes. 0xd4050 bytes (83%) free.
+[9/10] cd /Users/mliu/esp/v5.5/esp-idf/components/esptool_py && /Users/mliu/.espressif/tools/cmake/3.30.2/CMake.app/Contents/bin/cmake -D IDF_PATH=/Users/mliu/esp/v5.5/esp-idf -D "SERIAL_TOOL=/Users/mliu/.espressif/python_env/idf5.5_py3.9_env/bin/python;;/Users/mliu/esp/v5.5/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/mliu/Desktop/Projects/Working/build -P /Users/mliu/esp/v5.5/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/cu.usbmodem101 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 Working.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.9.0
+Serial port /dev/cu.usbmodem101
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE
+Crystal is 40MHz
+USB mode: USB-Serial/JTAG
+MAC: 30:ed:a0:00:e0:30
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x0003bfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 21088 bytes to 13427...
+Writing at 0x00000000... (100 %)
+Wrote 21088 bytes (13427 compressed) at 0x00000000 in 0.3 seconds (effective 559.3 kbit/s)...
+Hash of data verified.
+Compressed 180144 bytes to 96667...
+Writing at 0x00010000... (16 %)
+Writing at 0x0001b94f... (33 %)
+Writing at 0x0002172b... (50 %)
+Writing at 0x00027b60... (66 %)
+Writing at 0x0002f137... (83 %)
+Writing at 0x000361e7... (100 %)
+Wrote 180144 bytes (96667 compressed) at 0x00010000 in 1.5 seconds (effective 943.0 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 725.1 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

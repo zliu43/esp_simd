@@ -1,7 +1,0 @@
-Command: /Users/mliu/.espressif/python_env/idf5.5_py3.9_env/bin/python /Users/mliu/esp/v5.5/esp-idf/tools/idf_monitor.py -p /dev/cu.usbmodem1101 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /Users/mliu/Desktop/Projects/Working/build/Working.elf /Users/mliu/Desktop/Projects/Working/build/bootloader/bootloader.elf -m '/Users/mliu/.espressif/python_env/idf5.5_py3.9_env/bin/python' '/Users/mliu/esp/v5.5/esp-idf/tools/idf.py'
-[0;33m--- esp-idf-monitor 1.7.0 on /dev/cu.usbmodem1101 115200[0m
-[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
-[0m--- 0x40048839: [0;33muart_tx_one_char_uart[0m[0m in [0;32mROM[0m
-[0m--- 0x403c8700: [0;33m_stext[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
-[0m--- 0x403c8924: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/mliu/esp/v5.5/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
-[0m
