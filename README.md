@@ -27,16 +27,16 @@ SIMD (vectorized) execution consistently outperforms scalar execution, with **sp
 - Floating-point operations achieve more modest improvements (≈1.5–4×).  
 - Memory-bound ops (copy/fill/zero/ones) also benefit, though with smaller absolute times.  
 
-| Operation        | DType    | SIMD (vector_time) | Scalar (scalar_time) | Speedup (Scalar ÷ SIMD) |
-|------------------|----------|--------------------|-----------------------|--------------------------|
-| **Add**          | INT8     | 199                | 1227                  | **6.2×**                |
+| Operation        | DType    | SIMD (μs)          | Scalar (μs)           | Speedup (Scalar ÷ SIMD) |
+|------------------|----------|--------------------|-----------------------|-------------------------|
+| **Saturated Add**| INT8     | 199                | 1227                  | **6.2×**                |
 |                  | INT16    | 185                | 1214                  | **6.6×**                |
 |                  | INT32    | 193                | 1864                  | **9.7×**                |
 |                  | FLOAT32  | 267                | 957                   | **3.6×**                |
-| **Sub**          | INT8     | 192                | 1134                  | **5.9×**                |
+| **Saturated Sub**| INT8     | 192                | 1134                  | **5.9×**                |
 |                  | INT32    | 184                | 1666                  | **9.1×**                |
 |                  | FLOAT32  | 262                | 890                   | **3.4×**                |
-| **Mul (shift)**  | INT8     | 193                | 1167                  | **6.0×**                |
+| **Mul + shift**  | INT8     | 193                | 1167                  | **6.0×**                |
 |                  | INT32    | 588                | 2275                  | **3.9×**                |
 |                  | FLOAT32  | 279                | 1057                  | **3.8×**                |
 | **Dot Product**  | INT8     | 186                | 923                   | **5.0×**                |
