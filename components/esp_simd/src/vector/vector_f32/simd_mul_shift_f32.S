@@ -27,23 +27,37 @@ simd_mul_shift_f32:
     entry a1, 16                                // reserve 16 bytes for the stack frame 
     extui a7, a6, 0, 2                          // extracts the lowest 2 bits of a5 into a6 (a5 % 4), for tail processing
     srli a6, a6, 2                              // shift a5 right by 2 to get the number of 16-byte blocks a5 = (a5 / 4)
-   
-    loopnez a6, .Lsimd_loop                     // loop until a5 == 0
-        ee.ldf.128.ip f3, f2, f1, f0, a2, 16    // load 4 elements from vec1, increment a2
-        ee.ldf.128.ip f7, f6, f5, f4, a3, 16    // load 4 elements from vec2, increment a3
-        mul.s f3, f3, f7 
-        mul.s f2, f2, f6 
-        mul.s f1, f1, f5 
-        mul.s f0, f0, f4 
-        ee.stf.128.ip f3, f2, f1, f0, a4, 16    // store result
+    beqz a6, .Ltail_start                       // jump to scalar tail if no 16 byte blocks
+  
+    ee.ldf.128.ip f3, f2, f1, f0, a2, 16        // loads first loop 
+    ee.ldf.128.ip f7, f6, f5, f4, a3, 16        
+
+    mul.s f11, f3, f7                           // precomputes first cycle
+    mul.s f10, f2, f6 
+    mul.s f9, f1, f5 
+    mul.s f8, f0, f4 
+    
+    loopnez a6, .Lsimd_loop                     // loop until a6 == 0 
+        ee.ldf.128.ip f3, f2, f1, f0, a2, 16     
+        ee.ldf.128.ip f7, f6, f5, f4, a3, 16     
+        ee.stf.128.ip f11, f10, f9, f8, a4, 16  // store result
+        mul.s f11, f3, f7 
+        mul.s f10, f2, f6 
+        mul.s f9, f1, f5 
+        mul.s f8, f0, f4 
     .Lsimd_loop:
- 
+
+    addi a2, a2, -16                            // Moves the pointers back
+    addi a3, a3, -16
+
+    .Ltail_start:
+
     loopnez a7, .Ltail_loop
         lsip f0, a2, 4                          // load the first element, increment a2
         lsip f1, a3, 4                          // load the second element, increment a3
-        mul.s f0, f0, f1                        // performs f32 multiplication
+        mul.s f0, f0, f1                        // performs f32 addition
         ssip f0, a4, 4                          // stores the result, increments a4
     .Ltail_loop:
  
-    movi.n a2, 0                                // return VECTOR_SUCCESS
+    movi.n a2, 0                                // return exit code 0 (success)
     retw.n

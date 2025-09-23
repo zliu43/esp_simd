@@ -13,8 +13,8 @@ void test_basic(void){
     ESP_LOGI("vector_test_add:", "DTYPE_INT32");
     vector_test_add(true, DTYPE_INT32);
     ESP_LOGI("vector_test_add_alias:", "DTYPE_INT32");
-    vector_test_add_alias(true, DTYPE_FLOAT32);
-    ESP_LOGI("vector_test_add:", "DTYPE_FLOAT32");
+    vector_test_add_alias(true, DTYPE_INT32);
+    ESP_LOGI("vector_test_add:", "DTYPE_INT32");
     vector_test_add(true, DTYPE_FLOAT32);
     ESP_LOGI("vector_test_add_alias:", "DTYPE_FLOAT32");
     vector_test_add_alias(true, DTYPE_FLOAT32);
@@ -254,7 +254,6 @@ void test_bitwise(void){
 
 void app_main(void)
 { 
-    VECTOR_STACK_INIT(vec1, 8, DTYPE_INT32);
-    int32_t* vec1_data = (int32_t*)vec1.data;
-    vec1_data[1] = 4;
+    esp_task_wdt_deinit();
+    test_basic();
 }

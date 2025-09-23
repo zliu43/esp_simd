@@ -449,9 +449,10 @@ vector_status_t vec_fill_f32(vector_t *vec1, const float val){
         case (DTYPE_INT8):      return VECTOR_UNSUPPORTED_OPERATION;
         case (DTYPE_INT16):     return VECTOR_UNSUPPORTED_OPERATION;
         case (DTYPE_INT32):     return VECTOR_UNSUPPORTED_OPERATION;
-        case (DTYPE_FLOAT32): {
-            int32_t val_int32 = (int32_t)val;
-            return simd_fill_i32((int32_t*)(vec1->data), &val_int32, vec1->size);                                        
+        case (DTYPE_FLOAT32): { 
+            float* val_ptr = &val;
+            int32_t* ptr = (int32_t*)val_ptr;
+            return simd_fill_i32((int32_t*)(vec1->data), ptr, vec1->size);                                        
         }
         default:
             return VECTOR_ERROR;

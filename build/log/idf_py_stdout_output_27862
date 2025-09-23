@@ -1,0 +1,569 @@
+Command: /Users/mliu/.espressif/python_env/idf5.5_py3.9_env/bin/python /Users/mliu/esp/v5.5/esp-idf/tools/idf_monitor.py -p /dev/cu.usbmodem101 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /Users/mliu/Desktop/Projects/Working/build/Working.elf /Users/mliu/Desktop/Projects/Working/build/bootloader/bootloader.elf -m '/Users/mliu/.espressif/python_env/idf5.5_py3.9_env/bin/python' '/Users/mliu/esp/v5.5/esp-idf/tools/idf.py'
+ KiB): DRAMESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048839
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x159c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f48
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 22 2025 21:03:16[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=09a44h ( 39492) map[0m
+[0;32mI (93) esp_image: segment 1: paddr=00019a6c vaddr=3fc92400 size=028c8h ( 10440) load[0m
+[0;32mI (96) esp_image: segment 2: paddr=0001c33c vaddr=40374000 size=03cdch ( 15580) load[0m
+[0;32mI (105) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1bb48h (113480) map[0m
+[0;32mI (129) esp_image: segment 4: paddr=0003bb70 vaddr=40377cdc size=0a634h ( 42548) load[0m
+[0;32mI (139) esp_image: segment 5: paddr=000461ac vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (145) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (145) boot: Disabling RNG early entropy source...[0m
+[0;32mI (156) cpu_start: Multicore app[0m
+[0;32mI (165) cpu_start: Pro cpu start user code[0m
+[0;32mI (165) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (165) app_init: Application information:[0m
+[0;32mI (166) app_init: Project name:     Working[0m
+[0;32mI (169) app_init: App version:      f030b91-dirty[0m
+[0;32mI (174) app_init: Compile time:     Sep 22 2025 21:02:18[0m
+[0;32mI (179) app_init: ELF file SHA256:  4e2395da5...[0m
+[0;32mI (183) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (187) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (191) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (195) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (199) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (205) heap_init: At 3FC95538 len 000541D8 (336 KiB): RAM[0m
+[0;32mI (210) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (215) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (221) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (227) spi_flash: detected chip: gd[0m
+[0;32mI (229) spi_flash: flash io: dio[0m
+[0;33mW (232) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (245) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (251) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (258) main_task: Started on CPU0[0m
+[0;32mI (268) main_task: Calling app_main()[0m
+[0;32mI (268) vector_test_add:: DTYPE_INT8[0m
+[0;32mI (268) fill_test_vector: Seed set: 42[0m
+[0;32mI (348) vector_test_add: vector_time: 208[0m
+[0;32mI (348) vector_test_add: scalar_time: 4439[0m
+[0;32mI (348) vector_test_add:: DTYPE_INT16[0m
+[0;32mI (348) fill_test_vector: Seed set: 42[0m
+[0;32mI (438) vector_test_add: vector_time: 263[0m
+[0;32mI (438) vector_test_add: scalar_time: 4438[0m
+[0;32mI (438) vector_test_add:: DTYPE_INT32[0m
+[0;32mI (438) fill_test_vector: Seed set: 42[0m
+[0;32mI (568) vector_test_add: vector_time: 326[0m
+[0;32mI (568) vector_test_add: scalar_time: 6549[0m
+[0;32mI (568) vector_test_add_alias:: DTYPE_INT32[0m
+[0;32mI (568) fill_test_vector: Seed set: 1011[0m
+[0;32mI (608) vector_test_add_alias: vector_time: 175[0m
+[0;32mI (608) vector_test_add_alias: scalar_time: 1658[0m
+[0;32mI (608) vector_test_add:: DTYPE_INT32[0m
+[0;32mI (608) fill_test_vector: Seed set: 42[0m
+[0;32mI (798) vector_test_add: vector_time: 517[0m
+[0;32mI (798) vector_test_add: scalar_time: 3203[0m
+[0;32mI (798) vector_test_add_alias:: DTYPE_FLOAT32[0m
+[0;32mI (798) fill_test_vector: Seed set: 1011[0m
+[0;32mI (838) vector_test_add_alias: vector_time: 235[0m
+[0;32mI (838) vector_test_add_alias: scalar_time: 860[0m
+[0;32mI (838) vector_test_sub:: DTYPE_INT8[0m
+[0;32mI (838) fill_test_vector: Seed set: 1011[0m
+[0;32mI (868) vector_test_sub: vector_time: 189[0m
+[0;32mI (868) vector_test_sub: scalar_time: 1164[0m
+[0;32mI (868) vector_test_sub_alias:: DTYPE_INT8[0m
+[0;32mI (868) fill_test_vector: Seed set: 1011[0m
+[0;32mI (898) vector_test_sub_alias: vector_time: 177[0m
+[0;32mI (898) vector_test_sub_alias: scalar_time: 1155[0m
+[0;32mI (898) vector_test_sub:: DTYPE_INT16[0m
+[0;32mI (898) fill_test_vector: Seed set: 1011[0m
+[0;32mI (928) vector_test_sub: vector_time: 177[0m
+[0;32mI (928) vector_test_sub: scalar_time: 1157[0m
+[0;32mI (928) vector_test_sub_alias:: DTYPE_INT16[0m
+[0;32mI (928) fill_test_vector: Seed set: 1011[0m
+[0;32mI (958) vector_test_sub_alias: vector_time: 175[0m
+[0;32mI (958) vector_test_sub_alias: scalar_time: 1155[0m
+[0;32mI (958) vector_test_sub:: DTYPE_INT32[0m
+[0;32mI (958) fill_test_vector: Seed set: 1011[0m
+[0;32mI (998) vector_test_sub: vector_time: 177[0m
+[0;32mI (998) vector_test_sub: scalar_time: 1621[0m
+[0;32mI (998) vector_test_sub_alias:: DTYPE_INT32[0m
+[0;32mI (998) fill_test_vector: Seed set: 1011[0m
+[0;32mI (1038) vector_test_sub_alias: vector_time: 173[0m
+[0;32mI (1038) vector_test_sub_alias: scalar_time: 1615[0m
+[0;32mI (1038) vector_test_sub:: DTYPE_FLOAT32[0m
+[0;32mI (1038) fill_test_vector: Seed set: 1011[0m
+[0;32mI (1088) vector_test_sub: vector_time: 238[0m
+[0;32mI (1088) vector_test_sub: scalar_time: 865[0m
+[0;32mI (1088) vector_test_sub_alias:: DTYPE_FLOAT32[0m
+[0;32mI (1098) fill_test_vector: Seed set: 1011[0m
+[0;32mI (1138) vector_test_sub_alias: vector_time: 235[0m
+[0;32mI (1138) vector_test_sub_alias: scalar_time: 863[0m
+[0;32mI (1138) vec_add_scalar:: DTYPE_INT8[0m
+[0;32mI (1138) fill_test_vector: Seed set: 1011[0m
+[0;32mI (1158) vector_test_add_scalar: vector_time: 185[0m
+[0;32mI (1158) vector_test_add_scalar: scalar_time: 1019[0m
+[0;32mI (1158) vec_add_scalar_alias:: DTYPE_INT8[0m
+[0;32mI (1158) fill_test_vector: Seed set: 1011[0m
+[0;32mI (1178) vector_test_add_scalar_aliasing: vec_time: 172[0m
+[0;32mI (1178) vector_test_add_scalar_aliasing: scalar_time: 1010[0m
+[0;32mI (1178) vec_add_scalar:: DTYPE_INT16[0m
+[0;32mI (1178) fill_test_vector: Seed set: 1011[0m
+[0;32mI (1198) vector_test_add_scalar: vector_time: 164[0m
+[0;32mI (1198) vector_test_add_scalar: scalar_time: 1126[0m
+[0;32mI (1208) vec_add_scalar_alias:: DTYPE_INT16[0m
+[0;32mI (1208) fill_test_vector: Seed set: 1011[0m
+[0;32mI (1218) vector_test_add_scalar_aliasing: vec_time: 156[0m
+[0;32mI (1218) vector_test_add_scalar_aliasing: scalar_time: 1123[0m
+[0;32mI (1218) vec_add_scalar:: DTYPE_INT32[0m
+[0;32mI (1228) fill_test_vector: Seed set: 1011[0m
+[0;32mI (1248) vector_test_add_scalar: vector_time: 158[0m
+[0;32mI (1248) vector_test_add_scalar: scalar_time: 1562[0m
+[0;32mI (1248) vec_add_scalar_alias:: DTYPE_INT32[0m
+[0;32mI (1248) fill_test_vector: Seed set: 1011[0m
+[0;32mI (1278) vector_test_add_scalar_aliasing: vec_time: 154[0m
+[0;32mI (1278) vector_test_add_scalar_aliasing: scalar_time: 1565[0m
+[0;32mI (1278) vec_add_scalar:: DTYPE_FLOAT32[0m
+[0;32mI (1278) fill_test_vector: Seed set: 1011[0m
+[0;32mI (1318) vector_test_add_scalar: vector_time: 246[0m
+[0;32mI (1318) vector_test_add_scalar: scalar_time: 898[0m
+[0;32mI (1318) vec_add_scalar_alias:: DTYPE_FLOAT32[0m
+[0;32mI (1318) fill_test_vector: Seed set: 1011[0m
+[0;32mI (1348) vector_test_add_scalar_aliasing: vec_time: 238[0m
+[0;32mI (1348) vector_test_add_scalar_aliasing: scalar_time: 877[0m
+[0;32mI (1348) vec_mul_shift:: DTYPE_INT8[0m
+[0;32mI (1348) fill_test_vector: Seed set: 1011[0m
+[0;32mI (1378) vector_test_mul_shift: vector_time: 192[0m
+[0;32mI (1378) vector_test_mul_shift: scalar_time: 1104[0m
+[0;32mI (1378) vec_mul_shift:: DTYPE_INT16[0m
+[0;32mI (1378) fill_test_vector: Seed set: 1012[0m
+[0;32mI (1408) vector_test_mul_shift: vector_time: 179[0m
+[0;32mI (1408) vector_test_mul_shift: scalar_time: 774[0m
+[0;32mI (1408) vec_mul_shift:: DTYPE_INT32[0m
+[0;32mI (1408) fill_test_vector: Seed set: 1012[0m
+[0;32mI (1458) vector_test_mul_shift: vector_time: 560[0m
+[0;32mI (1458) vector_test_mul_shift: scalar_time: 2150[0m
+[0;32mI (1458) vec_mul_shift:: DTYPE_FLOAT32[0m
+[0;32mI (1458) fill_test_vector: Seed set: 1012[0m
+[0;32mI (1458) float_mul_init: i: 0; v1: 101.000000, v2: 14.000000[0m
+[1;31mE (1468) float_mul: i: 0; scalar: 1414.000000, vector: 1414.000000[0m
+[0;32mI (1468) float_mul_init: i: 1; v1: -8.000000, v2: -123.000000[0m
+[1;31mE (1478) float_mul: i: 1; scalar: 984.000000, vector: 984.000000[0m
+[0;32mI (1478) float_mul_init: i: 2; v1: 99.000000, v2: -95.000000[0m
+[1;31mE (1488) float_mul: i: 2; scalar: -9405.000000, vector: -9405.000000[0m
+[0;32mI (1488) float_mul_init: i: 3; v1: 58.000000, v2: -43.000000[0m
+[1;31mE (1498) float_mul: i: 3; scalar: -2494.000000, vector: -2494.000000[0m
+[0;32mI (1508) float_mul_init: i: 4; v1: -70.000000, v2: 114.000000[0m
+[1;31mE (1508) float_mul: i: 4; scalar: -7980.000000, vector: -7980.000000[0m
+[0;32mI (1518) float_mul_init: i: 5; v1: -33.000000, v2: 38.000000[0m
+[1;31mE (1518) float_mul: i: 5; scalar: -1254.000000, vector: -1254.000000[0m
+[0;32mI (1528) float_mul_init: i: 6; v1: 75.000000, v2: -8.000000[0m
+[1;31mE (1528) float_mul: i: 6; scalar: -600.000000, vector: -600.000000[0m
+[0;32mI (1538) float_mul_init: i: 7; v1: -34.000000, v2: -54.000000[0m
+[1;31mE (1548) float_mul: i: 7; scalar: 1836.000000, vector: 1836.000000[0m
+[0;32mI (1548) float_mul_init: i: 8; v1: -110.000000, v2: -59.000000[0m
+[1;31mE (1558) float_mul: i: 8; scalar: 6490.000000, vector: 6490.000000[0m
+[0;32mI (1558) float_mul_init: i: 9; v1: -47.000000, v2: 106.000000[0m
+[1;31mE (1568) float_mul: i: 9; scalar: -4982.000000, vector: -4982.000000[0m
+[0;32mI (1568) float_mul_init: i: 10; v1: 32.000000, v2: 89.000000[0m
+[1;31mE (1578) float_mul: i: 10; scalar: 2848.000000, vector: 2848.000000[0m
+[0;32mI (1588) float_mul_init: i: 11; v1: -75.000000, v2: -37.000000[0m
+[1;31mE (1588) float_mul: i: 11; scalar: 2775.000000, vector: 2775.000000[0m
+[0;32mI (1598) float_mul_init: i: 12; v1: 76.000000, v2: 9.000000[0m
+[1;31mE (1598) float_mul: i: 12; scalar: 684.000000, vector: 684.000000[0m
+[0;32mI (1608) float_mul_init: i: 13; v1: 6.000000, v2: 83.000000[0m
+[1;31mE (1608) float_mul: i: 13; scalar: 498.000000, vector: 498.000000[0m
+[0;32mI (1618) float_mul_init: i: 14; v1: 61.000000, v2: -76.000000[0m
+[1;31mE (1628) float_mul: i: 14; scalar: -4636.000000, vector: -4636.000000[0m
+[0;32mI (1628) float_mul_init: i: 15; v1: -35.000000, v2: 125.000000[0m
+[1;31mE (1638) float_mul: i: 15; scalar: -4375.000000, vector: -4375.000000[0m
+[0;32mI (1638) float_mul_init: i: 16; v1: -97.000000, v2: 102.000000[0m
+[1;31mE (1648) float_mul: i: 16; scalar: -9894.000000, vector: -9894.000000[0m
+[0;32mI (1648) float_mul_init: i: 17; v1: 38.000000, v2: 127.000000[0m
+[1;31mE (1658) float_mul: i: 17; scalar: 4826.000000, vector: 4826.000000[0m
+[0;32mI (1668) float_mul_init: i: 18; v1: -20.000000, v2: -21.000000[0m
+[1;31mE (1668) float_mul: i: 18; scalar: 420.000000, vector: 420.000000[0m
+[0;32mI (1678) float_mul_init: i: 19; v1: 41.000000, v2: -27.000000[0m
+[1;31mE (1678) float_mul: i: 19; scalar: -1107.000000, vector: -1107.000000[0m
+[0;32mI (1688) float_mul_init: i: 20; v1: 46.000000, v2: -60.000000[0m
+[1;31mE (1688) float_mul: i: 20; scalar: -2760.000000, vector: -2760.000000[0m
+[0;32mI (1698) float_mul_init: i: 21; v1: 11.000000, v2: -66.000000[0m
+[1;31mE (1708) float_mul: i: 21; scalar: -726.000000, vector: -726.000000[0m
+[0;32mI (1708) float_mul_init: i: 22; v1: 51.000000, v2: -114.000000[0m
+[1;31mE (1718) float_mul: i: 22; scalar: -5814.000000, vector: -5814.000000[0m
+[0;32mI (1718) float_mul_init: i: 23; v1: 60.000000, v2: -26.000000[0m
+[1;31mE (1728) float_mul: i: 23; scalar: -1560.000000, vector: -1560.000000[0m
+[0;32mI (1738) float_mul_init: i: 24; v1: -107.000000, v2: -106.000000[0m
+[1;31mE (1738) float_mul: i: 24; scalar: 11342.000000, vector: 11342.000000[0m
+[0;32mI (1748) float_mul_init: i: 25; v1: -69.000000, v2: -104.000000[0m
+[1;31mE (1748) float_mul: i: 25; scalar: 7176.000000, vector: 7176.000000[0m
+[0;32mI (1758) float_mul_init: i: 26; v1: 28.000000, v2: -78.000000[0m
+[1;31mE (1758) float_mul: i: 26; scalar: -2184.000000, vector: -2184.000000[0m
+[0;32mI (1768) float_mul_init: i: 27; v1: 96.000000, v2: -63.000000[0m
+[1;31mE (1778) float_mul: i: 27; scalar: -6048.000000, vector: -6048.000000[0m
+[0;32mI (1778) float_mul_init: i: 28; v1: -89.000000, v2: -18.000000[0m
+[1;31mE (1788) float_mul: i: 28; scalar: 1602.000000, vector: 1602.000000[0m
+[0;32mI (1788) float_mul_init: i: 29; v1: 124.000000, v2: -47.000000[0m
+[1;31mE (1798) float_mul: i: 29; scalar: -5828.000000, vector: -5828.000000[0m
+[0;32mI (1808) float_mul_init: i: 30; v1: 57.000000, v2: -45.000000[0m
+[1;31mE (1808) float_mul: i: 30; scalar: -2565.000000, vector: -2565.000000[0m
+[0;32mI (1818) float_mul_init: i: 31; v1: -53.000000, v2: -100.000000[0m
+[1;31mE (1818) float_mul: i: 31; scalar: 5300.000000, vector: 5300.000000[0m
+[0;32mI (1828) float_mul_init: i: 32; v1: -74.000000, v2: 117.000000[0m
+[1;31mE (1828) float_mul: i: 32; scalar: -8658.000000, vector: -8658.000000[0m
+[0;32mI (1838) float_mul_init: i: 33; v1: 16.000000, v2: -37.000000[0m
+[1;31mE (1848) float_mul: i: 33; scalar: -592.000000, vector: -592.000000[0m
+[0;32mI (1848) float_mul_init: i: 34; v1: -78.000000, v2: 29.000000[0m
+[1;31mE (1858) float_mul: i: 34; scalar: -2262.000000, vector: -2262.000000[0m
+[0;32mI (1858) float_mul_init: i: 35; v1: -127.000000, v2: -115.000000[0m
+[1;31mE (1868) float_mul: i: 35; scalar: 14605.000000, vector: 14605.000000[0m
+[0;32mI (1878) float_mul_init: i: 36; v1: -49.000000, v2: -113.000000[0m
+[1;31mE (1878) float_mul: i: 36; scalar: 5537.000000, vector: 5537.000000[0m
+[0;32mI (1888) float_mul_init: i: 37; v1: 119.000000, v2: -4.000000[0m
+[1;31mE (1888) float_mul: i: 37; scalar: -476.000000, vector: -476.000000[0m
+[0;32mI (1898) float_mul_init: i: 38; v1: 42.000000, v2: -22.000000[0m
+[1;31mE (1898) float_mul: i: 38; scalar: -924.000000, vector: -924.000000[0m
+[0;32mI (1908) float_mul_init: i: 39; v1: 101.000000, v2: 113.000000[0m
+[1;31mE (1918) float_mul: i: 39; scalar: 11413.000000, vector: 11413.000000[0m
+[0;32mI (1918) float_mul_init: i: 40; v1: 78.000000, v2: -118.000000[0m
+[1;31mE (1928) float_mul: i: 40; scalar: -9204.000000, vector: -9204.000000[0m
+[0;32mI (1928) float_mul_init: i: 41; v1: -116.000000, v2: 73.000000[0m
+[1;31mE (1938) float_mul: i: 41; scalar: -8468.000000, vector: -8468.000000[0m
+[0;32mI (1948) float_mul_init: i: 42; v1: -10.000000, v2: -13.000000[0m
+[1;31mE (1948) float_mul: i: 42; scalar: 130.000000, vector: 130.000000[0m
+[0;32mI (1958) float_mul_init: i: 43; v1: -82.000000, v2: 34.000000[0m
+[1;31mE (1958) float_mul: i: 43; scalar: -2788.000000, vector: -2788.000000[0m
+[0;32mI (1968) float_mul_init: i: 44; v1: -86.000000, v2: -14.000000[0m
+[1;31mE (1968) float_mul: i: 44; scalar: 1204.000000, vector: 1204.000000[0m
+[0;32mI (1978) float_mul_init: i: 45; v1: 100.000000, v2: 10.000000[0m
+[1;31mE (1988) float_mul: i: 45; scalar: 1000.000000, vector: 1000.000000[0m
+[0;32mI (1988) float_mul_init: i: 46; v1: -97.000000, v2: 37.000000[0m
+[1;31mE (1998) float_mul: i: 46; scalar: -3589.000000, vector: -3589.000000[0m
+[0;32mI (1998) float_mul_init: i: 47; v1: -15.000000, v2: 72.000000[0m
+[1;31mE (2008) float_mul: i: 47; scalar: -1080.000000, vector: -1080.000000[0m
+[0;32mI (2008) float_mul_init: i: 48; v1: 32.000000, v2: 74.000000[0m
+[1;31mE (2018) float_mul: i: 48; scalar: 2368.000000, vector: 2368.000000[0m
+[0;32mI (2028) float_mul_init: i: 49; v1: 46.000000, v2: -90.000000[0m
+[1;31mE (2028) float_mul: i: 49; scalar: -4140.000000, vector: -4140.000000[0m
+[0;32mI (2038) float_mul_init: i: 50; v1: 8.000000, v2: -57.000000[0m
+[1;31mE (2038) float_mul: i: 50; scalar: -456.000000, vector: -456.000000[0m
+[0;32mI (2048) float_mul_init: i: 51; v1: 21.000000, v2: 11.000000[0m
+[1;31mE (2048) float_mul: i: 51; scalar: 231.000000, vector: 231.000000[0m
+[0;32mI (2058) float_mul_init: i: 52; v1: -55.000000, v2: -37.000000[0m
+[1;31mE (2068) float_mul: i: 52; scalar: 2035.000000, vector: 2035.000000[0m
+[0;32mI (2068) float_mul_init: i: 53; v1: 18.000000, v2: -60.000000[0m
+[1;31mE (2078) float_mul: i: 53; scalar: -1080.000000, vector: -1080.000000[0m
+[0;32mI (2078) float_mul_init: i: 54; v1: -116.000000, v2: 55.000000[0m
+[1;31mE (2088) float_mul: i: 54; scalar: -6380.000000, vector: -6380.000000[0m
+[0;32mI (2098) float_mul_init: i: 55; v1: -35.000000, v2: 127.000000[0m
+[1;31mE (2098) float_mul: i: 55; scalar: -4445.000000, vector: -4445.000000[0m
+[0;32mI (2108) float_mul_init: i: 56; v1: 93.000000, v2: -66.000000[0m
+[1;31mE (2108) float_mul: i: 56; scalar: -6138.000000, vector: -6138.000000[0m
+[0;32mI (2118) float_mul_init: i: 57; v1: 102.000000, v2: 98.000000[0m
+[1;31mE (2118) float_mul: i: 57; scalar: 9996.000000, vector: 9996.000000[0m
+[0;32mI (2128) float_mul_init: i: 58; v1: 1.000000, v2: -121.000000[0m
+[1;31mE (2138) float_mul: i: 58; scalar: -121.000000, vector: -121.000000[0m
+[0;32mI (2138) float_mul_init: i: 59; v1: -13.000000, v2: -111.000000[0m
+[1;31mE (2148) float_mul: i: 59; scalar: 1443.000000, vector: 1443.000000[0m
+[0;32mI (2148) float_mul_init: i: 60; v1: 105.000000, v2: -4.000000[0m
+[1;31mE (2158) float_mul: i: 60; scalar: -420.000000, vector: -420.000000[0m
+[0;32mI (2158) float_mul_init: i: 61; v1: 4.000000, v2: 83.000000[0m
+[1;31mE (2168) float_mul: i: 61; scalar: 332.000000, vector: 332.000000[0m
+[0;32mI (2178) float_mul_init: i: 62; v1: -121.000000, v2: -32.000000[0m
+[1;31mE (2178) float_mul: i: 62; scalar: 3872.000000, vector: 3872.000000[0m
+[0;32mI (2188) float_mul_init: i: 63; v1: -108.000000, v2: -65.000000[0m
+[1;31mE (2188) float_mul: i: 63; scalar: 7020.000000, vector: 7020.000000[0m
+[0;32mI (2198) float_mul_init: i: 64; v1: 118.000000, v2: 111.000000[0m
+[1;31mE (2198) float_mul: i: 64; scalar: 13098.000000, vector: 13098.000000[0m
+[0;32mI (2208) float_mul_init: i: 65; v1: 109.000000, v2: 41.000000[0m
+[1;31mE (2218) float_mul: i: 65; scalar: 4469.000000, vector: 4469.000000[0m
+[0;32mI (2218) float_mul_init: i: 66; v1: -85.000000, v2: 26.000000[0m
+[1;31mE (2228) float_mul: i: 66; scalar: -2210.000000, vector: -2210.000000[0m
+[0;32mI (2228) float_mul_init: i: 67; v1: -7.000000, v2: 53.000000[0m
+[1;31mE (2238) float_mul: i: 67; scalar: -371.000000, vector: -371.000000[0m
+[0;32mI (2248) float_mul_init: i: 68; v1: -88.000000, v2: 89.000000[0m
+[1;31mE (2248) float_mul: i: 68; scalar: -7832.000000, vector: -7832.000000[0m
+[0;32mI (2258) float_mul_init: i: 69; v1: -106.000000, v2: 121.000000[0m
+[1;31mE (2258) float_mul: i: 69; scalar: -12826.000000, vector: -12826.000000[0m
+[0;32mI (2268) float_mul_init: i: 70; v1: -97.000000, v2: -76.000000[0m
+[1;31mE (2268) float_mul: i: 70; scalar: 7372.000000, vector: 7372.000000[0m
+[0;32mI (2278) float_mul_init: i: 71; v1: 45.000000, v2: 70.000000[0m
+[1;31mE (2288) float_mul: i: 71; scalar: 3150.000000, vector: 3150.000000[0m
+[0;32mI (2288) float_mul_init: i: 72; v1: 93.000000, v2: 59.000000[0m
+[1;31mE (2298) float_mul: i: 72; scalar: 5487.000000, vector: 5487.000000[0m
+[0;32mI (2298) float_mul_init: i: 73; v1: 47.000000, v2: -35.000000[0m
+[1;31mE (2308) float_mul: i: 73; scalar: -1645.000000, vector: -1645.000000[0m
+[0;32mI (2308) float_mul_init: i: 74; v1: -76.000000, v2: 32.000000[0m
+[1;31mE (2318) float_mul: i: 74; scalar: -2432.000000, vector: -2432.000000[0m
+[0;32mI (2328) float_mul_init: i: 75; v1: -82.000000, v2: -115.000000[0m
+[1;31mE (2328) float_mul: i: 75; scalar: 9430.000000, vector: 9430.000000[0m
+[0;32mI (2338) float_mul_init: i: 76; v1: -50.000000, v2: -83.000000[0m
+[1;31mE (2338) float_mul: i: 76; scalar: 4150.000000, vector: 4150.000000[0m
+[0;32mI (2348) float_mul_init: i: 77; v1: 71.000000, v2: 33.000000[0m
+[1;31mE (2348) float_mul: i: 77; scalar: 2343.000000, vector: 2343.000000[0m
+[0;32mI (2358) float_mul_init: i: 78; v1: -78.000000, v2: 96.000000[0m
+[1;31mE (2368) float_mul: i: 78; scalar: -7488.000000, vector: -7488.000000[0m
+[0;32mI (2368) float_mul_init: i: 79; v1: 42.000000, v2: 52.000000[0m
+[1;31mE (2378) float_mul: i: 79; scalar: 2184.000000, vector: 2184.000000[0m
+[0;32mI (2378) float_mul_init: i: 80; v1: -4.000000, v2: 75.000000[0m
+[1;31mE (2388) float_mul: i: 80; scalar: -300.000000, vector: -300.000000[0m
+[0;32mI (2398) float_mul_init: i: 81; v1: -75.000000, v2: 126.000000[0m
+[1;31mE (2398) float_mul: i: 81; scalar: -9450.000000, vector: -9450.000000[0m
+[0;32mI (2408) float_mul_init: i: 82; v1: 88.000000, v2: -24.000000[0m
+[1;31mE (2408) float_mul: i: 82; scalar: -2112.000000, vector: -2112.000000[0m
+[0;32mI (2418) float_mul_init: i: 83; v1: 21.000000, v2: -100.000000[0m
+[1;31mE (2418) float_mul: i: 83; scalar: -2100.000000, vector: -2100.000000[0m
+[0;32mI (2428) float_mul_init: i: 84; v1: -50.000000, v2: -16.000000[0m
+[1;31mE (2438) float_mul: i: 84; scalar: 800.000000, vector: 800.000000[0m
+[0;32mI (2438) float_mul_init: i: 85; v1: 58.000000, v2: -24.000000[0m
+[1;31mE (2448) float_mul: i: 85; scalar: -1392.000000, vector: -1392.000000[0m
+[0;32mI (2448) float_mul_init: i: 86; v1: -9.000000, v2: -122.000000[0m
+[1;31mE (2458) float_mul: i: 86; scalar: 1098.000000, vector: 1098.000000[0m
+[0;32mI (2458) float_mul_init: i: 87; v1: -20.000000, v2: 105.000000[0m
+[1;31mE (2468) float_mul: i: 87; scalar: -2100.000000, vector: -2100.000000[0m
+[0;32mI (2478) float_mul_init: i: 88; v1: 35.000000, v2: -49.000000[0m
+[1;31mE (2478) float_mul: i: 88; scalar: -1715.000000, vector: -1715.000000[0m
+[0;32mI (2488) float_mul_init: i: 89; v1: -89.000000, v2: -100.000000[0m
+[1;31mE (2488) float_mul: i: 89; scalar: 8900.000000, vector: 8900.000000[0m
+[0;32mI (2498) float_mul_init: i: 90; v1: 101.000000, v2: 115.000000[0m
+[1;31mE (2508) float_mul: i: 90; scalar: 11615.000000, vector: 11615.000000[0m
+[0;32mI (2508) float_mul_init: i: 91; v1: -27.000000, v2: 79.000000[0m
+[1;31mE (2518) float_mul: i: 91; scalar: -2133.000000, vector: -2133.000000[0m
+[0;32mI (2518) float_mul_init: i: 92; v1: 34.000000, v2: -76.000000[0m
+[1;31mE (2528) float_mul: i: 92; scalar: -2584.000000, vector: -2584.000000[0m
+[0;32mI (2528) float_mul_init: i: 93; v1: -3.000000, v2: -56.000000[0m
+[1;31mE (2538) float_mul: i: 93; scalar: 168.000000, vector: 168.000000[0m
+[0;32mI (2548) float_mul_init: i: 94; v1: 112.000000, v2: -108.000000[0m
+[1;31mE (2548) float_mul: i: 94; scalar: -12096.000000, vector: -12096.000000[0m
+[0;32mI (2558) float_mul_init: i: 95; v1: -114.000000, v2: 58.000000[0m
+[1;31mE (2558) float_mul: i: 95; scalar: -6612.000000, vector: -6612.000000[0m
+[0;32mI (2568) float_mul_init: i: 96; v1: -69.000000, v2: 108.000000[0m
+[1;31mE (2578) float_mul: i: 96; scalar: -7452.000000, vector: -7452.000000[0m
+[0;32mI (2578) float_mul_init: i: 97; v1: 91.000000, v2: 106.000000[0m
+[1;31mE (2588) float_mul: i: 97; scalar: 9646.000000, vector: 9646.000000[0m
+[0;32mI (2588) float_mul_init: i: 98; v1: -58.000000, v2: 107.000000[0m
+[1;31mE (2598) float_mul: i: 98; scalar: -6206.000000, vector: -6206.000000[0m
+[0;32mI (2598) float_mul_init: i: 99; v1: 10.000000, v2: -82.000000[0m
+[1;31mE (2608) float_mul: i: 99; scalar: -820.000000, vector: -820.000000[0m
+[0;32mI (2618) float_mul_init: i: 100; v1: -62.000000, v2: -107.000000[0m
+[1;31mE (2618) float_mul: i: 100; scalar: 6634.000000, vector: 6634.000000[0m
+[0;32mI (2628) float_mul_init: i: 101; v1: -39.000000, v2: 72.000000[0m
+[1;31mE (2628) float_mul: i: 101; scalar: -2808.000000, vector: -2808.000000[0m
+[0;32mI (2638) float_mul_init: i: 102; v1: 0.000000, v2: 11.000000[0m
+[1;31mE (2648) float_mul: i: 102; scalar: 0.000000, vector: 0.000000[0m
+[0;32mI (2648) float_mul_init: i: 103; v1: -100.000000, v2: 18.000000[0m
+[1;31mE (2658) float_mul: i: 103; scalar: -1800.000000, vector: -1800.000000[0m
+[0;32mI (2658) float_mul_init: i: 104; v1: -47.000000, v2: -43.000000[0m
+[1;31mE (2668) float_mul: i: 104; scalar: 2021.000000, vector: 2021.000000[0m
+[0;32mI (2668) float_mul_init: i: 105; v1: -96.000000, v2: 37.000000[0m
+[1;31mE (2678) float_mul: i: 105; scalar: -3552.000000, vector: -3552.000000[0m
+[0;32mI (2688) float_mul_init: i: 106; v1: 99.000000, v2: -123.000000[0m
+[1;31mE (2688) float_mul: i: 106; scalar: -12177.000000, vector: -12177.000000[0m
+[0;32mI (2698) float_mul_init: i: 107; v1: -127.000000, v2: -31.000000[0m
+[1;31mE (2698) float_mul: i: 107; scalar: 3937.000000, vector: 3937.000000[0m
+[0;32mI (2708) float_mul_init: i: 108; v1: -81.000000, v2: 66.000000[0m
+[1;31mE (2718) float_mul: i: 108; scalar: -5346.000000, vector: -5346.000000[0m
+[0;32mI (2718) float_mul_init: i: 109; v1: -66.000000, v2: -16.000000[0m
+[1;31mE (2728) float_mul: i: 109; scalar: 1056.000000, vector: 1056.000000[0m
+[0;32mI (2728) float_mul_init: i: 110; v1: 100.000000, v2: 9.000000[0m
+[1;31mE (2738) float_mul: i: 110; scalar: 900.000000, vector: 900.000000[0m
+[0;32mI (2738) float_mul_init: i: 111; v1: 95.000000, v2: 8.000000[0m
+[1;31mE (2748) float_mul: i: 111; scalar: 760.000000, vector: 760.000000[0m
+[0;32mI (2758) float_mul_init: i: 112; v1: -5.000000, v2: -102.000000[0m
+[1;31mE (2758) float_mul: i: 112; scalar: 510.000000, vector: 510.000000[0m
+[0;32mI (2768) float_mul_init: i: 113; v1: -74.000000, v2: -111.000000[0m
+[1;31mE (2768) float_mul: i: 113; scalar: 8214.000000, vector: 8214.000000[0m
+[0;32mI (2778) float_mul_init: i: 114; v1: 35.000000, v2: 92.000000[0m
+[1;31mE (2778) float_mul: i: 114; scalar: 3220.000000, vector: 3220.000000[0m
+[0;32mI (2788) float_mul_init: i: 115; v1: -35.000000, v2: 35.000000[0m
+[1;31mE (2798) float_mul: i: 115; scalar: -1225.000000, vector: -1225.000000[0m
+[0;32mI (2798) float_mul_init: i: 116; v1: -41.000000, v2: -56.000000[0m
+[1;31mE (2808) float_mul: i: 116; scalar: 2296.000000, vector: 2296.000000[0m
+[0;32mI (2808) float_mul_init: i: 117; v1: 12.000000, v2: -13.000000[0m
+[1;31mE (2818) float_mul: i: 117; scalar: -156.000000, vector: -156.000000[0m
+[0;32mI (2828) float_mul_init: i: 118; v1: 14.000000, v2: -94.000000[0m
+[1;31mE (2828) float_mul: i: 118; scalar: -1316.000000, vector: -1316.000000[0m
+[0;32mI (2838) float_mul_init: i: 119; v1: 77.000000, v2: -89.000000[0m
+[1;31mE (2838) float_mul: i: 119; scalar: -6853.000000, vector: -6853.000000[0m
+[0;32mI (2848) float_mul_init: i: 120; v1: -65.000000, v2: 61.000000[0m
+[1;31mE (2858) float_mul: i: 120; scalar: -3965.000000, vector: -3965.000000[0m
+[0;32mI (2858) float_mul_init: i: 121; v1: -68.000000, v2: 87.000000[0m
+[1;31mE (2868) float_mul: i: 121; scalar: -5916.000000, vector: -5916.000000[0m
+[0;32mI (2868) float_mul_init: i: 122; v1: 121.000000, v2: 16.000000[0m
+[1;31mE (2878) float_mul: i: 122; scalar: 1936.000000, vector: 1936.000000[0m
+[0;32mI (2878) float_mul_init: i: 123; v1: 27.000000, v2: -26.000000[0m
+[1;31mE (2888) float_mul: i: 123; scalar: -702.000000, vector: -702.000000[0m
+[0;32mI (2898) float_mul_init: i: 124; v1: -82.000000, v2: -37.000000[0m
+[1;31mE (2898) float_mul: i: 124; scalar: 3034.000000, vector: 3034.000000[0m
+[0;32mI (2908) float_mul_init: i: 125; v1: 1.000000, v2: 91.000000[0m
+[1;31mE (2908) float_mul: i: 125; scalar: 91.000000, vector: 91.000000[0m
+[0;32mI (2918) float_mul_init: i: 126; v1: 95.000000, v2: 50.000000[0m
+[1;31mE (2918) float_mul: i: 126; scalar: 4750.000000, vector: 4750.000000[0m
+[0;32mI (2928) float_mul_init: i: 127; v1: -31.000000, v2: 83.000000[0m
+[1;31mE (2938) float_mul: i: 127; scalar: -2573.000000, vector: -2573.000000[0m
+[0;32mI (2938) float_mul_init: i: 128; v1: -121.000000, v2: -37.000000[0m
+[1;31mE (2948) float_mul: i: 128; scalar: 4477.000000, vector: 4477.000000[0m
+[0;32mI (2948) float_mul_init: i: 129; v1: -102.000000, v2: 63.000000[0m
+[1;31mE (2958) float_mul: i: 129; scalar: -6426.000000, vector: -6426.000000[0m
+[0;32mI (2968) float_mul_init: i: 130; v1: -45.000000, v2: 125.000000[0m
+[1;31mE (2968) float_mul: i: 130; scalar: -5625.000000, vector: -5625.000000[0m
+[0;32mI (2978) float_mul_init: i: 131; v1: 117.000000, v2: 15.000000[0m
+[1;31mE (2978) float_mul: i: 131; scalar: 1755.000000, vector: 1755.000000[0m
+[0;32mI (2988) float_mul_init: i: 132; v1: 35.000000, v2: -12.000000[0m
+[1;31mE (2998) float_mul: i: 132; scalar: -420.000000, vector: -420.000000[0m
+[0;32mI (2998) float_mul_init: i: 133; v1: -62.000000, v2: 72.000000[0m
+[1;31mE (3008) float_mul: i: 133; scalar: -4464.000000, vector: -4464.000000[0m
+[0;32mI (3008) float_mul_init: i: 134; v1: 95.000000, v2: -99.000000[0m
+[1;31mE (3018) float_mul: i: 134; scalar: -9405.000000, vector: -9405.000000[0m
+[0;32mI (3028) float_mul_init: i: 135; v1: 71.000000, v2: 42.000000[0m
+[1;31mE (3028) float_mul: i: 135; scalar: 2982.000000, vector: 2982.000000[0m
+[0;32mI (3038) float_mul_init: i: 136; v1: -108.000000, v2: -95.000000[0m
+[1;31mE (3038) float_mul: i: 136; scalar: 10260.000000, vector: 10260.000000[0m
+[0;32mI (3048) float_mul_init: i: 137; v1: -3.000000, v2: 35.000000[0m
+[1;31mE (3048) float_mul: i: 137; scalar: -105.000000, vector: -105.000000[0m
+[0;32mI (3058) float_mul_init: i: 138; v1: -102.000000, v2: -13.000000[0m
+[1;31mE (3068) float_mul: i: 138; scalar: 1326.000000, vector: 1326.000000[0m
+[0;32mI (3068) float_mul_init: i: 139; v1: 118.000000, v2: -65.000000[0m
+[1;31mE (3078) float_mul: i: 139; scalar: -7670.000000, vector: -7670.000000[0m
+[0;32mI (3078) float_mul_init: i: 140; v1: -12.000000, v2: 20.000000[0m
+[1;31mE (3088) float_mul: i: 140; scalar: -240.000000, vector: -240.000000[0m
+[0;32mI (3098) float_mul_init: i: 141; v1: -127.000000, v2: 12.000000[0m
+[1;31mE (3098) float_mul: i: 141; scalar: -1524.000000, vector: -1524.000000[0m
+[0;32mI (3108) float_mul_init: i: 142; v1: 120.000000, v2: 9.000000[0m
+[1;31mE (3108) float_mul: i: 142; scalar: 1080.000000, vector: 1080.000000[0m
+[0;32mI (3118) float_mul_init: i: 143; v1: 31.000000, v2: 55.000000[0m
+[1;31mE (3118) float_mul: i: 143; scalar: 1705.000000, vector: 1705.000000[0m
+[0;32mI (3128) float_mul_init: i: 144; v1: -90.000000, v2: -65.000000[0m
+[1;31mE (3138) float_mul: i: 144; scalar: 5850.000000, vector: 5850.000000[0m
+[0;32mI (3138) float_mul_init: i: 145; v1: -36.000000, v2: 9.000000[0m
+[1;31mE (3148) float_mul: i: 145; scalar: -324.000000, vector: -324.000000[0m
+[0;32mI (3148) float_mul_init: i: 146; v1: -89.000000, v2: -96.000000[0m
+[1;31mE (3158) float_mul: i: 146; scalar: 8544.000000, vector: 8544.000000[0m
+[0;32mI (3168) float_mul_init: i: 147; v1: -84.000000, v2: -4.000000[0m
+[1;31mE (3168) float_mul: i: 147; scalar: 336.000000, vector: 336.000000[0m
+[0;32mI (3178) float_mul_init: i: 148; v1: 61.000000, v2: 88.000000[0m
+[1;31mE (3178) float_mul: i: 148; scalar: 5368.000000, vector: 5368.000000[0m
+[0;32mI (3188) float_mul_init: i: 149; v1: 84.000000, v2: 61.000000[0m
+[1;31mE (3188) float_mul: i: 149; scalar: 5124.000000, vector: 5124.000000[0m
+[0;32mI (3198) float_mul_init: i: 150; v1: 67.000000, v2: -14.000000[0m
+[1;31mE (3208) float_mul: i: 150; scalar: -938.000000, vector: -938.000000[0m
+[0;32mI (3208) float_mul_init: i: 151; v1: 59.000000, v2: 42.000000[0m
+[1;31mE (3218) float_mul: i: 151; scalar: 2478.000000, vector: 2478.000000[0m
+[0;32mI (3218) float_mul_init: i: 152; v1: 46.000000, v2: -67.000000[0m
+[1;31mE (3228) float_mul: i: 152; scalar: -3082.000000, vector: -3082.000000[0m
+[0;32mI (3238) float_mul_init: i: 153; v1: -42.000000, v2: 43.000000[0m
+[1;31mE (3238) float_mul: i: 153; scalar: -1806.000000, vector: -1806.000000[0m
+[0;32mI (3248) float_mul_init: i: 154; v1: -110.000000, v2: -8.000000[0m
+[1;31mE (3248) float_mul: i: 154; scalar: 880.000000, vector: 880.000000[0m
+[0;32mI (3258) float_mul_init: i: 155; v1: -103.000000, v2: -125.000000[0m
+[1;31mE (3258) float_mul: i: 155; scalar: 12875.000000, vector: 12875.000000[0m
+[0;32mI (3268) float_mul_init: i: 0; v1: 125.000000, v2: -96.000000[0m
+[1;31mE (3278) float_mul: i: 0; scalar: -12000.000000, vector: -12000.000000[0m
+[0;32mI (3278) float_mul_init: i: 1; v1: 69.000000, v2: -54.000000[0m
+[1;31mE (3288) float_mul: i: 1; scalar: -3726.000000, vector: -3726.000000[0m
+[0;32mI (3288) float_mul_init: i: 2; v1: -9.000000, v2: 109.000000[0m
+[1;31mE (3298) float_mul: i: 2; scalar: -981.000000, vector: -981.000000[0m
+[0;32mI (3298) float_mul_init: i: 3; v1: -95.000000, v2: 25.000000[0m
+[1;31mE (3308) float_mul: i: 3; scalar: -2375.000000, vector: -2375.000000[0m
+[0;32mI (3318) float_mul_init: i: 4; v1: -45.000000, v2: 70.000000[0m
+[1;31mE (3318) float_mul: i: 4; scalar: -3150.000000, vector: -3150.000000[0m
+[0;32mI (3328) float_mul_init: i: 5; v1: -123.000000, v2: -114.000000[0m
+[1;31mE (3328) float_mul: i: 5; scalar: 14022.000000, vector: 14022.000000[0m
+[0;32mI (3338) float_mul_init: i: 6; v1: 45.000000, v2: -84.000000[0m
+[1;31mE (3338) float_mul: i: 6; scalar: -3780.000000, vector: -3780.000000[0m
+[0;32mI (3348) float_mul_init: i: 7; v1: 57.000000, v2: 121.000000[0m
+[1;31mE (3358) float_mul: i: 7; scalar: 6897.000000, vector: 6897.000000[0m
+[0;32mI (3358) float_mul_init: i: 8; v1: -119.000000, v2: -54.000000[0m
+[1;31mE (3368) float_mul: i: 8; scalar: 6426.000000, vector: 6426.000000[0m
+[0;32mI (3368) float_mul_init: i: 9; v1: -125.000000, v2: 108.000000[0m
+[1;31mE (3378) float_mul: i: 9; scalar: -13500.000000, vector: -13500.000000[0m
+[0;32mI (3388) float_mul_init: i: 10; v1: -104.000000, v2: 49.000000[0m
+[1;31mE (3388) float_mul: i: 10; scalar: -5096.000000, vector: -5096.000000[0m
+[0;32mI (3398) float_mul_init: i: 11; v1: 27.000000, v2: -111.000000[0m
+[1;31mE (3398) float_mul: i: 11; scalar: -2997.000000, vector: -2997.000000[0m
+[0;32mI (3408) float_mul_init: i: 12; v1: -48.000000, v2: 29.000000[0m
+[1;31mE (3408) float_mul: i: 12; scalar: -1392.000000, vector: -1392.000000[0m
+[0;32mI (3418) float_mul_init: i: 0; v1: -82.000000, v2: -41.000000[0m
+[1;31mE (3428) float_mul: i: 0; scalar: 3362.000000, vector: 3362.000000[0m
+[0;32mI (3428) float_mul_init: i: 1; v1: 56.000000, v2: 8.000000[0m
+[1;31mE (3438) float_mul: i: 1; scalar: 448.000000, vector: 448.000000[0m
+[0;32mI (3438) float_mul_init: i: 2; v1: -21.000000, v2: 36.000000[0m
+[1;31mE (3448) float_mul: i: 2; scalar: -756.000000, vector: -756.000000[0m
+[0;32mI (3448) float_mul_init: i: 3; v1: -56.000000, v2: -54.000000[0m
+[1;31mE (3458) float_mul: i: 3; scalar: 3024.000000, vector: 3024.000000[0m
+[0;32mI (3468) float_mul_init: i: 4; v1: -85.000000, v2: -58.000000[0m
+[1;31mE (3468) float_mul: i: 4; scalar: 4930.000000, vector: 4930.000000[0m
+[0;32mI (3478) float_mul_init: i: 5; v1: 32.000000, v2: 18.000000[0m
+[1;31mE (3478) float_mul: i: 5; scalar: 576.000000, vector: 576.000000[0m
+[0;32mI (3488) float_mul_init: i: 6; v1: -53.000000, v2: 105.000000[0m
+[1;31mE (3488) float_mul: i: 6; scalar: -5565.000000, vector: -5565.000000[0m
+[0;32mI (3498) float_mul_init: i: 7; v1: -36.000000, v2: 127.000000[0m
+[1;31mE (3508) float_mul: i: 7; scalar: -4572.000000, vector: -4572.000000[0m
+[0;32mI (3508) float_mul_init: i: 8; v1: 114.000000, v2: 71.000000[0m
+[1;31mE (3518) float_mul: i: 8; scalar: 8094.000000, vector: 8094.000000[0m
+[0;32mI (3518) float_mul_init: i: 9; v1: 25.000000, v2: 46.000000[0m
+[1;31mE (3528) float_mul: i: 9; scalar: 1150.000000, vector: 1150.000000[0m
+[0;32mI (3528) float_mul_init: i: 10; v1: -91.000000, v2: 23.000000[0m
+[1;31mE (3538) float_mul: i: 10; scalar: -2093.000000, vector: -2093.000000[0m
+[0;32mI (3548) float_mul_init: i: 11; v1: -50.000000, v2: 46.000000[0m
+[1;31mE (3548) float_mul: i: 11; scalar: -2300.000000, vector: -2300.000000[0m
+[0;32mI (3558) float_mul_init: i: 12; v1: -101.000000, v2: -85.000000[0m
+[1;31mE (3558) float_mul: i: 12; scalar: 8585.000000, vector: 8585.000000[0m
+[0;32mI (3568) float_mul_init: i: 13; v1: -43.000000, v2: -96.000000[0m
+[1;31mE (3568) float_mul: i: 13; scalar: 4128.000000, vector: 4128.000000[0m
+[0;32mI (3578) float_mul_init: i: 14; v1: -115.000000, v2: 1.000000[0m
+[1;31mE (3588) float_mul: i: 14; scalar: -115.000000, vector: -115.000000[0m
+[0;32mI (3588) float_mul_init: i: 15; v1: -120.000000, v2: 103.000000[0m
+[1;31mE (3598) float_mul: i: 15; scalar: -12360.000000, vector: -12360.000000[0m
+[0;32mI (3598) float_mul_init: i: 16; v1: 123.000000, v2: -2.000000[0m
+[1;31mE (3608) float_mul: i: 16; scalar: -246.000000, vector: -246.000000[0m
+[0;32mI (3608) float_mul_init: i: 17; v1: -83.000000, v2: -110.000000[0m
+[1;31mE (3618) float_mul: i: 17; scalar: 9130.000000, vector: 9130.000000[0m
+[0;32mI (3628) float_mul_init: i: 18; v1: -35.000000, v2: 83.000000[0m
+[1;31mE (3628) float_mul: i: 18; scalar: -2905.000000, vector: -2905.000000[0m
+[0;32mI (3638) float_mul_init: i: 19; v1: -35.000000, v2: -78.000000[0m
+[1;31mE (3638) float_mul: i: 19; scalar: 2730.000000, vector: 2730.000000[0m
+[0;32mI (3648) float_mul_init: i: 20; v1: 51.000000, v2: -47.000000[0m
+[1;31mE (3658) float_mul: i: 20; scalar: -2397.000000, vector: -2397.000000[0m
+[0;32mI (3658) float_mul_init: i: 21; v1: 92.000000, v2: -113.000000[0m
+[1;31mE (3668) float_mul: i: 21; scalar: -10396.000000, vector: -10396.000000[0m
+[0;32mI (3668) float_mul_init: i: 22; v1: 68.000000, v2: 122.000000[0m
+[1;31mE (3678) float_mul: i: 22; scalar: 8296.000000, vector: 8296.000000[0m
+[0;32mI (3678) float_mul_init: i: 23; v1: -121.000000, v2: -48.000000[0m
+[1;31mE (3688) float_mul: i: 23; scalar: 5808.000000, vector: 5808.000000[0m
+[0;32mI (3698) float_mul_init: i: 24; v1: -72.000000, v2: -52.000000[0m
+[1;31mE (3698) float_mul: i: 24; scalar: 3744.000000, vector: 3744.000000[0m
+[0;32mI (3708) float_mul_init: i: 25; v1: -23.000000, v2: -43.000000[0m
+[1;31mE (3708) float_mul: i: 25; scalar: 989.000000, vector: 989.000000[0m
+[0;32mI (3718) float_mul_init: i: 26; v1: 91.000000, v2: 5.000000[0m
+[1;31mE (3718) float_mul: i: 26; scalar: 455.000000, vector: 455.000000[0m
+[0;32mI (3728) float_mul_init: i: 27; v1: 41.000000, v2: -55.000000[0m
+[1;31mE (3738) float_mul: i: 27; scalar: -2255.000000, vector: -2255.000000[0m
+[0;32mI (3738) float_mul_init: i: 28; v1: -114.000000, v2: -65.000000[0m
+[1;31mE (3748) float_mul: i: 28; scalar: 7410.000000, vector: 7410.000000[0m
+[0;32mI (3748) float_mul_init: i: 29; v1: -118.000000, v2: 80.000000[0m
+[1;31mE (3758) float_mul: i: 29; scalar: -9440.000000, vector: -9440.000000[0m
+[0;32mI (3768) float_mul_init: i: 30; v1: -12.000000, v2: 38.000000[0m
+[1;31mE (3768) float_mul: i: 30; scalar: -456.000000, vector: -456.000000[0m
+[0;32mI (3778) float_mul_init: i: 31; v1: -75.000000, v2: 30.000000[0m
+[1;31mE (3778) float_mul: i: 31; scalar: -2250.000000, vector: -2250.000000[0m
+[0;32mI (3788) float_mul_init: i: 32; v1: 34.000000, v2: -104.000000[0m
+[1;31mE (3788) float_mul: i: 32; scalar: -3536.000000, vector: -3536.000000[0m
+[0;32mI (3798) float_mul_init: i: 33; v1: 109.000000, v2: -32.000000[0m
+[1;31mE (3808) float_mul: i: 33; scalar: -3488.000000, vector: -3488.000000[0m
+[0;32mI (3808) float_mul_init: i: 34; v1: 82.000000, v2: 25.000000[0m
+[1;31mE (3818) float_mul: i: 34; scalar: 2050.000000, vector: 2050.000000[0m
+[0;32mI (3818) float_mul_init: i: 35; v1: 99.000000, v2: -60.000000[0m

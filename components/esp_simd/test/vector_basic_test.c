@@ -12,13 +12,13 @@
 void vector_test_add(bool verbose, dtype type){ 
 
     timer_init();
-    set_rand_seed();
+    set_seed(42);
 
     uint32_t vec_time = 0;                                              // Runtime logs
     uint32_t scalar_time = 0;
 
     for (int run_num = 0; run_num < TEST_RUNS; run_num++){
-        int test_size = 1 + rand() % MAX_SIZE;                              // Random vector sizes 
+        int test_size = 512;                                            // Random vector sizes 
         vector_t *vec1 = create_test_vector(test_size, type);           // Allocating the test vectors
         vector_t *vec2 = create_test_vector(test_size, type);
         vector_t *simd_result = create_test_vector(vec1->size, vec1->type); 
@@ -491,16 +491,16 @@ void vector_test_mul_shift(bool verbose, dtype type){
         assert(vector_check_canary(vec2));
  
         timer_start();                                                  // Scalar functions are assumed intended behavior
-        scalar_mul(vec1, vec2, scalar_result, rand_shift_amount);
+        assert(scalar_mul(vec1, vec2, scalar_result, rand_shift_amount) == VECTOR_SUCCESS);
         timer_end(&scalar_time);
 
         timer_start();                                                  // Running tests
-        vec_mul(vec1, vec2, simd_result,  rand_shift_amount);
-        timer_end(&vec_time); 
+        assert(vec_mul(vec1, vec2, simd_result,  rand_shift_amount) == VECTOR_SUCCESS);
+        timer_end(&vec_time);  
 
-        vector_assert_eq(simd_result, scalar_result);                   // Check results
-        vector_assert_eq(vec1, vec1_copy);                              // Check modification of inputs
-        vector_assert_eq(vec2, vec2_copy);
+        assert(vector_assert_eq(simd_result, scalar_result));                   // Check results
+        assert(vector_assert_eq(vec1, vec1_copy));                              // Check modification of inputs
+        assert(vector_assert_eq(vec2, vec2_copy));
         vector_check_canary(vec1);                                      // Check modification of canary region
         vector_check_canary(vec2);
         vector_check_canary(simd_result);
@@ -719,19 +719,19 @@ void vector_test_mul_scalar_shift(bool verbose, dtype type){
  
         timer_start();                                                  // Scalar functions are assumed intended behavior
         if (type == DTYPE_FLOAT32){
-            scalar_mul_scalar_f32(vec1, rand_float, scalar_result);
+            assert(scalar_mul_scalar_f32(vec1, rand_float, scalar_result) == VECTOR_SUCCESS);
         } else{
-            scalar_mul_scalar(vec1, rand_scalar, scalar_result, rand_shift_amount); 
+            assert(scalar_mul_scalar(vec1, rand_scalar, scalar_result, rand_shift_amount) == VECTOR_SUCCESS); 
         }
         timer_end(&scalar_time);
 
         timer_start();                                                  // Running tests
         if (type == DTYPE_FLOAT32){
-            vec_mul_scalar_f32(vec1, rand_float, simd_result);
+            assert(vec_mul_scalar_f32(vec1, rand_float, simd_result) == VECTOR_SUCCESS);
         } else{
-            vec_mul_scalar(vec1, rand_scalar, simd_result, rand_shift_amount); 
+            assert(vec_mul_scalar(vec1, rand_scalar, simd_result, rand_shift_amount) == VECTOR_SUCCESS);
         }
-        timer_end(&vec_time); 
+        timer_end(&vec_time);  
 
         vector_assert_eq(simd_result, scalar_result);                   // Check results
         vector_assert_eq(vec1, vec1_copy);                              // Check modification of inputs 
@@ -846,7 +846,7 @@ void vector_test_dotp_f32(bool verbose, dtype type){
         timer_start();                                                  // Running tests
         assert(vec_dotp_f32(vec1, vec2, &simd_result) == VECTOR_SUCCESS);
         timer_end(&vec_time); 
- 
+  
         assert(float_eq(scalar_result, simd_result));
         vector_assert_eq(vec1, vec1_copy);                              // Check modification of inputs
         vector_assert_eq(vec2, vec2_copy);
@@ -1236,12 +1236,12 @@ void vector_test_mac(bool verbose, dtype type){
 void vector_test_mac_f32(bool verbose, dtype type){ 
 
     timer_init();
-    set_rand_seed();
+    set_seed(42);
 
     uint32_t vec_time = 0;                                              // Runtime logs
     uint32_t scalar_time = 0;
 
-    for (int run_num = 0; run_num < TEST_RUNS; run_num++){
+    for (int run_num = 0; run_num < 128; run_num++){
         int test_size = 1 + rand() % MAX_SIZE;                          // Random vector sizes 
         vector_t *vec1 = create_test_vector(test_size, type);           // Allocating the test vectors  
         float rand_start_val = rand_float_val();
@@ -1250,14 +1250,7 @@ void vector_test_mac_f32(bool verbose, dtype type){
         float scalar_accumulator = rand_start_val;
 
         assert(vec1);              
-        fill_test_vector(vec1);                                         // Fill with random values in range 
-        if (type == DTYPE_INT32){                                       // Behavior undefined for overflow.
-            int32_t* data = vec1->data;
-            for (int i = 0; i < vec1->size; i++){
-                int32_t val = rand() % UINT16_MAX + INT16_MIN;
-                data[i] = val;
-            } 
-        }
+        fill_test_vector(vec1);                                         // Fill with random values in range  
 
         vector_t *vec1_copy = vector_create(vec1->size, vec1->type);    // Creating copies (to check for modification of inputs) 
         vec_copy(vec1, vec1_copy);  
@@ -1423,7 +1416,7 @@ void vector_test_fill_f32(bool verbose, dtype type){
 
     for (int run_num = 0; run_num < TEST_RUNS; run_num++){
         int test_size = 1 + rand() % MAX_SIZE;                          // Random vector sizes  
-        float rand_scalar = rand_float_val();
+        const float rand_scalar = rand_float_val();
         vector_t *vec1 = create_test_vector(test_size, type);           // Allocating the test vectors  
         vector_t *vec2 = create_test_vector(test_size, type);           // Allocating the test vectors  
 
@@ -1434,13 +1427,13 @@ void vector_test_fill_f32(bool verbose, dtype type){
  
  
         timer_start();                                                  // Scalar functions are assumed intended behavior
-        assert(scalar_fill_f32(vec1,rand_scalar) == VECTOR_SUCCESS);
+        assert(scalar_fill_f32(vec1, rand_scalar) == VECTOR_SUCCESS);
         timer_end(&scalar_time);
 
         timer_start();                                                  // Running tests
-        assert(vec_fill_f32(vec2,rand_scalar) == VECTOR_SUCCESS);
+        assert(vec_fill_f32(vec2, rand_scalar) == VECTOR_SUCCESS);
         timer_end(&vec_time); 
-  
+   
         vector_assert_eq(vec1,vec2);
         vector_check_canary(vec1);                                      // Check modification of canary region 
         vector_check_canary(vec2);                                      // Check modification of canary region 

@@ -1,0 +1,371 @@
+Command: /Users/mliu/.espressif/python_env/idf5.5_py3.9_env/bin/python /Users/mliu/esp/v5.5/esp-idf/tools/idf_monitor.py -p /dev/cu.usbmodem101 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /Users/mliu/Desktop/Projects/Working/build/Working.elf /Users/mliu/Desktop/Projects/Working/build/bootloader/bootloader.elf -m '/Users/mliu/.espressif/python_env/idf5.5_py3.9_env/bin/python' '/Users/mliu/esp/v5.5/esp-idf/tools/idf.py'
+W (233ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048836
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x159c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f48
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 22 2025 21:03:16[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=099e4h ( 39396) map[0m
+[0;32mI (93) esp_image: segment 1: paddr=00019a0c vaddr=3fc92400 size=028c8h ( 10440) load[0m
+[0;32mI (96) esp_image: segment 2: paddr=0001c2dc vaddr=40374000 size=03d3ch ( 15676) load[0m
+[0;32mI (105) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1ba54h (113236) map[0m
+[0;32mI (129) esp_image: segment 4: paddr=0003ba7c vaddr=40377d3c size=0a5d4h ( 42452) load[0m
+[0;32mI (138) esp_image: segment 5: paddr=00046058 vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (144) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (145) boot: Disabling RNG early entropy source...[0m
+[0;32mI (156) cpu_start: Multicore app[0m
+[0;32mI (165) cpu_start: Pro cpu start user code[0m
+[0;32mI (165) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (165) app_init: Application information:[0m
+[0;32mI (166) app_init: Project name:     Working[0m
+[0;32mI (169) app_init: App version:      f030b91-dirty[0m
+[0;32mI (174) app_init: Compile time:     Sep 22 2025 21:02:18[0m
+[0;32mI (179) app_init: ELF file SHA256:  23e6b5dfe...[0m
+[0;32mI (183) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (187) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (191) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (195) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (199) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (205) heap_init: At 3FC95538 len 000541D8 (336 KiB): RAM[0m
+[0;32mI (210) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (215) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (221) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (227) spi_flash: detected chip: gd[0m
+[0;32mI (229) spi_flash: flash io: dio[0m
+[0;33mW (232) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (245) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (251) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (258) main_task: Started on CPU0[0m
+[0;32mI (268) main_task: Calling app_main()[0m
+[0;32mI (268) vector_test_add:: DTYPE_INT8[0m
+[0;32mI (268) fill_test_vector: Seed set: 42[0m
+[0;32mI (348) vector_test_add: vector_time: 207[0m
+[0;32mI (348) vector_test_add: scalar_time: 4443[0m
+[0;32mI (348) vector_test_add:: DTYPE_INT16[0m
+[0;32mI (348) fill_test_vector: Seed set: 42[0m
+[0;32mI (438) vector_test_add: vector_time: 260[0m
+[0;32mI (438) vector_test_add: scalar_time: 4427[0m
+[0;32mI (438) vector_test_add:: DTYPE_INT32[0m
+[0;32mI (438) fill_test_vector: Seed set: 42[0m
+[0;32mI (568) vector_test_add: vector_time: 324[0m
+[0;32mI (568) vector_test_add: scalar_time: 6552[0m
+[0;32mI (568) vector_test_add_alias:: DTYPE_INT32[0m
+[0;32mI (568) fill_test_vector: Seed set: 3095[0m
+[0;32mI (608) vector_test_add_alias: vector_time: 177[0m
+[0;32mI (608) vector_test_add_alias: scalar_time: 1664[0m
+[0;32mI (608) vector_test_add:: DTYPE_INT32[0m
+[0;32mI (608) fill_test_vector: Seed set: 42[0m
+[0;32mI (798) vector_test_add: vector_time: 516[0m
+[0;32mI (798) vector_test_add: scalar_time: 3202[0m
+[0;32mI (798) vector_test_add_alias:: DTYPE_FLOAT32[0m
+[0;32mI (798) fill_test_vector: Seed set: 3095[0m
+[0;32mI (838) vector_test_add_alias: vector_time: 229[0m
+[0;32mI (838) vector_test_add_alias: scalar_time: 864[0m
+[0;32mI (838) vector_test_sub:: DTYPE_INT8[0m
+[0;32mI (838) fill_test_vector: Seed set: 3095[0m
+[0;32mI (868) vector_test_sub: vector_time: 195[0m
+[0;32mI (868) vector_test_sub: scalar_time: 1186[0m
+[0;32mI (868) vector_test_sub_alias:: DTYPE_INT8[0m
+[0;32mI (868) fill_test_vector: Seed set: 3095[0m
+[0;32mI (898) vector_test_sub_alias: vector_time: 196[0m
+[0;32mI (898) vector_test_sub_alias: scalar_time: 1179[0m
+[0;32mI (898) vector_test_sub:: DTYPE_INT16[0m
+[0;32mI (898) fill_test_vector: Seed set: 3095[0m
+[0;32mI (928) vector_test_sub: vector_time: 179[0m
+[0;32mI (928) vector_test_sub: scalar_time: 1189[0m
+[0;32mI (928) vector_test_sub_alias:: DTYPE_INT16[0m
+[0;32mI (928) fill_test_vector: Seed set: 3095[0m
+[0;32mI (958) vector_test_sub_alias: vector_time: 177[0m
+[0;32mI (958) vector_test_sub_alias: scalar_time: 1187[0m
+[0;32mI (958) vector_test_sub:: DTYPE_INT32[0m
+[0;32mI (958) fill_test_vector: Seed set: 3095[0m
+[0;32mI (998) vector_test_sub: vector_time: 181[0m
+[0;32mI (998) vector_test_sub: scalar_time: 1640[0m
+[0;32mI (998) vector_test_sub_alias:: DTYPE_INT32[0m
+[0;32mI (998) fill_test_vector: Seed set: 3095[0m
+[0;32mI (1038) vector_test_sub_alias: vector_time: 184[0m
+[0;32mI (1038) vector_test_sub_alias: scalar_time: 1626[0m
+[0;32mI (1038) vector_test_sub:: DTYPE_FLOAT32[0m
+[0;32mI (1038) fill_test_vector: Seed set: 3095[0m
+[0;32mI (1098) vector_test_sub: vector_time: 238[0m
+[0;32mI (1098) vector_test_sub: scalar_time: 870[0m
+[0;32mI (1098) vector_test_sub_alias:: DTYPE_FLOAT32[0m
+[0;32mI (1098) fill_test_vector: Seed set: 3095[0m
+[0;32mI (1138) vector_test_sub_alias: vector_time: 230[0m
+[0;32mI (1138) vector_test_sub_alias: scalar_time: 870[0m
+[0;32mI (1138) vec_add_scalar:: DTYPE_INT8[0m
+[0;32mI (1138) fill_test_vector: Seed set: 3095[0m
+[0;32mI (1168) vector_test_add_scalar: vector_time: 180[0m
+[0;32mI (1168) vector_test_add_scalar: scalar_time: 1077[0m
+[0;32mI (1168) vec_add_scalar_alias:: DTYPE_INT8[0m
+[0;32mI (1168) fill_test_vector: Seed set: 3095[0m
+[0;32mI (1178) vector_test_add_scalar_aliasing: vec_time: 171[0m
+[0;32mI (1178) vector_test_add_scalar_aliasing: scalar_time: 1065[0m
+[0;32mI (1178) vec_add_scalar:: DTYPE_INT16[0m
+[0;32mI (1188) fill_test_vector: Seed set: 3095[0m
+[0;32mI (1208) vector_test_add_scalar: vector_time: 164[0m
+[0;32mI (1208) vector_test_add_scalar: scalar_time: 1180[0m
+[0;32mI (1208) vec_add_scalar_alias:: DTYPE_INT16[0m
+[0;32mI (1208) fill_test_vector: Seed set: 3095[0m
+[0;32mI (1228) vector_test_add_scalar_aliasing: vec_time: 156[0m
+[0;32mI (1228) vector_test_add_scalar_aliasing: scalar_time: 1179[0m
+[0;32mI (1228) vec_add_scalar:: DTYPE_INT32[0m
+[0;32mI (1228) fill_test_vector: Seed set: 3095[0m
+[0;32mI (1258) vector_test_add_scalar: vector_time: 160[0m
+[0;32mI (1258) vector_test_add_scalar: scalar_time: 1598[0m
+[0;32mI (1258) vec_add_scalar_alias:: DTYPE_INT32[0m
+[0;32mI (1258) fill_test_vector: Seed set: 3095[0m
+[0;32mI (1278) vector_test_add_scalar_aliasing: vec_time: 156[0m
+[0;32mI (1278) vector_test_add_scalar_aliasing: scalar_time: 1591[0m
+[0;32mI (1278) vec_add_scalar:: DTYPE_FLOAT32[0m
+[0;32mI (1288) fill_test_vector: Seed set: 3095[0m
+[0;32mI (1318) vector_test_add_scalar: vector_time: 228[0m
+[0;32mI (1318) vector_test_add_scalar: scalar_time: 804[0m
+[0;32mI (1318) vec_add_scalar_alias:: DTYPE_FLOAT32[0m
+[0;32mI (1318) fill_test_vector: Seed set: 3096[0m
+[0;32mI (1348) vector_test_add_scalar_aliasing: vec_time: 227[0m
+[0;32mI (1348) vector_test_add_scalar_aliasing: scalar_time: 824[0m
+[0;32mI (1348) vec_mul_shift:: DTYPE_INT8[0m
+[0;32mI (1348) fill_test_vector: Seed set: 3096[0m
+[0;32mI (1378) vector_test_mul_shift: vector_time: 193[0m
+[0;32mI (1378) vector_test_mul_shift: scalar_time: 1142[0m
+[0;32mI (1378) vec_mul_shift:: DTYPE_INT16[0m
+[0;32mI (1378) fill_test_vector: Seed set: 3096[0m
+[0;32mI (1408) vector_test_mul_shift: vector_time: 187[0m
+[0;32mI (1408) vector_test_mul_shift: scalar_time: 965[0m
+[0;32mI (1408) vec_mul_shift:: DTYPE_INT32[0m
+[0;32mI (1418) fill_test_vector: Seed set: 3096[0m
+[0;32mI (1458) vector_test_mul_shift: vector_time: 566[0m
+[0;32mI (1458) vector_test_mul_shift: scalar_time: 2168[0m
+[0;32mI (1458) vec_mul_shift:: DTYPE_FLOAT32[0m
+[0;32mI (1458) fill_test_vector: Seed set: 3096[0m
+[0;32mI (1518) vector_test_mul_shift: vector_time: 251[0m
+[0;32mI (1518) vector_test_mul_shift: scalar_time: 1014[0m
+[0;32mI (1518) vec_mul_shift_alias:: DTYPE_INT8[0m
+[0;32mI (1518) fill_test_vector: Seed set: 3096[0m
+[0;32mI (1548) vector_test_mul_shift: vector_time: 177[0m
+[0;32mI (1548) vector_test_mul_shift: scalar_time: 1134[0m
+[0;32mI (1548) vec_mul_shift_alias:: DTYPE_INT16[0m
+[0;32mI (1548) fill_test_vector: Seed set: 3096[0m
+[0;32mI (1578) vector_test_mul_shift: vector_time: 178[0m
+[0;32mI (1578) vector_test_mul_shift: scalar_time: 977[0m
+[0;32mI (1578) vec_mul_shift_alias:: DTYPE_INT32[0m
+[0;32mI (1578) fill_test_vector: Seed set: 3096[0m
+[0;32mI (1618) vector_test_mul_shift: vector_time: 489[0m
+[0;32mI (1618) vector_test_mul_shift: scalar_time: 1826[0m
+[0;32mI (1618) vec_mul_shift_alias:: DTYPE_FLOAT32[0m
+[0;32mI (1618) fill_test_vector: Seed set: 3096[0m
+[0;32mI (1658) vector_test_mul_shift: vector_time: 227[0m
+[0;32mI (1658) vector_test_mul_shift: scalar_time: 865[0m
+[0;32mI (1658) vec_sum:: DTYPE_INT8[0m
+[0;32mI (1658) fill_test_vector: Seed set: 3096[0m
+[0;32mI (1668) vector_test_sum: vector_time: 152[0m
+[0;32mI (1668) vector_test_sum: scalar_time: 687[0m
+[0;32mI (1668) vec_sum:: DTYPE_INT16[0m
+[0;32mI (1668) fill_test_vector: Seed set: 3096[0m
+[0;32mI (1688) vector_test_sum: vector_time: 134[0m
+[0;32mI (1688) vector_test_sum: scalar_time: 631[0m
+[0;32mI (1688) vec_sum:: DTYPE_INT32[0m
+[0;32mI (1688) fill_test_vector: Seed set: 3096[0m
+[0;32mI (1718) vector_test_sum: vector_time: 161[0m
+[0;32mI (1718) vector_test_sum: scalar_time: 1106[0m
+[0;32mI (1718) vec_sum:: DTYPE_FLOAT32[0m
+[0;32mI (1718) fill_test_vector: Seed set: 3096[0m
+[0;32mI (1738) vector_test_sum: vector_time: 203[0m
+[0;32mI (1738) vector_test_sum: scalar_time: 605[0m
+[0;32mI (1738) vec_mul_scalar_shift:: DTYPE_INT8[0m
+[0;32mI (1738) fill_test_vector: Seed set: 3096[0m
+[0;32mI (1758) vector_test_mul_scalar: vector_time: 182[0m
+[0;32mI (1758) vector_test_mul_scalar: scalar_time: 953[0m
+[0;32mI (1758) vec_mul_scalar_shift:: DTYPE_INT16[0m
+[0;32mI (1758) fill_test_vector: Seed set: 3096[0m
+[0;32mI (1778) vector_test_mul_scalar: vector_time: 176[0m
+[0;32mI (1778) vector_test_mul_scalar: scalar_time: 792[0m
+[0;32mI (1778) vec_mul_scalar_shift:: DTYPE_INT32[0m
+[0;32mI (1778) fill_test_vector: Seed set: 3096[0m
+[0;32mI (1808) vector_test_mul_scalar: vector_time: 443[0m
+[0;32mI (1808) vector_test_mul_scalar: scalar_time: 1941[0m
+[0;32mI (1808) vec_mul_scalar_shift_f32:: DTYPE_FLOAT32[0m
+[0;32mI (1808) fill_test_vector: Seed set: 3096[0m
+[0;32mI (1848) vector_test_mul_scalar: vector_time: 252[0m
+[0;32mI (1848) vector_test_mul_scalar: scalar_time: 867[0m
+[0;32mI (1848) vec_dotp:: DTYPE_INT8[0m
+[0;32mI (1848) fill_test_vector: Seed set: 3096[0m
+[0;32mI (1878) vector_test_dotp: vector_time: 186[0m
+[0;32mI (1878) vector_test_dotp: scalar_time: 930[0m
+[0;32mI (1878) vec_dotp:: DTYPE_INT16[0m
+[0;32mI (1878) fill_test_vector: Seed set: 3096[0m
+[0;32mI (1908) vector_test_dotp: vector_time: 167[0m
+[0;32mI (1908) vector_test_dotp: scalar_time: 771[0m
+[0;32mI (1908) vec_dotp:: DTYPE_INT32[0m
+[0;32mI (1908) fill_test_vector: Seed set: 3096[0m
+[0;32mI (1938) vector_test_dotp: vector_time: 377[0m
+[0;32mI (1938) vector_test_dotp: scalar_time: 731[0m
+[0;32mI (1938) vec_dotp_f32:: DTYPE_FLOAT32[0m
+[0;32mI (1938) fill_test_vector: Seed set: 3096[0m
+[0;32mI (1988) vector_test_dotp: vector_time: 218[0m
+[0;32mI (1988) vector_test_dotp: scalar_time: 784[0m
+[0;32mI (1988) vec_abs:: DTYPE_INT8[0m
+[0;32mI (1988) fill_test_vector: Seed set: 3096[0m
+[0;32mI (2008) vector_test_abs: vector_time: 183[0m
+[0;32mI (2008) vector_test_abs: scalar_time: 1045[0m
+[0;32mI (2008) vec_abs:: DTYPE_INT16[0m
+[0;32mI (2008) fill_test_vector: Seed set: 3096[0m
+[0;32mI (2028) vector_test_abs: vector_time: 177[0m
+[0;32mI (2028) vector_test_abs: scalar_time: 1044[0m
+[0;32mI (2028) vec_abs:: DTYPE_INT32[0m
+[0;32mI (2028) fill_test_vector: Seed set: 3096[0m
+[0;32mI (2058) vector_test_abs: vector_time: 322[0m
+[0;32mI (2058) vector_test_abs: scalar_time: 720[0m
+[0;32mI (2058) vec_abs:: DTYPE_FLOAT32[0m
+[0;32mI (2058) fill_test_vector: Seed set: 3096[0m
+[0;32mI (2088) vector_test_abs: vector_time: 184[0m
+[0;32mI (2088) vector_test_abs: scalar_time: 813[0m
+[0;32mI (2088) vec_ceil:: DTYPE_INT8[0m
+[0;32mI (2088) fill_test_vector: Seed set: 3096[0m
+[0;32mI (2108) vector_test_ceil: vector_time: 163[0m
+[0;32mI (2108) vector_test_ceil: scalar_time: 829[0m
+[0;32mI (2108) vec_ceil:: DTYPE_INT16[0m
+[0;32mI (2108) fill_test_vector: Seed set: 3096[0m
+[0;32mI (2128) vector_test_ceil: vector_time: 141[0m
+[0;32mI (2128) vector_test_ceil: scalar_time: 719[0m
+[0;32mI (2128) vec_ceil:: DTYPE_INT32[0m
+[0;32mI (2128) fill_test_vector: Seed set: 3096[0m
+[0;32mI (2158) vector_test_ceil: vector_time: 167[0m
+[0;32mI (2158) vector_test_ceil: scalar_time: 658[0m
+[0;32mI (2158) vec_ceil_f32:: DTYPE_FLOAT32[0m
+[0;32mI (2158) fill_test_vector: Seed set: 3096[0m
+[0;32mI (2188) vector_test_ceil_f32: vector_time: 257[0m
+[0;32mI (2188) vector_test_ceil_f32: scalar_time: 959[0m
+[0;32mI (2188) vec_floor:: DTYPE_INT8[0m
+[0;32mI (2188) fill_test_vector: Seed set: 3096[0m
+[0;32mI (2208) vector_test_floor: vector_time: 164[0m
+[0;32mI (2208) vector_test_floor: scalar_time: 829[0m
+[0;32mI (2208) vec_floor:: DTYPE_INT16[0m
+[0;32mI (2208) fill_test_vector: Seed set: 3096[0m
+[0;32mI (2228) vector_test_floor: vector_time: 145[0m
+[0;32mI (2228) vector_test_floor: scalar_time: 717[0m
+[0;32mI (2228) vec_floor:: DTYPE_INT32[0m
+[0;32mI (2228) fill_test_vector: Seed set: 3096[0m
+[0;32mI (2258) vector_test_floor: vector_time: 156[0m
+[0;32mI (2258) vector_test_floor: scalar_time: 659[0m
+[0;32mI (2258) vec_floor:: DTYPE_FLOAT32[0m
+[0;32mI (2258) fill_test_vector: Seed set: 3096[0m
+[0;32mI (2288) vector_test_floor_f32: vector_time: 260[0m
+[0;32mI (2288) vector_test_floor_f32: scalar_time: 901[0m
+[0;32mI (2288) vec_neg:: DTYPE_INT8[0m
+[0;32mI (2288) fill_test_vector: Seed set: 3096[0m
+[0;32mI (2308) vector_test_neg: vector_time: 183[0m
+[0;32mI (2308) vector_test_neg: scalar_time: 994[0m
+[0;32mI (2308) vec_neg:: DTYPE_INT16[0m
+[0;32mI (2308) fill_test_vector: Seed set: 3097[0m
+[0;32mI (2328) vector_test_neg: vector_time: 168[0m
+[0;32mI (2328) vector_test_neg: scalar_time: 962[0m
+[0;32mI (2328) vec_neg:: DTYPE_INT32[0m
+[0;32mI (2328) fill_test_vector: Seed set: 3097[0m
+[0;32mI (2358) vector_test_neg: vector_time: 296[0m
+[0;32mI (2358) vector_test_neg: scalar_time: 661[0m
+[0;32mI (2358) vec_neg:: DTYPE_FLOAT32[0m
+[0;32mI (2358) fill_test_vector: Seed set: 3097[0m
+[0;32mI (2388) vector_test_neg: vector_time: 174[0m
+[0;32mI (2388) vector_test_neg: scalar_time: 704[0m
+[0;32mI (2388) vec_mac:: DTYPE_INT8[0m
+[0;32mI (2388) fill_test_vector: Seed set: 3097[0m
+[0;32mI (2398) vector_test_mac: vector_time: 159[0m
+[0;32mI (2398) vector_test_mac: scalar_time: 802[0m
+[0;32mI (2398) vec_mac:: DTYPE_INT16[0m
+[0;32mI (2408) fill_test_vector: Seed set: 3097[0m
+[0;32mI (2418) vector_test_mac: vector_time: 152[0m
+[0;32mI (2418) vector_test_mac: scalar_time: 754[0m
+[0;32mI (2418) vec_mac:: DTYPE_INT32[0m
+[0;32mI (2418) fill_test_vector: Seed set: 3097[0m
+[0;32mI (2448) vector_test_mac: vector_time: 300[0m
+[0;32mI (2448) vector_test_mac: scalar_time: 745[0m
+[0;32mI (2448) vec_mac_f32:: DTYPE_FLOAT32[0m
+[0;32mI (2448) fill_test_vector: Seed set: 42[0m
+[0;32mI (2488) vector_test_mac_f32: vector_time: 405[0m
+[0;32mI (2498) vector_test_mac_f32: scalar_time: 1604[0m
+[0;32mI (2498) vec_zero:: DTYPE_INT8[0m
+[0;32mI (2498) fill_test_vector: Seed set: 3097[0m
+[0;32mI (2498) vector_test_zeros: vector_time: 140[0m
+[0;32mI (2498) vector_test_zeros: scalar_time: 622[0m
+[0;32mI (2508) vec_zero:: DTYPE_INT16[0m
+[0;32mI (2508) fill_test_vector: Seed set: 3097[0m
+[0;32mI (2518) vector_test_zeros: vector_time: 131[0m
+[0;32mI (2518) vector_test_zeros: scalar_time: 615[0m
+[0;32mI (2518) vec_zero:: DTYPE_INT32[0m
+[0;32mI (2518) fill_test_vector: Seed set: 3097[0m
+[0;32mI (2528) vector_test_zeros: vector_time: 131[0m
+[0;32mI (2528) vector_test_zeros: scalar_time: 613[0m
+[0;32mI (2538) vec_zero:: DTYPE_FLOAT32[0m
+[0;32mI (2538) fill_test_vector: Seed set: 3097[0m
+[0;32mI (2548) vector_test_zeros: vector_time: 128[0m
+[0;32mI (2548) vector_test_zeros: scalar_time: 615[0m
+[0;32mI (2548) vec_ones:: DTYPE_INT8[0m
+[0;32mI (2548) fill_test_vector: Seed set: 3097[0m
+[0;32mI (2558) vector_test_ones: vector_time: 137[0m
+[0;32mI (2558) vector_test_ones: scalar_time: 675[0m
+[0;32mI (2568) vec_ones:: DTYPE_INT16[0m
+[0;32mI (2568) fill_test_vector: Seed set: 3097[0m
+[0;32mI (2578) vector_test_ones: vector_time: 133[0m
+[0;32mI (2578) vector_test_ones: scalar_time: 614[0m
+[0;32mI (2578) vec_ones:: DTYPE_INT32[0m
+[0;32mI (2578) fill_test_vector: Seed set: 3097[0m
+[0;32mI (2588) vector_test_ones: vector_time: 133[0m
+[0;32mI (2588) vector_test_ones: scalar_time: 612[0m
+[0;32mI (2588) vec_ones:: DTYPE_FLOAT32[0m
+[0;32mI (2598) fill_test_vector: Seed set: 3097[0m
+[0;32mI (2608) vector_test_ones: vector_time: 132[0m
+[0;32mI (2608) vector_test_ones: scalar_time: 614[0m
+[0;32mI (2608) vec_fill:: DTYPE_INT8[0m
+[0;32mI (2608) fill_test_vector: Seed set: 3097[0m
+[0;32mI (2618) vector_test_fill: vector_time: 139[0m
+[0;32mI (2618) vector_test_fill: scalar_time: 552[0m
+[0;32mI (2618) vec_fill:: DTYPE_INT16[0m
+[0;32mI (2628) fill_test_vector: Seed set: 3097[0m
+[0;32mI (2628) vector_test_fill: vector_time: 132[0m
+[0;32mI (2638) vector_test_fill: scalar_time: 551[0m
+[0;32mI (2638) vec_fill:: DTYPE_INT32[0m
+[0;32mI (2638) fill_test_vector: Seed set: 3097[0m
+[0;32mI (2648) vector_test_fill: vector_time: 130[0m
+[0;32mI (2648) vector_test_fill: scalar_time: 544[0m
+[0;32mI (2648) vec_fill:: DTYPE_FLOAT32[0m
+[0;32mI (2648) fill_test_vector: Seed set: 3097[0m
+[0;32mI (2668) vector_test_fill_f32: vector_time: 134[0m
+[0;32mI (2668) vector_test_fill_f32: scalar_time: 530[0m
+[0;32mI (2668) vec_copy:: DTYPE_INT8[0m
+[0;32mI (2668) fill_test_vector: Seed set: 3097[0m
+[0;32mI (2688) vector_test_copy: vector_time: 132[0m
+[0;32mI (2688) vector_test_copy: scalar_time: 175[0m
+[0;32mI (2688) vec_copy:: DTYPE_INT16[0m
+[0;32mI (2688) fill_test_vector: Seed set: 3097[0m
+[0;32mI (2708) vector_test_copy: vector_time: 138[0m
+[0;32mI (2708) vector_test_copy: scalar_time: 190[0m
+[0;32mI (2708) vec_copy:: DTYPE_INT32[0m
+[0;32mI (2708) fill_test_vector: Seed set: 3097[0m
+[0;32mI (2728) vector_test_copy: vector_time: 160[0m
+[0;32mI (2728) vector_test_copy: scalar_time: 255[0m
+[0;32mI (2728) vec_copy:: DTYPE_FLOAT32[0m
+[0;32mI (2728) fill_test_vector: Seed set: 3097[0m
+[0;32mI (2758) vector_test_copy: vector_time: 162[0m
+[0;32mI (2758) vector_test_copy: scalar_time: 255[0m
+[0;32mI (2758) main_task: Returned from app_main()[0m

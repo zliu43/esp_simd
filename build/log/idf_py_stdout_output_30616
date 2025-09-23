@@ -1,0 +1,578 @@
+Command: /Users/mliu/.espressif/python_env/idf5.5_py3.9_env/bin/python /Users/mliu/esp/v5.5/esp-idf/tools/idf_monitor.py -p /dev/cu.usbmodem101 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /Users/mliu/Desktop/Projects/Working/build/Working.elf /Users/mliu/Desktop/Projects/Working/build/bootloader/bootloader.elf -m '/Users/mliu/.espressif/python_env/idf5.5_py3.9_env/bin/python' '/Users/mliu/esp/v5.5/esp-idf/tools/idf.py'
+I (23ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048839
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x159c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f48
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Sep 22 2025 21:03:16[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=09a04h ( 39428) map[0m
+[0;32mI (93) esp_image: segment 1: paddr=00019a2c vaddr=3fc92400 size=028c8h ( 10440) load[0m
+[0;32mI (96) esp_image: segment 2: paddr=0001c2fc vaddr=40374000 size=03d1ch ( 15644) load[0m
+[0;32mI (105) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1ba88h (113288) map[0m
+[0;32mI (129) esp_image: segment 4: paddr=0003bab0 vaddr=40377d1c size=0a5f4h ( 42484) load[0m
+[0;32mI (138) esp_image: segment 5: paddr=000460ac vaddr=600fe000 size=00020h (    32) load[0m
+[0;32mI (144) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (145) boot: Disabling RNG early entropy source...[0m
+[0;32mI (156) cpu_start: Multicore app[0m
+[0;32mI (165) cpu_start: Pro cpu start user code[0m
+[0;32mI (165) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (165) app_init: Application information:[0m
+[0;32mI (166) app_init: Project name:     Working[0m
+[0;32mI (169) app_init: App version:      f030b91-dirty[0m
+[0;32mI (174) app_init: Compile time:     Sep 22 2025 21:02:18[0m
+[0;32mI (179) app_init: ELF file SHA256:  54d82f8d0...[0m
+[0;32mI (183) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (187) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (191) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (195) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (199) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (205) heap_init: At 3FC95538 len 000541D8 (336 KiB): RAM[0m
+[0;32mI (210) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (215) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (221) heap_init: At 600FE020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (227) spi_flash: detected chip: gd[0m
+[0;32mI (229) spi_flash: flash io: dio[0m
+[0;33mW (232) spi_flash: Detected size(16384k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (245) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (251) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (258) main_task: Started on CPU0[0m
+[0;32mI (268) main_task: Calling app_main()[0m
+[0;32mI (268) vector_test_add:: DTYPE_INT8[0m
+[0;32mI (268) fill_test_vector: Seed set: 42[0m
+[0;32mI (348) vector_test_add: vector_time: 206[0m
+[0;32mI (348) vector_test_add: scalar_time: 4439[0m
+[0;32mI (348) vector_test_add:: DTYPE_INT16[0m
+[0;32mI (348) fill_test_vector: Seed set: 42[0m
+[0;32mI (438) vector_test_add: vector_time: 263[0m
+[0;32mI (438) vector_test_add: scalar_time: 4437[0m
+[0;32mI (438) vector_test_add:: DTYPE_INT32[0m
+[0;32mI (438) fill_test_vector: Seed set: 42[0m
+[0;32mI (568) vector_test_add: vector_time: 326[0m
+[0;32mI (568) vector_test_add: scalar_time: 6558[0m
+[0;32mI (568) vector_test_add_alias:: DTYPE_INT32[0m
+[0;32mI (568) fill_test_vector: Seed set: 2774[0m
+[0;32mI (608) vector_test_add_alias: vector_time: 183[0m
+[0;32mI (608) vector_test_add_alias: scalar_time: 1732[0m
+[0;32mI (608) vector_test_add:: DTYPE_INT32[0m
+[0;32mI (608) fill_test_vector: Seed set: 42[0m
+[0;32mI (798) vector_test_add: vector_time: 517[0m
+[0;32mI (798) vector_test_add: scalar_time: 3202[0m
+[0;32mI (798) vector_test_add_alias:: DTYPE_FLOAT32[0m
+[0;32mI (798) fill_test_vector: Seed set: 2774[0m
+[0;32mI (848) vector_test_add_alias: vector_time: 244[0m
+[0;32mI (848) vector_test_add_alias: scalar_time: 900[0m
+[0;32mI (848) vector_test_sub:: DTYPE_INT8[0m
+[0;32mI (848) fill_test_vector: Seed set: 2774[0m
+[0;32mI (878) vector_test_sub: vector_time: 195[0m
+[0;32mI (878) vector_test_sub: scalar_time: 1278[0m
+[0;32mI (878) vector_test_sub_alias:: DTYPE_INT8[0m
+[0;32mI (878) fill_test_vector: Seed set: 2774[0m
+[0;32mI (908) vector_test_sub_alias: vector_time: 185[0m
+[0;32mI (908) vector_test_sub_alias: scalar_time: 1270[0m
+[0;32mI (908) vector_test_sub:: DTYPE_INT16[0m
+[0;32mI (908) fill_test_vector: Seed set: 2774[0m
+[0;32mI (938) vector_test_sub: vector_time: 188[0m
+[0;32mI (938) vector_test_sub: scalar_time: 1278[0m
+[0;32mI (938) vector_test_sub_alias:: DTYPE_INT16[0m
+[0;32mI (938) fill_test_vector: Seed set: 2774[0m
+[0;32mI (968) vector_test_sub_alias: vector_time: 188[0m
+[0;32mI (968) vector_test_sub_alias: scalar_time: 1274[0m
+[0;32mI (968) vector_test_sub:: DTYPE_INT32[0m
+[0;32mI (968) fill_test_vector: Seed set: 2774[0m
+[0;32mI (1008) vector_test_sub: vector_time: 186[0m
+[0;32mI (1008) vector_test_sub: scalar_time: 1695[0m
+[0;32mI (1008) vector_test_sub_alias:: DTYPE_INT32[0m
+[0;32mI (1008) fill_test_vector: Seed set: 2774[0m
+[0;32mI (1048) vector_test_sub_alias: vector_time: 188[0m
+[0;32mI (1048) vector_test_sub_alias: scalar_time: 1693[0m
+[0;32mI (1048) vector_test_sub:: DTYPE_FLOAT32[0m
+[0;32mI (1048) fill_test_vector: Seed set: 2774[0m
+[0;32mI (1108) vector_test_sub: vector_time: 241[0m
+[0;32mI (1108) vector_test_sub: scalar_time: 906[0m
+[0;32mI (1108) vector_test_sub_alias:: DTYPE_FLOAT32[0m
+[0;32mI (1108) fill_test_vector: Seed set: 2774[0m
+[0;32mI (1158) vector_test_sub_alias: vector_time: 240[0m
+[0;32mI (1158) vector_test_sub_alias: scalar_time: 905[0m
+[0;32mI (1158) vec_add_scalar:: DTYPE_INT8[0m
+[0;32mI (1158) fill_test_vector: Seed set: 2774[0m
+[0;32mI (1178) vector_test_add_scalar: vector_time: 180[0m
+[0;32mI (1178) vector_test_add_scalar: scalar_time: 1129[0m
+[0;32mI (1178) vec_add_scalar_alias:: DTYPE_INT8[0m
+[0;32mI (1178) fill_test_vector: Seed set: 2774[0m
+[0;32mI (1198) vector_test_add_scalar_aliasing: vec_time: 169[0m
+[0;32mI (1198) vector_test_add_scalar_aliasing: scalar_time: 1124[0m
+[0;32mI (1198) vec_add_scalar:: DTYPE_INT16[0m
+[0;32mI (1198) fill_test_vector: Seed set: 2774[0m
+[0;32mI (1218) vector_test_add_scalar: vector_time: 165[0m
+[0;32mI (1228) vector_test_add_scalar: scalar_time: 1241[0m
+[0;32mI (1228) vec_add_scalar_alias:: DTYPE_INT16[0m
+[0;32mI (1228) fill_test_vector: Seed set: 2774[0m
+[0;32mI (1238) vector_test_add_scalar_aliasing: vec_time: 153[0m
+[0;32mI (1248) vector_test_add_scalar_aliasing: scalar_time: 1242[0m
+[0;32mI (1248) vec_add_scalar:: DTYPE_INT32[0m
+[0;32mI (1248) fill_test_vector: Seed set: 2774[0m
+[0;32mI (1278) vector_test_add_scalar: vector_time: 166[0m
+[0;32mI (1278) vector_test_add_scalar: scalar_time: 1756[0m
+[0;32mI (1278) vec_add_scalar_alias:: DTYPE_INT32[0m
+[0;32mI (1278) fill_test_vector: Seed set: 2774[0m
+[0;32mI (1298) vector_test_add_scalar_aliasing: vec_time: 160[0m
+[0;32mI (1298) vector_test_add_scalar_aliasing: scalar_time: 1751[0m
+[0;32mI (1298) vec_add_scalar:: DTYPE_FLOAT32[0m
+[0;32mI (1308) fill_test_vector: Seed set: 2775[0m
+[0;32mI (1338) vector_test_add_scalar: vector_time: 226[0m
+[0;32mI (1338) vector_test_add_scalar: scalar_time: 763[0m
+[0;32mI (1338) vec_add_scalar_alias:: DTYPE_FLOAT32[0m
+[0;32mI (1338) fill_test_vector: Seed set: 2775[0m
+[0;32mI (1368) vector_test_add_scalar_aliasing: vec_time: 219[0m
+[0;32mI (1368) vector_test_add_scalar_aliasing: scalar_time: 756[0m
+[0;32mI (1368) vec_mul_shift:: DTYPE_INT8[0m
+[0;32mI (1368) fill_test_vector: Seed set: 2775[0m
+[0;32mI (1398) vector_test_mul_shift: vector_time: 201[0m
+[0;32mI (1398) vector_test_mul_shift: scalar_time: 1114[0m
+[0;32mI (1398) vec_mul_shift:: DTYPE_INT16[0m
+[0;32mI (1398) fill_test_vector: Seed set: 2775[0m
+[0;32mI (1428) vector_test_mul_shift: vector_time: 181[0m
+[0;32mI (1428) vector_test_mul_shift: scalar_time: 954[0m
+[0;32mI (1428) vec_mul_shift:: DTYPE_INT32[0m
+[0;32mI (1428) fill_test_vector: Seed set: 2775[0m
+[0;32mI (1468) vector_test_mul_shift: vector_time: 518[0m
+[0;32mI (1468) vector_test_mul_shift: scalar_time: 1957[0m
+[0;32mI (1478) vec_mul_shift:: DTYPE_FLOAT32[0m
+[0;32mI (1478) fill_test_vector: Seed set: 2775[0m
+[0;32mI (1528) vector_test_mul_shift: vector_time: 242[0m
+[0;32mI (1528) vector_test_mul_shift: scalar_time: 925[0m
+[0;32mI (1528) vec_mul_shift_alias:: DTYPE_INT8[0m
+[0;32mI (1528) fill_test_vector: Seed set: 2775[0m
+[0;32mI (1558) vector_test_mul_shift: vector_time: 173[0m
+[0;32mI (1558) vector_test_mul_shift: scalar_time: 1121[0m
+[0;32mI (1558) vec_mul_shift_alias:: DTYPE_INT16[0m
+[0;32mI (1558) fill_test_vector: Seed set: 2775[0m
+[0;32mI (1588) vector_test_mul_shift: vector_time: 171[0m
+[0;32mI (1588) vector_test_mul_shift: scalar_time: 968[0m
+[0;32mI (1588) vec_mul_shift_alias:: DTYPE_INT32[0m
+[0;32mI (1588) fill_test_vector: Seed set: 2775[0m
+[0;32mI (1618) vector_test_mul_shift: vector_time: 478[0m
+[0;32mI (1618) vector_test_mul_shift: scalar_time: 1779[0m
+[0;32mI (1618) vec_mul_shift_alias:: DTYPE_FLOAT32[0m
+[0;32mI (1618) fill_test_vector: Seed set: 2775[0m
+[0;32mI (1658) vector_test_mul_shift: vector_time: 222[0m
+[0;32mI (1658) vector_test_mul_shift: scalar_time: 843[0m
+[0;32mI (1658) vec_sum:: DTYPE_INT8[0m
+[0;32mI (1668) fill_test_vector: Seed set: 2775[0m
+[0;32mI (1678) vector_test_sum: vector_time: 152[0m
+[0;32mI (1678) vector_test_sum: scalar_time: 662[0m
+[0;32mI (1678) vec_sum:: DTYPE_INT16[0m
+[0;32mI (1678) fill_test_vector: Seed set: 2775[0m
+[0;32mI (1688) vector_test_sum: vector_time: 135[0m
+[0;32mI (1688) vector_test_sum: scalar_time: 606[0m
+[0;32mI (1688) vec_sum:: DTYPE_INT32[0m
+[0;32mI (1688) fill_test_vector: Seed set: 2775[0m
+[0;32mI (1718) vector_test_sum: vector_time: 161[0m
+[0;32mI (1718) vector_test_sum: scalar_time: 1073[0m
+[0;32mI (1718) vec_sum:: DTYPE_FLOAT32[0m
+[0;32mI (1718) fill_test_vector: Seed set: 2775[0m
+[0;32mI (1738) vector_test_sum: vector_time: 194[0m
+[0;32mI (1738) vector_test_sum: scalar_time: 545[0m
+[0;32mI (1738) vec_mul_scalar_shift:: DTYPE_INT8[0m
+[0;32mI (1738) fill_test_vector: Seed set: 2775[0m
+[0;32mI (1768) vector_test_mul_scalar: vector_time: 199[0m
+[0;32mI (1768) vector_test_mul_scalar: scalar_time: 1047[0m
+[0;32mI (1768) vec_mul_scalar_shift:: DTYPE_INT16[0m
+[0;32mI (1768) fill_test_vector: Seed set: 2775[0m
+[0;32mI (1788) vector_test_mul_scalar: vector_time: 194[0m
+[0;32mI (1788) vector_test_mul_scalar: scalar_time: 881[0m
+[0;32mI (1788) vec_mul_scalar_shift:: DTYPE_INT32[0m
+[0;32mI (1788) fill_test_vector: Seed set: 2775[0m
+[0;32mI (1818) vector_test_mul_scalar: vector_time: 425[0m
+[0;32mI (1818) vector_test_mul_scalar: scalar_time: 1792[0m
+[0;32mI (1818) vec_mul_scalar_shift_f32:: DTYPE_FLOAT32[0m
+[0;32mI (1818) fill_test_vector: Seed set: 2775[0m
+[0;32mI (1848) vector_test_mul_scalar: vector_time: 247[0m
+[0;32mI (1848) vector_test_mul_scalar: scalar_time: 838[0m
+[0;32mI (1848) vec_dotp:: DTYPE_INT8[0m
+[0;32mI (1848) fill_test_vector: Seed set: 2775[0m
+[0;32mI (1878) vector_test_dotp: vector_time: 182[0m
+[0;32mI (1878) vector_test_dotp: scalar_time: 842[0m
+[0;32mI (1878) vec_dotp:: DTYPE_INT16[0m
+[0;32mI (1878) fill_test_vector: Seed set: 2775[0m
+[0;32mI (1898) vector_test_dotp: vector_time: 161[0m
+[0;32mI (1908) vector_test_dotp: scalar_time: 697[0m
+[0;32mI (1908) vec_dotp:: DTYPE_INT32[0m
+[0;32mI (1908) fill_test_vector: Seed set: 2775[0m
+[0;32mI (1948) vector_test_dotp: vector_time: 393[0m
+[0;32mI (1948) vector_test_dotp: scalar_time: 780[0m
+[0;32mI (1948) vec_dotp_f32:: DTYPE_FLOAT32[0m
+[0;32mI (1948) fill_test_vector: Seed set: 2775[0m
+[0;32mI (1998) vector_test_dotp: vector_time: 224[0m
+[0;32mI (1998) vector_test_dotp: scalar_time: 830[0m
+[0;32mI (1998) vec_abs:: DTYPE_INT8[0m
+[0;32mI (1998) fill_test_vector: Seed set: 2775[0m
+[0;32mI (2018) vector_test_abs: vector_time: 177[0m
+[0;32mI (2018) vector_test_abs: scalar_time: 1004[0m
+[0;32mI (2018) vec_abs:: DTYPE_INT16[0m
+[0;32mI (2018) fill_test_vector: Seed set: 2775[0m
+[0;32mI (2038) vector_test_abs: vector_time: 173[0m
+[0;32mI (2038) vector_test_abs: scalar_time: 1000[0m
+[0;32mI (2038) vec_abs:: DTYPE_INT32[0m
+[0;32mI (2038) fill_test_vector: Seed set: 2775[0m
+[0;32mI (2058) vector_test_abs: vector_time: 292[0m
+[0;32mI (2058) vector_test_abs: scalar_time: 639[0m
+[0;32mI (2058) vec_abs:: DTYPE_FLOAT32[0m
+[0;32mI (2058) fill_test_vector: Seed set: 2775[0m
+[0;32mI (2088) vector_test_abs: vector_time: 179[0m
+[0;32mI (2088) vector_test_abs: scalar_time: 734[0m
+[0;32mI (2088) vec_ceil:: DTYPE_INT8[0m
+[0;32mI (2088) fill_test_vector: Seed set: 2775[0m
+[0;32mI (2108) vector_test_ceil: vector_time: 171[0m
+[0;32mI (2108) vector_test_ceil: scalar_time: 754[0m
+[0;32mI (2108) vec_ceil:: DTYPE_INT16[0m
+[0;32mI (2108) fill_test_vector: Seed set: 2775[0m
+[0;32mI (2128) vector_test_ceil: vector_time: 142[0m
+[0;32mI (2128) vector_test_ceil: scalar_time: 652[0m
+[0;32mI (2128) vec_ceil:: DTYPE_INT32[0m
+[0;32mI (2128) fill_test_vector: Seed set: 2775[0m
+[0;32mI (2158) vector_test_ceil: vector_time: 158[0m
+[0;32mI (2158) vector_test_ceil: scalar_time: 691[0m
+[0;32mI (2158) vec_ceil_f32:: DTYPE_FLOAT32[0m
+[0;32mI (2158) fill_test_vector: Seed set: 2775[0m
+[0;32mI (2188) vector_test_ceil_f32: vector_time: 252[0m
+[0;32mI (2188) vector_test_ceil_f32: scalar_time: 876[0m
+[0;32mI (2188) vec_floor:: DTYPE_INT8[0m
+[0;32mI (2188) fill_test_vector: Seed set: 2775[0m
+[0;32mI (2208) vector_test_floor: vector_time: 172[0m
+[0;32mI (2208) vector_test_floor: scalar_time: 766[0m
+[0;32mI (2208) vec_floor:: DTYPE_INT16[0m
+[0;32mI (2208) fill_test_vector: Seed set: 2775[0m
+[0;32mI (2228) vector_test_floor: vector_time: 154[0m
+[0;32mI (2228) vector_test_floor: scalar_time: 659[0m
+[0;32mI (2228) vec_floor:: DTYPE_INT32[0m
+[0;32mI (2228) fill_test_vector: Seed set: 2775[0m
+[0;32mI (2248) vector_test_floor: vector_time: 158[0m
+[0;32mI (2248) vector_test_floor: scalar_time: 702[0m
+[0;32mI (2248) vec_floor:: DTYPE_FLOAT32[0m
+[0;32mI (2248) fill_test_vector: Seed set: 2775[0m
+[0;32mI (2288) vector_test_floor_f32: vector_time: 247[0m
+[0;32mI (2288) vector_test_floor_f32: scalar_time: 838[0m
+[0;32mI (2288) vec_neg:: DTYPE_INT8[0m
+[0;32mI (2288) fill_test_vector: Seed set: 2775[0m
+[0;32mI (2308) vector_test_neg: vector_time: 171[0m
+[0;32mI (2308) vector_test_neg: scalar_time: 955[0m
+[0;32mI (2308) vec_neg:: DTYPE_INT16[0m
+[0;32mI (2308) fill_test_vector: Seed set: 2776[0m
+[0;32mI (2318) vector_test_neg: vector_time: 173[0m
+[0;32mI (2318) vector_test_neg: scalar_time: 1030[0m
+[0;32mI (2328) vec_neg:: DTYPE_INT32[0m
+[0;32mI (2328) fill_test_vector: Seed set: 2776[0m
+[0;32mI (2348) vector_test_neg: vector_time: 310[0m
+[0;32mI (2348) vector_test_neg: scalar_time: 674[0m
+[0;32mI (2348) vec_neg:: DTYPE_FLOAT32[0m
+[0;32mI (2348) fill_test_vector: Seed set: 2776[0m
+[0;32mI (2378) vector_test_neg: vector_time: 177[0m
+[0;32mI (2378) vector_test_neg: scalar_time: 726[0m
+[0;32mI (2378) vec_mac:: DTYPE_INT8[0m
+[0;32mI (2378) fill_test_vector: Seed set: 2776[0m
+[0;32mI (2398) vector_test_mac: vector_time: 177[0m
+[0;32mI (2398) vector_test_mac: scalar_time: 873[0m
+[0;32mI (2398) vec_mac:: DTYPE_INT16[0m
+[0;32mI (2398) fill_test_vector: Seed set: 2776[0m
+[0;32mI (2408) vector_test_mac: vector_time: 154[0m
+[0;32mI (2408) vector_test_mac: scalar_time: 803[0m
+[0;32mI (2408) vec_mac:: DTYPE_INT32[0m
+[0;32mI (2418) fill_test_vector: Seed set: 2776[0m
+[0;32mI (2438) vector_test_mac: vector_time: 307[0m
+[0;32mI (2438) vector_test_mac: scalar_time: 773[0m
+[0;32mI (2438) vec_mac_f32:: DTYPE_FLOAT32[0m
+[0;32mI (2438) fill_test_vector: Seed set: 42[0m
+[0;32mI (2488) vector_test_mac_f32: vector_time: 405[0m
+[0;32mI (2488) vector_test_mac_f32: scalar_time: 1607[0m
+[0;32mI (2488) vec_zero:: DTYPE_INT8[0m
+[0;32mI (2488) fill_test_vector: Seed set: 2776[0m
+[0;32mI (2498) vector_test_zeros: vector_time: 142[0m
+[0;32mI (2498) vector_test_zeros: scalar_time: 615[0m
+[0;32mI (2498) vec_zero:: DTYPE_INT16[0m
+[0;32mI (2508) fill_test_vector: Seed set: 2776[0m
+[0;32mI (2508) vector_test_zeros: vector_time: 132[0m
+[0;32mI (2508) vector_test_zeros: scalar_time: 607[0m
+[0;32mI (2518) vec_zero:: DTYPE_INT32[0m
+[0;32mI (2518) fill_test_vector: Seed set: 2776[0m
+[0;32mI (2528) vector_test_zeros: vector_time: 132[0m
+[0;32mI (2528) vector_test_zeros: scalar_time: 609[0m
+[0;32mI (2528) vec_zero:: DTYPE_FLOAT32[0m
+[0;32mI (2528) fill_test_vector: Seed set: 2776[0m
+[0;32mI (2548) vector_test_zeros: vector_time: 128[0m
+[0;32mI (2548) vector_test_zeros: scalar_time: 609[0m
+[0;32mI (2548) vec_ones:: DTYPE_INT8[0m
+[0;32mI (2548) fill_test_vector: Seed set: 2776[0m
+[0;32mI (2558) vector_test_ones: vector_time: 133[0m
+[0;32mI (2558) vector_test_ones: scalar_time: 670[0m
+[0;32mI (2558) vec_ones:: DTYPE_INT16[0m
+[0;32mI (2558) fill_test_vector: Seed set: 2776[0m
+[0;32mI (2568) vector_test_ones: vector_time: 132[0m
+[0;32mI (2568) vector_test_ones: scalar_time: 612[0m
+[0;32mI (2578) vec_ones:: DTYPE_INT32[0m
+[0;32mI (2578) fill_test_vector: Seed set: 2776[0m
+[0;32mI (2588) vector_test_ones: vector_time: 130[0m
+[0;32mI (2588) vector_test_ones: scalar_time: 610[0m
+[0;32mI (2588) vec_ones:: DTYPE_FLOAT32[0m
+[0;32mI (2588) fill_test_vector: Seed set: 2776[0m
+[0;32mI (2598) vector_test_ones: vector_time: 131[0m
+[0;32mI (2598) vector_test_ones: scalar_time: 613[0m
+[0;32mI (2598) vec_fill:: DTYPE_INT8[0m
+[0;32mI (2608) fill_test_vector: Seed set: 2776[0m
+[0;32mI (2618) vector_test_fill: vector_time: 138[0m
+[0;32mI (2618) vector_test_fill: scalar_time: 527[0m
+[0;32mI (2618) vec_fill:: DTYPE_INT16[0m
+[0;32mI (2618) fill_test_vector: Seed set: 2776[0m
+[0;32mI (2628) vector_test_fill: vector_time: 132[0m
+[0;32mI (2628) vector_test_fill: scalar_time: 526[0m
+[0;32mI (2628) vec_fill:: DTYPE_INT32[0m
+[0;32mI (2638) fill_test_vector: Seed set: 2776[0m
+[0;32mI (2648) vector_test_fill: vector_time: 130[0m
+[0;32mI (2648) vector_test_fill: scalar_time: 521[0m
+[0;32mI (2648) vec_fill:: DTYPE_FLOAT32[0m
+[0;32mI (2648) fill_test_vector: Seed set: 2776[0m
+[1;31mE (2648) vec_fill_f32: scalar: 33.000000[0m
+[1;31mE (2658) vector_assert_eq_f32: Mismatch found at 0, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2668) vector_assert_eq_f32: Mismatch found at 1, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2668) vector_assert_eq_f32: Mismatch found at 2, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2678) vector_assert_eq_f32: Mismatch found at 3, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2688) vector_assert_eq_f32: Mismatch found at 4, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2688) vector_assert_eq_f32: Mismatch found at 5, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2698) vector_assert_eq_f32: Mismatch found at 6, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2708) vector_assert_eq_f32: Mismatch found at 7, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2718) vector_assert_eq_f32: Mismatch found at 8, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2718) vector_assert_eq_f32: Mismatch found at 9, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2728) vector_assert_eq_f32: Mismatch found at 10, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2738) vector_assert_eq_f32: Mismatch found at 11, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2748) vector_assert_eq_f32: Mismatch found at 12, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2748) vector_assert_eq_f32: Mismatch found at 13, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2758) vector_assert_eq_f32: Mismatch found at 14, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2768) vector_assert_eq_f32: Mismatch found at 15, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2768) vector_assert_eq_f32: Mismatch found at 16, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2778) vector_assert_eq_f32: Mismatch found at 17, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2788) vector_assert_eq_f32: Mismatch found at 18, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2798) vector_assert_eq_f32: Mismatch found at 19, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2798) vector_assert_eq_f32: Mismatch found at 20, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2808) vector_assert_eq_f32: Mismatch found at 21, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2818) vector_assert_eq_f32: Mismatch found at 22, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2828) vector_assert_eq_f32: Mismatch found at 23, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2828) vector_assert_eq_f32: Mismatch found at 24, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2838) vector_assert_eq_f32: Mismatch found at 25, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2848) vector_assert_eq_f32: Mismatch found at 26, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2858) vector_assert_eq_f32: Mismatch found at 27, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2858) vector_assert_eq_f32: Mismatch found at 28, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2868) vector_assert_eq_f32: Mismatch found at 29, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2878) vector_assert_eq_f32: Mismatch found at 30, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2888) vector_assert_eq_f32: Mismatch found at 31, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2888) vector_assert_eq_f32: Mismatch found at 32, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2898) vector_assert_eq_f32: Mismatch found at 33, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2908) vector_assert_eq_f32: Mismatch found at 34, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2918) vector_assert_eq_f32: Mismatch found at 35, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2918) vector_assert_eq_f32: Mismatch found at 36, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2928) vector_assert_eq_f32: Mismatch found at 37, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2938) vector_assert_eq_f32: Mismatch found at 38, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2938) vector_assert_eq_f32: Mismatch found at 39, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2948) vector_assert_eq_f32: Mismatch found at 40, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2958) vector_assert_eq_f32: Mismatch found at 41, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2968) vector_assert_eq_f32: Mismatch found at 42, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2968) vector_assert_eq_f32: Mismatch found at 43, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2978) vector_assert_eq_f32: Mismatch found at 44, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2988) vector_assert_eq_f32: Mismatch found at 45, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2998) vector_assert_eq_f32: Mismatch found at 46, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (2998) vector_assert_eq_f32: Mismatch found at 47, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (3008) vector_assert_eq_f32: Mismatch found at 48, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (3018) vector_assert_eq_f32: Mismatch found at 49, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (3028) vector_assert_eq_f32: Mismatch found at 50, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (3028) vector_assert_eq_f32: Mismatch found at 51, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (3038) vector_assert_eq_f32: Mismatch found at 52, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (3048) vector_assert_eq_f32: Mismatch found at 53, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (3058) vector_assert_eq_f32: Mismatch found at 54, vec1: 33.000000, vec2 0.000000[0m
+[1;31mE (3058) vec_fill_f32: scalar: 64.000000[0m
+[1;31mE (3068) vector_assert_eq_f32: Mismatch found at 0, vec1: 64.000000, vec2 0.000000[0m
+[1;31mE (3068) vector_assert_eq_f32: Mismatch found at 1, vec1: 64.000000, vec2 0.000000[0m
+[1;31mE (3078) vector_assert_eq_f32: Mismatch found at 2, vec1: 64.000000, vec2 0.000000[0m
+[1;31mE (3088) vec_fill_f32: scalar: 41.000000[0m
+[1;31mE (3088) vector_assert_eq_f32: Mismatch found at 0, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3098) vector_assert_eq_f32: Mismatch found at 1, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3108) vector_assert_eq_f32: Mismatch found at 2, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3108) vector_assert_eq_f32: Mismatch found at 3, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3118) vector_assert_eq_f32: Mismatch found at 4, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3128) vector_assert_eq_f32: Mismatch found at 5, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3138) vector_assert_eq_f32: Mismatch found at 6, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3138) vector_assert_eq_f32: Mismatch found at 7, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3148) vector_assert_eq_f32: Mismatch found at 8, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3158) vector_assert_eq_f32: Mismatch found at 9, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3158) vector_assert_eq_f32: Mismatch found at 10, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3168) vector_assert_eq_f32: Mismatch found at 11, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3178) vector_assert_eq_f32: Mismatch found at 12, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3188) vector_assert_eq_f32: Mismatch found at 13, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3188) vector_assert_eq_f32: Mismatch found at 14, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3198) vector_assert_eq_f32: Mismatch found at 15, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3208) vector_assert_eq_f32: Mismatch found at 16, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3218) vector_assert_eq_f32: Mismatch found at 17, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3218) vector_assert_eq_f32: Mismatch found at 18, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3228) vector_assert_eq_f32: Mismatch found at 19, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3238) vector_assert_eq_f32: Mismatch found at 20, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3248) vector_assert_eq_f32: Mismatch found at 21, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3248) vector_assert_eq_f32: Mismatch found at 22, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3258) vector_assert_eq_f32: Mismatch found at 23, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3268) vector_assert_eq_f32: Mismatch found at 24, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3278) vector_assert_eq_f32: Mismatch found at 25, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3278) vector_assert_eq_f32: Mismatch found at 26, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3288) vector_assert_eq_f32: Mismatch found at 27, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3298) vector_assert_eq_f32: Mismatch found at 28, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3298) vector_assert_eq_f32: Mismatch found at 29, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3308) vector_assert_eq_f32: Mismatch found at 30, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3318) vector_assert_eq_f32: Mismatch found at 31, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3328) vector_assert_eq_f32: Mismatch found at 32, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3328) vector_assert_eq_f32: Mismatch found at 33, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3338) vector_assert_eq_f32: Mismatch found at 34, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3348) vector_assert_eq_f32: Mismatch found at 35, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3358) vector_assert_eq_f32: Mismatch found at 36, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3358) vector_assert_eq_f32: Mismatch found at 37, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3368) vector_assert_eq_f32: Mismatch found at 38, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3378) vector_assert_eq_f32: Mismatch found at 39, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3388) vector_assert_eq_f32: Mismatch found at 40, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3388) vector_assert_eq_f32: Mismatch found at 41, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3398) vector_assert_eq_f32: Mismatch found at 42, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3408) vector_assert_eq_f32: Mismatch found at 43, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3418) vector_assert_eq_f32: Mismatch found at 44, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3418) vector_assert_eq_f32: Mismatch found at 45, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3428) vector_assert_eq_f32: Mismatch found at 46, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3438) vector_assert_eq_f32: Mismatch found at 47, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3448) vector_assert_eq_f32: Mismatch found at 48, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3448) vector_assert_eq_f32: Mismatch found at 49, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3458) vector_assert_eq_f32: Mismatch found at 50, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3468) vector_assert_eq_f32: Mismatch found at 51, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3468) vector_assert_eq_f32: Mismatch found at 52, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3478) vector_assert_eq_f32: Mismatch found at 53, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3488) vector_assert_eq_f32: Mismatch found at 54, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3498) vector_assert_eq_f32: Mismatch found at 55, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3498) vector_assert_eq_f32: Mismatch found at 56, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3508) vector_assert_eq_f32: Mismatch found at 57, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3518) vector_assert_eq_f32: Mismatch found at 58, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3528) vector_assert_eq_f32: Mismatch found at 59, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3528) vector_assert_eq_f32: Mismatch found at 60, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3538) vector_assert_eq_f32: Mismatch found at 61, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3548) vector_assert_eq_f32: Mismatch found at 62, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3558) vector_assert_eq_f32: Mismatch found at 63, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3558) vector_assert_eq_f32: Mismatch found at 64, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3568) vector_assert_eq_f32: Mismatch found at 65, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3578) vector_assert_eq_f32: Mismatch found at 66, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3588) vector_assert_eq_f32: Mismatch found at 67, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3588) vector_assert_eq_f32: Mismatch found at 68, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3598) vector_assert_eq_f32: Mismatch found at 69, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3608) vector_assert_eq_f32: Mismatch found at 70, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3608) vector_assert_eq_f32: Mismatch found at 71, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3618) vector_assert_eq_f32: Mismatch found at 72, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3628) vector_assert_eq_f32: Mismatch found at 73, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3638) vector_assert_eq_f32: Mismatch found at 74, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3638) vector_assert_eq_f32: Mismatch found at 75, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3648) vector_assert_eq_f32: Mismatch found at 76, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3658) vector_assert_eq_f32: Mismatch found at 77, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3668) vector_assert_eq_f32: Mismatch found at 78, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3668) vector_assert_eq_f32: Mismatch found at 79, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3678) vector_assert_eq_f32: Mismatch found at 80, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3688) vector_assert_eq_f32: Mismatch found at 81, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3698) vector_assert_eq_f32: Mismatch found at 82, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3698) vector_assert_eq_f32: Mismatch found at 83, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3708) vector_assert_eq_f32: Mismatch found at 84, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3718) vector_assert_eq_f32: Mismatch found at 85, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3728) vector_assert_eq_f32: Mismatch found at 86, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3728) vector_assert_eq_f32: Mismatch found at 87, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3738) vector_assert_eq_f32: Mismatch found at 88, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3748) vector_assert_eq_f32: Mismatch found at 89, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3748) vector_assert_eq_f32: Mismatch found at 90, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3758) vector_assert_eq_f32: Mismatch found at 91, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3768) vector_assert_eq_f32: Mismatch found at 92, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3778) vector_assert_eq_f32: Mismatch found at 93, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3778) vector_assert_eq_f32: Mismatch found at 94, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3788) vector_assert_eq_f32: Mismatch found at 95, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3798) vector_assert_eq_f32: Mismatch found at 96, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3808) vector_assert_eq_f32: Mismatch found at 97, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3808) vector_assert_eq_f32: Mismatch found at 98, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3818) vector_assert_eq_f32: Mismatch found at 99, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3828) vector_assert_eq_f32: Mismatch found at 100, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3838) vector_assert_eq_f32: Mismatch found at 101, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3838) vector_assert_eq_f32: Mismatch found at 102, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3848) vector_assert_eq_f32: Mismatch found at 103, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3858) vector_assert_eq_f32: Mismatch found at 104, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3868) vector_assert_eq_f32: Mismatch found at 105, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3868) vector_assert_eq_f32: Mismatch found at 106, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3878) vector_assert_eq_f32: Mismatch found at 107, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3888) vector_assert_eq_f32: Mismatch found at 108, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3898) vector_assert_eq_f32: Mismatch found at 109, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3898) vector_assert_eq_f32: Mismatch found at 110, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3908) vector_assert_eq_f32: Mismatch found at 111, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3918) vector_assert_eq_f32: Mismatch found at 112, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3928) vector_assert_eq_f32: Mismatch found at 113, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3928) vector_assert_eq_f32: Mismatch found at 114, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3938) vector_assert_eq_f32: Mismatch found at 115, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3948) vector_assert_eq_f32: Mismatch found at 116, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3958) vector_assert_eq_f32: Mismatch found at 117, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3958) vector_assert_eq_f32: Mismatch found at 118, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3968) vector_assert_eq_f32: Mismatch found at 119, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3978) vector_assert_eq_f32: Mismatch found at 120, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3988) vector_assert_eq_f32: Mismatch found at 121, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3988) vector_assert_eq_f32: Mismatch found at 122, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (3998) vector_assert_eq_f32: Mismatch found at 123, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4008) vector_assert_eq_f32: Mismatch found at 124, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4018) vector_assert_eq_f32: Mismatch found at 125, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4018) vector_assert_eq_f32: Mismatch found at 126, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4028) vector_assert_eq_f32: Mismatch found at 127, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4038) vector_assert_eq_f32: Mismatch found at 128, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4048) vector_assert_eq_f32: Mismatch found at 129, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4048) vector_assert_eq_f32: Mismatch found at 130, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4058) vector_assert_eq_f32: Mismatch found at 131, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4068) vector_assert_eq_f32: Mismatch found at 132, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4078) vector_assert_eq_f32: Mismatch found at 133, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4078) vector_assert_eq_f32: Mismatch found at 134, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4088) vector_assert_eq_f32: Mismatch found at 135, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4098) vector_assert_eq_f32: Mismatch found at 136, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4098) vector_assert_eq_f32: Mismatch found at 137, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4108) vector_assert_eq_f32: Mismatch found at 138, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4118) vector_assert_eq_f32: Mismatch found at 139, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4128) vector_assert_eq_f32: Mismatch found at 140, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4128) vector_assert_eq_f32: Mismatch found at 141, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4138) vector_assert_eq_f32: Mismatch found at 142, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4148) vector_assert_eq_f32: Mismatch found at 143, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4158) vector_assert_eq_f32: Mismatch found at 144, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4158) vector_assert_eq_f32: Mismatch found at 145, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4168) vector_assert_eq_f32: Mismatch found at 146, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4178) vector_assert_eq_f32: Mismatch found at 147, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4188) vector_assert_eq_f32: Mismatch found at 148, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4188) vector_assert_eq_f32: Mismatch found at 149, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4198) vector_assert_eq_f32: Mismatch found at 150, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4208) vector_assert_eq_f32: Mismatch found at 151, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4218) vector_assert_eq_f32: Mismatch found at 152, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4218) vector_assert_eq_f32: Mismatch found at 153, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4228) vector_assert_eq_f32: Mismatch found at 154, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4238) vector_assert_eq_f32: Mismatch found at 155, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4248) vector_assert_eq_f32: Mismatch found at 156, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4248) vector_assert_eq_f32: Mismatch found at 157, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4258) vector_assert_eq_f32: Mismatch found at 158, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4268) vector_assert_eq_f32: Mismatch found at 159, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4278) vector_assert_eq_f32: Mismatch found at 160, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4278) vector_assert_eq_f32: Mismatch found at 161, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4288) vector_assert_eq_f32: Mismatch found at 162, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4298) vector_assert_eq_f32: Mismatch found at 163, vec1: 41.000000, vec2 0.000000[0m
+[1;31mE (4308) vector_assert_eq_f32: Mismatch found at 164, vec1: 41.000000, vec2 0.000000[0m

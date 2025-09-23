@@ -3,6 +3,7 @@
 #include "vector_test_helper.h"
 #include "esp_heap_caps.h"  
 #include "esp_log.h"
+#include "math.h"
 #include <time.h>  
 
 gptimer_handle_t gptimer = NULL;
@@ -47,6 +48,13 @@ vector_t* create_test_vector(const size_t size, const dtype type){
     return vec;                                                                             // Return the created vector_t
 }
 
+float rand_float_val(){
+    float val = 1.0f;
+    val *= (rand() & 0x1 ? -1 : 1);
+    val *= rand() % 128;
+    return val;
+}
+
 void fill_test_vector(vector_t *vec){
     switch (vec->type){
         case (DTYPE_INT8): {
@@ -76,11 +84,8 @@ void fill_test_vector(vector_t *vec){
         case (DTYPE_FLOAT32): {
             float* data = vec->data;
             for (int i = 0; i < vec->size; i++){
-                uint32_t r = (rand() << 16) ^ rand();
-                float f = (r / 4294967296.0f); 
-                data[i] = 2.0f * f - 1.0f; 
+                data[i] = rand_float_val();
             }
-            break;
         }
     }
 }
@@ -127,14 +132,19 @@ int rand_scalar_val(dtype type){
             assert(false);
     }
 }
-
-float rand_float_val(){
-     return (float)rand_scalar_val(DTYPE_INT32);
-}
-
+ 
 bool float_eq(float a, float b){
-    if (a == 0.0f && b == 0.0f) { return true;}
-    return (((double)a / (double)b < 1.0005) || (((double)b / (double)a) < 1.0005));
+    const float abs_tol = 1e-6f;     
+    const float rel_tol = 1e-3f;     
+ 
+    if (isnan(a) || isnan(b)) return false;
+    if (isinf(a) || isinf(b)) return a == b;
+
+    float diff = fabsf(a - b);
+
+    if (diff <= abs_tol) return true;  
+
+    return diff <= rel_tol * fmaxf(fabsf(a), fabsf(b));
 }
 
 bool vector_assert_eq(vector_t *vec1, vector_t *vec2){
@@ -191,7 +201,7 @@ bool vector_assert_eq(vector_t *vec1, vector_t *vec2){
             {
                 float val1 = vec1_data[i]; 
                 float val2 = vec2_data[i];
-                if (!float_eq(val1,val1)){
+                if (!float_eq(val1,val2)){
                     ESP_LOGE("vector_assert_eq_f32", "Mismatch found at %d, vec1: %f, vec2 %f", i, val1, val2);
                     equals_flag = false;
                 }

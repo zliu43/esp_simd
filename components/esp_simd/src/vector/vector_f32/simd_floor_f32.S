@@ -26,17 +26,17 @@ simd_floor_f32:
     extui a6, a5, 0, 2                          // extracts the lowest 2 bits of a5 into a6 (a5 % 4), for tail processing
     srli a5, a5, 2                              // shift a5 right by 2 to get the number of 16-byte blocks a5 = (a5 / 4)
    
-    lsip f4, a3, 0                              // loat ceil into f4
+    lsip f4, a4, 0                              // loat ceil into f4
     loopnez a5, .Lsimd_loop                     // loop until a5 == 0
         ee.ldf.128.ip f3, f2, f1, f0, a2, 16    // load 4 elements from vec1, increment a2  
         olt.s   b0, f3, f4                      // b0 = (floor > cur)
         olt.s   b1, f2, f4           
         olt.s   b2, f1, f4                      
         olt.s   b3, f0, f4        
-        movt.s  f0, f4, b0                  
-        movt.s  f1, f4, b1                  
-        movt.s  f2, f4, b2      
-        movt.s  f3, f4, b3
+        movt.s  f3, f4, b0                  
+        movt.s  f2, f4, b1                  
+        movt.s  f1, f4, b2      
+        movt.s  f0, f4, b3
         ee.stf.128.ip f3, f2, f1, f0, a3, 16    // store result
     .Lsimd_loop:
  
@@ -44,7 +44,7 @@ simd_floor_f32:
         lsip f0, a2, 4                          // load the first element, increment a2 
         olt.s   b0, f0, f4                      // b0 = (floor > cur)
         movt.s  f0, f4, b0
-        ssip f0, a4, 4                          // stores the result, increments a4
+        ssip f0, a3, 4                          // stores the result, increments a4
     .Ltail_loop:
  
     movi.n a2, 0                                // return VECTOR_SUCCESS

@@ -454,6 +454,7 @@ vector_status_t scalar_dotp_f32(const vector_t *vec1, const vector_t *vec2, floa
             for (int i = 0 ; i < vec1->size; i++){
                 output += vec1_data[i] * vec2_data[i];
             }
+            *result = output;
             return VECTOR_SUCCESS;
         }
         default:
@@ -561,13 +562,12 @@ vector_status_t scalar_ceil_f32(const vector_t *vec1, vector_t* result, const fl
         case (DTYPE_INT8):   return VECTOR_UNSUPPORTED_OPERATION;
         case (DTYPE_INT16):  return VECTOR_UNSUPPORTED_OPERATION;
         case (DTYPE_INT32):  return VECTOR_UNSUPPORTED_OPERATION;
-        case (DTYPE_FLOAT32): { 
-            float ceil = (float)ceiling; 
+        case (DTYPE_FLOAT32): {   
             float *vec1_data = (float*)(vec1->data);    
             float *result_data = (float*)(result->data);                                   
             for (int i = 0; i < vec1->size; i++){
                 float cur_val = vec1_data[i];
-                result_data[i] = cur_val > ceil ? ceil : cur_val;
+                result_data[i] = cur_val > ceiling ? ceiling : cur_val;
             }
             return VECTOR_SUCCESS;
         }
@@ -677,12 +677,11 @@ vector_status_t scalar_neg(const vector_t *vec1,  vector_t* result) {
             return VECTOR_SUCCESS;
         }
         case (DTYPE_FLOAT32): { 
-            int32_t* vec1_data = (int32_t*)vec1->data;
-            int32_t* result_data = (int32_t*)result->data;
+            float* vec1_data = (float*)vec1->data;
+            float* result_data = (float*)result->data;
             for (int i = 0 ; i < vec1->size; i++){
-                int32_t val = vec1_data[i];
-                val = val ^ INT32_MAX;
-                result_data[i] = val;
+                float val = vec1_data[i]; 
+                result_data[i] = -val;
             }
             return VECTOR_SUCCESS;
         }
