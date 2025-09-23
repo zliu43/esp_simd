@@ -22,7 +22,13 @@ simd_add_f32:
     entry a1, 16                                // reserve 16 bytes for the stack frame 
     extui a6, a5, 0, 2                          // extracts the lowest 2 bits of a5 into a6 (a5 % 4), for tail processing
     srli a5, a5, 2                              // shift a5 right by 2 to get the number of 16-byte blocks a5 = (a5 / 4)
-   
+    beqz a5, .Ltail_start                       // jump to scalar tail if no 16 byte blocks
+
+    /**
+     * Precomputes first loop to save 3 cycles per loop from pipeline hazard between add and store
+     * Does overread by 16 bytes. 
+     * Previous version:
+
     loopnez a5, .Lsimd_loop                     // loop until a5 == 0
         ee.ldf.128.ip f3, f2, f1, f0, a2, 16    // load 4 elements from vec1, increment a2
         ee.ldf.128.ip f7, f6, f5, f4, a3, 16    // load 4 elements from vec2, increment a3
@@ -31,8 +37,31 @@ simd_add_f32:
         add.s f1, f1, f5 
         add.s f0, f0, f4 
         ee.stf.128.ip f3, f2, f1, f0, a4, 16    // store result
+    .Lsimd_loop: 
+     */
+
+    ee.ldf.128.ip f3, f2, f1, f0, a2, 16        // loads first loop 
+    ee.ldf.128.ip f7, f6, f5, f4, a3, 16        
+    add.s f11, f3, f7                           // precomputes first cycle
+    add.s f10, f2, f6 
+    add.s f9, f1, f5 
+    add.s f8, f0, f4 
+
+    addi a5, a5, -1
+    loopnez a5, .Lsimd_loop                     // loop until a5 == 0 
+        ee.ldf.128.ip f3, f2, f1, f0, a2, 16     
+        ee.ldf.128.ip f7, f6, f5, f4, a3, 16     
+        ee.stf.128.ip f11, f10, f9, f8, a4, 16  // store result
+        add.s f11, f3, f7 
+        add.s f10, f2, f6 
+        add.s f9, f1, f5 
+        add.s f8, f0, f4 
     .Lsimd_loop:
- 
+
+    ee.stf.128.ip f11, f10, f9, f8, a4, 16      // store result 
+
+    .Ltail_start:
+
     loopnez a6, .Ltail_loop
         lsip f0, a2, 4                          // load the first element, increment a2
         lsip f1, a3, 4                          // load the second element, increment a3

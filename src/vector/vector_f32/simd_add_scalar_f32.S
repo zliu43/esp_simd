@@ -22,20 +22,32 @@ simd_add_scalar_f32:
     entry a1, 16                                // reserve 16 bytes for the stack frame 
     extui a6, a5, 0, 2                          // extracts the lowest 2 bits of a5 into a6 (a5 % 4), for tail processing
     srli a5, a5, 2                              // shift a5 right by 2 to get the number of 16-byte blocks a5 = (a5 / 4)
-   
+
     lsip f4, a3, 0
+    beqz a5, .Ltail_start
+    
+    ee.ldf.128.ip f3, f2, f1, f0, a2, 16        // loads first loop  
+    add.s f8, f3, f4                            // precomputes first cycle
+    add.s f7, f2, f4 
+    add.s f6, f1, f4 
+    add.s f5, f0, f4 
+
+    addi a5, a5, -1
     loopnez a5, .Lsimd_loop                     // loop until a5 == 0
         ee.ldf.128.ip f3, f2, f1, f0, a2, 16    // load 4 elements from vec1, increment a2 
-        add.s f3, f3, f7 
-        add.s f2, f2, f6 
-        add.s f1, f1, f5 
-        add.s f0, f0, f4 
-        ee.stf.128.ip f3, f2, f1, f0, a4, 16    // store result
+        ee.stf.128.ip f8, f7, f6, f5, a4, 16    // store result
+        add.s f8, f3, f4 
+        add.s f7, f2, f4 
+        add.s f6, f1, f4 
+        add.s f5, f0, f4 
     .Lsimd_loop:
- 
+
+    ee.stf.128.ip f8, f7, f6, f5, a4, 16    // store result 
+
+    .Ltail_start:
     loopnez a6, .Ltail_loop
         lsip f0, a2, 4                          // load the first element, increment a2 
-        add.s f0, f0, f1                        // performs f32 addition
+        add.s f0, f0, f4                        // performs f32 addition
         ssip f0, a4, 4                          // stores the result, increments a4
     .Ltail_loop:
  

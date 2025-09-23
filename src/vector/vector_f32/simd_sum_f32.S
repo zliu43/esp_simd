@@ -27,14 +27,22 @@ simd_sum_f32:
     extui a5, a4, 0, 2                          // extracts the lowest 2 bits of a4 into a5 (a4 % 4), for tail processing
     srli a4, a4, 2                              // shift a4 right by 2 to get the number of 16-byte blocks a4 = (a4 / 4)
     
-    sub.s f4, f4,f4 
+    const.s f4, 0
+    const.s f5, 0
+    const.s f6, 0
+    const.s f7, 0
+
     loopnez a4, .Lsimd_loop                     // loop until a4 == 0
         ee.ldf.128.ip f3, f2, f1, f0, a2, 16    // load 4 elements from vec1, increment a2 
-        add.s f0, f0, f1
-        add.s f2, f2, f3
-        add.s f4, f4, f0
-        add.s f4, f4, f2 
+        add.s f4, f0, f4
+        add.s f5, f1, f5
+        add.s f6, f2, f6
+        add.s f7, f3, f7 
     .Lsimd_loop:
+
+    add.s f4, f4, f5
+    add.s f6, f6, f7
+    add.s f4, f4, f6
  
     loopnez a5, .Ltail_loop
         lsip f0, a2, 4                          // load the first element, increment a2 

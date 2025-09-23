@@ -25,7 +25,7 @@ extern "C" {
 #include "vector/vector_extra_functions.h"
 #endif
  
-// Macro to help initialize vector on stack.
+// Macro to help initialize vector not on heap
 #define VECTOR_STACK_INIT(name, length, dtype_enum)                      \
     alignas(16) uint8_t name##_buf[(length) * sizeof_dtype(dtype_enum)]; \
     vector_t name = {                                                    \

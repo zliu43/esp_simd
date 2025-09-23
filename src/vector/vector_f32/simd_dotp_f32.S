@@ -23,21 +23,30 @@ simd_dotp_f32:
     extui a6, a5, 0, 2                          // extracts the lowest 2 bits of a5 into a6 (a5 % 4), for tail processing
     srli a5, a5, 2                              // shift a5 right by 2 to get the number of 16-byte blocks a5 = (a5 / 4)
    
-    sub.s f8, f8, f8                            // zeros f8 for accumulator
+    const.s f8, 0                               // zeros f8 for accumulator
+    const.s f9, 0                               // zeros f9 for accumulator
+    const.s f10, 0                              // zeros f10 for accumulator 
+    const.s f11, 0                              // zeros f11 for accumulator 
+
     loopnez a5, .Lsimd_loop                     // loop until a5 == 0
         ee.ldf.128.ip f3, f2, f1, f0, a2, 16    // load 4 elements from vec1, increment a2
         ee.ldf.128.ip f7, f6, f5, f4, a3, 16    // load 4 elements from vec2, increment a3
         madd.s f8, f3, f7                       // multiply elements
-        madd.s f8, f2, f6 
-        madd.s f8, f1, f5 
-        madd.s f8, f0, f4                       // accumulate
+        madd.s f9, f2, f6 
+        madd.s f10, f1, f5 
+        madd.s f11, f0, f4                       // accumulate
     .Lsimd_loop:
+
+    add.s f8, f8, f9
+    add.s f10, f10, f11
+    add.s f8, f8, f10
  
     loopnez a6, .Ltail_loop
         lsip f0, a2, 4                          // load the first element, increment a2
         lsip f1, a3, 4                          // load the second element, increment a3
         madd.s f8, f0, f1                        // performs f32 multiplication 
     .Ltail_loop:
+
     ssi f8, a4, 0
  
     movi.n a2, 0                                // return VECTOR_SUCCESS
