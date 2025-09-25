@@ -36,13 +36,13 @@ simd_add_scalar_f32:
     loopnez a5, .Lsimd_loop                     // loop until a5 == 0
         ee.ldf.128.ip f3, f2, f1, f0, a2, 16    // load 4 elements from vec1, increment a2 
         ee.stf.128.ip f8, f7, f6, f5, a4, 16    // store result
-        add.s f8, f3, f4 
+        add.s f8, f3, f4                        // computes next cycle
         add.s f7, f2, f4 
         add.s f6, f1, f4 
         add.s f5, f0, f4 
     .Lsimd_loop:
 
-    ee.stf.128.ip f8, f7, f6, f5, a4, 16    // store result 
+    ee.stf.128.ip f8, f7, f6, f5, a4, 16        // store result of final cycle
 
     .Ltail_start:
     loopnez a6, .Ltail_loop

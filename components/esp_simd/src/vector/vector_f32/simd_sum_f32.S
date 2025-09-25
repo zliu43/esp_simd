@@ -49,7 +49,6 @@ simd_sum_f32:
         add.s f4, f0, f4                        // performs f32 addition
     .Ltail_loop:
 
-    ssi f4, a3, 0                              // stores the result, 
- 
     movi.n a2, 0                                // return exit code 0 (success)
+    ssi f4, a3, 0                              // stores the result,  
     retw.n

@@ -5256,7 +5256,7 @@ Discarded input sections
  .literal       0x00000000        0x0 esp-idf/esp_simd/libesp_simd.a(simd_mul_shift_f32.S.obj)
  .data          0x00000000        0x0 esp-idf/esp_simd/libesp_simd.a(simd_mul_shift_f32.S.obj)
  .bss           0x00000000        0x0 esp-idf/esp_simd/libesp_simd.a(simd_mul_shift_f32.S.obj)
- .xt.prop       0x00000000       0x3c esp-idf/esp_simd/libesp_simd.a(simd_mul_shift_f32.S.obj)
+ .xt.prop       0x00000000       0x48 esp-idf/esp_simd/libesp_simd.a(simd_mul_shift_f32.S.obj)
  .data          0x00000000        0x0 esp-idf/esp_simd/libesp_simd.a(simd_neg_f32.S.obj)
  .bss           0x00000000        0x0 esp-idf/esp_simd/libesp_simd.a(simd_neg_f32.S.obj)
  .xt.lit        0x00000000        0x8 esp-idf/esp_simd/libesp_simd.a(simd_neg_f32.S.obj)

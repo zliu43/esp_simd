@@ -28,7 +28,7 @@ simd_mac_f32:
     
     const.s f7, 0                               // additional accumulators
     const.s f8, 0
-    const.s f9, 0
+    const.s f9
 
     lsip f5, a4, 0                              // multiplier
 
@@ -47,10 +47,9 @@ simd_mac_f32:
     loopnez a6, .Ltail_loop
         lsip f0, a2, 4                          // load the first element, increment a2 
         madd.s f4, f0, f5   
-    .Ltail_loop:
+    .Ltail_loop: 
 
-    ssi f4, a3, 0                               // stores the result, 
- 
-    movi.n a2, 0                                // return VECTOR_SUCCESS
+    movi.n a2, 0                                // return VECTOR_SUCCESS 
+    ssi f4, a3, 0                               // stores the result,  
     retw.n
 

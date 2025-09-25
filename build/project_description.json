@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "Working",
-    "project_version":    "f030b91-dirty",
+    "project_version":    "af88feb-dirty",
     "project_path":       "/Users/mliu/Desktop/Projects/Working",
     "idf_path":           "/Users/mliu/esp/v5.5/esp-idf",
     "build_dir":          "/Users/mliu/Desktop/Projects/Working/build",
