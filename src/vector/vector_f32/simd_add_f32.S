@@ -49,16 +49,16 @@ simd_add_f32:
 
     addi a5, a5, -1
     loopnez a5, .Lsimd_loop                     // loop until a5 == 0 
-        ee.ldf.128.ip f3, f2, f1, f0, a2, 16     
+        ee.ldf.128.ip f3, f2, f1, f0, a2, 16    // loads next cycle 
         ee.ldf.128.ip f7, f6, f5, f4, a3, 16     
         ee.stf.128.ip f11, f10, f9, f8, a4, 16  // store result
-        add.s f11, f3, f7 
+        add.s f11, f3, f7                       // compute last cycle
         add.s f10, f2, f6 
         add.s f9, f1, f5 
         add.s f8, f0, f4 
     .Lsimd_loop:
 
-    ee.stf.128.ip f11, f10, f9, f8, a4, 16      // store result 
+    ee.stf.128.ip f11, f10, f9, f8, a4, 16      // store result of final cycle
 
     .Ltail_start:
 

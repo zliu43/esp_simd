@@ -36,6 +36,7 @@ simd_mul_scalar_f32:
     mul.s f6, f1, f4 
     mul.s f5, f0, f4 
 
+    addi a5, a5, -1
     loopnez a5, .Lsimd_loop                     // loop until a5 == 0
         ee.ldf.128.ip f3, f2, f1, f0, a2, 16    // load 4 elements from vec1, increment a2 
         ee.stf.128.ip f8, f7, f6, f5, a4, 16    // store result
@@ -44,8 +45,8 @@ simd_mul_scalar_f32:
         mul.s f6, f1, f4 
         mul.s f5, f0, f4 
     .Lsimd_loop:
- 
-    addi a2, a2, -16                            // moves pointer back
+
+    ee.stf.128.ip f8, f7, f6, f5, a4, 16    // store result 
 
     .Ltail_start:
     loopnez a6, .Ltail_loop

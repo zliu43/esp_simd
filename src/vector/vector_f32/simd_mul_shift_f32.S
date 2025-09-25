@@ -37,6 +37,7 @@ simd_mul_shift_f32:
     mul.s f9, f1, f5 
     mul.s f8, f0, f4 
     
+    addi a6, a6, -1
     loopnez a6, .Lsimd_loop                     // loop until a6 == 0 
         ee.ldf.128.ip f3, f2, f1, f0, a2, 16     
         ee.ldf.128.ip f7, f6, f5, f4, a3, 16     
@@ -47,8 +48,7 @@ simd_mul_shift_f32:
         mul.s f8, f0, f4 
     .Lsimd_loop:
 
-    addi a2, a2, -16                            // Moves the pointers back
-    addi a3, a3, -16
+    ee.stf.128.ip f11, f10, f9, f8, a4, 16  // store result 
 
     .Ltail_start:
 
