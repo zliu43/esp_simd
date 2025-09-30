@@ -112,6 +112,8 @@ extern int simd_ceil_f32(const float *a, float *result, const float *max_val, co
 extern int simd_floor_f32(const float *a, float *result, const float *min_val, const size_t size);
 extern int simd_neg_f32(const float *a, float *result, const size_t size);
 extern int simd_mac_f32(const float *a, float *accumulator, const float *multiplier, const size_t size); 
+extern int simd_min(const float* a, const float *b, float *result);
+extern int simd_max(const float* a, const float *b, float *result);
 
 //TODO - NOT YET IMPLEMENTED 
 //extern int simd_bound(const int8_t *a, const int8_t *max_val, const int8_t *min_val, int8_t *result, const size_t size);

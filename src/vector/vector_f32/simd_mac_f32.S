@@ -28,7 +28,7 @@ simd_mac_f32:
     
     const.s f7, 0                               // additional accumulators
     const.s f8, 0
-    const.s f9
+    const.s f9, 0
 
     lsip f5, a4, 0                              // multiplier
 
