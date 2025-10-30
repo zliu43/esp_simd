@@ -31,7 +31,7 @@ simd_dotp_i8:
     movi.n a7, 0                                    // zeros a7
     beqz a5, .Ltail_start                           // if no full blocks (a5 == 0), skip SIMD and go to scalar tail
 
-    // SIMD addition loop for 16-byte blocks 
+    // SIMD multiply-addition loop for 16-byte blocks 
     ee.zero.accx                                    // clears the QACC register
     ee.vld.128.ip     q0, a2, 16                    // loads 16 bytes from a2 into q0, then increment a2 by 16
     loopnez a5, .Lsimd_loop                         // loop until a5 == 0
@@ -47,8 +47,8 @@ simd_dotp_i8:
  
     loopnez a6, .Ltail_loop 
         l8ui a8, a2, 0
-        sext a8, a8, 7
         l8ui a9, a3, 0
+        sext a8, a8, 7
         sext a9, a9, 7
         mull a8, a8, a9
         add a7, a7, a8 

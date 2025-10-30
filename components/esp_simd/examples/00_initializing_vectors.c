@@ -22,6 +22,7 @@ void app_main(){
     vector_t* vec2_ptr = vector_create(512, DTYPE_INT32);   // vector_create returns null when memory allocation fails
     if(vector_ok(vec2_ptr) != VECTOR_SUCCESS){
         // Error handling when system fails to allocate memory
+        vector_destroy(vec2_ptr);
     }
 
     // Using a vector as a wrapper for existing data

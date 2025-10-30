@@ -133,6 +133,18 @@ vector_status_t vector_free_data(vector_t *vec);
  */
 vector_status_t vector_destroy(vector_t *vec);
 
+/**
+ * @brief Set data pointer and metadata of a vector_t.
+ * 
+ * @param vec       Pointer to the vector_t to initialize.
+ * @param data      Pointer to the data buffer (must be 16-byte aligned).
+ * @param size      Number of elements in the data buffer.
+ * @param type      Data type of the elements (DTYPE_INT8/INT16/INT32/FLOAT32).
+ * @param owns_data Boolean indicating if the vector owns the data buffer.
+ * @retval VECTOR_SUCCESS           Vector initialized successfully.
+ */
+vector_status_t vector_set(vector_t* vec, void* data, size_t size, dtype type, bool owns_data);
+
 #ifdef __cplusplus
 }
 #endif
