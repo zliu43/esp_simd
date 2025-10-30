@@ -51,3 +51,16 @@ vector_status_t vector_destroy(vector_t *vec) {
     return VECTOR_SUCCESS;
 }
 
+vector_status_t vector_set(vector_t *vec, void *data, size_t size, dtype type, bool owns_data) {
+    if (!vec) { return VECTOR_NULL; }
+    if (!data) { return VECTOR_NULL; }
+    if ((uint32_t)data & 0xF) { return VECTOR_UNALIGNED_DATA; }                             // Data not 128-bit aligned
+    if (type < DTYPE_INT8 || type > DTYPE_FLOAT32) { return VECTOR_TYPE_MISMATCH; }         // Invalid Type
+
+    vec->data = data;
+    vec->size = size;
+    vec->type = type;
+    vec->owns_data = owns_data;
+
+    return VECTOR_SUCCESS;
+}
