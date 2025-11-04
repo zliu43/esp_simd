@@ -17,6 +17,7 @@ vector_status_t vec_max(const vector_t *vec1, const vector_t *vec2, vector_t *re
             return simd_max_i32((int32_t*)(vec1->data), (int32_t*)(vec2->data), (int32_t*)(result->data), vec1->size); 
         }
         case (DTYPE_FLOAT32): {
+            // return simd_max_f32((float*)(vec1->data), (float*)(vec2->data), (float*)(result->data), vec1->size);
             return VECTOR_NOT_IMPLEMENTED;
         }
         default:
@@ -39,6 +40,7 @@ vector_status_t vec_min(const vector_t *vec1, const vector_t *vec2, vector_t *re
             return simd_min_i32((int32_t*)(vec1->data), (int32_t*)(vec2->data), (int32_t*)(result->data), vec1->size); 
         }
         case (DTYPE_FLOAT32): {
+            //return simd_min_f32((float*)(vec1->data), (float*)(vec2->data), (float*)(result->data), vec1->size);
             return VECTOR_NOT_IMPLEMENTED;
         }
         default:

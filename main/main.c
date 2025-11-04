@@ -1,6 +1,7 @@
 #include "vector.h" 
 #include "vector_basic_test.h"
 #include "vector_bitwise_test.h"
+#include "vector_basic_functions.h"
 #include "esp_task_wdt.h"   
 #include "esp_log.h" 
 
@@ -196,6 +197,14 @@ void test_basic(void){
     vector_test_copy(true, DTYPE_INT32);
     ESP_LOGI("vec_copy:", "DTYPE_FLOAT32"); 
     vector_test_copy(true, DTYPE_FLOAT32);
+
+    // vec_convert
+    ESP_LOGI("vec_convert:", "DTYPE_INT8 to DTYPE_INT16"); 
+    vector_test_convert(true, DTYPE_INT8, DTYPE_INT16);
+    ESP_LOGI("vec_convert:", "DTYPE_INT8 to DTYPE_INT32"); 
+    vector_test_convert(true, DTYPE_INT8, DTYPE_INT32);
+    ESP_LOGI("vec_convert:", "DTYPE_INT16 to DTYPE_INT32"); 
+    vector_test_convert(true, DTYPE_INT16, DTYPE_INT32);
 }
 
 void test_bitwise(void){
@@ -250,10 +259,25 @@ void test_bitwise(void){
     vector_test_not(true, DTYPE_INT32); 
     ESP_LOGI("vector_test_not:", "DTYPE_FLOAT32");
     vector_test_not(true, DTYPE_FLOAT32); 
+
 }
 
 void app_main(void)
 { 
     esp_task_wdt_deinit();
     test_basic();
+
+    /*
+    int16_t test_data[] = {1,2,3,4,5,6,7,8,-1,-2,-3,-4,-5,-6,-7,-8,127,-128};
+    vector_t *test_vector = vector_create(18, DTYPE_INT16);
+    memcpy(test_vector->data, test_data, 18*sizeof(int16_t));
+    vector_t *result_vector = vector_create(18, DTYPE_INT32);
+    vec_convert(test_vector, result_vector);
+    for (size_t i = 0; i < result_vector->size; i++){
+        int16_t va_list = ((int16_t*)(test_vector->data))[i];
+        int32_t vb_list = ((int32_t*)(result_vector->data))[i];
+        ESP_LOGI("app_main", "initial vector[%d]: %d result_vector[%d]: %d",i, (int)(va_list), i, (int)(vb_list));
+    }
+    vector_destroy(test_vector);
+    vector_destroy(result_vector);*/
 }

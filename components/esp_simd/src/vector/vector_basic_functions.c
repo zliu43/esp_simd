@@ -452,7 +452,7 @@ vector_status_t vec_fill_f32(vector_t *vec1, const float val){
         case (DTYPE_FLOAT32): { 
             float* val_ptr = &val;
             int32_t* ptr = (int32_t*)val_ptr;
-            return simd_fill_i32((int32_t*)(vec1->data), ptr, vec1->size);                                        
+            return simd_fill_i32((int32_t*)(vec1->data), ptr,  vec1->size);                                        
         }
         default:
             return VECTOR_ERROR;
@@ -478,4 +478,64 @@ vector_status_t vec_copy(vector_t *vec1, vector_t *result){
         default:
             return VECTOR_ERROR;
     }
+}
+
+vector_status_t vec_convert(const vector_t *src, vector_t *dst){
+    if (src->type == dst->type) { return VECTOR_INVALID_ARGUMENT;}
+    if (src->size != dst->size ) { return VECTOR_SIZE_MISMATCH;}
+    switch(src->type){
+        case DTYPE_INT8:{
+            switch(dst->type){ 
+                case DTYPE_INT16:{
+                    return simd_i8_to_i16((int8_t*)(src->data), (int16_t*)(dst->data), src->size);
+                }
+                case DTYPE_INT32:{
+                    return simd_i8_to_i32((int8_t*)(src->data), (int32_t*)(dst->data), src->size); 
+                }
+                case DTYPE_FLOAT32:{
+                    return VECTOR_NOT_IMPLEMENTED;
+                }
+                default:
+                    return VECTOR_ERROR;
+            }
+        }
+        case DTYPE_INT16:{
+            switch(dst->type){ 
+                case DTYPE_INT8:{
+                    return VECTOR_NOT_IMPLEMENTED;
+                    //return simd_i16_to_i8((int16_t*)(src->data), (int8_t*)(dst->data), src->size);
+                }
+                case DTYPE_INT32:{ 
+                    return simd_i16_to_i32((int16_t*)(src->data), (int32_t*)(dst->data), src->size);
+                }
+                case DTYPE_FLOAT32:{
+                    return VECTOR_NOT_IMPLEMENTED;
+                }
+                default:
+                    return VECTOR_ERROR;
+            }
+        }
+        case DTYPE_INT32:{
+            switch(dst->type){ 
+                case DTYPE_INT8:{
+                    return VECTOR_NOT_IMPLEMENTED;
+                    //return simd_i32_to_i8((int32_t*)(src->data), (int8_t*)(dst->data), src->size);
+                }
+                case DTYPE_INT16:{
+                    return VECTOR_NOT_IMPLEMENTED;
+                    //return simd_i32_to_i16((int32_t*)(src->data), (int16_t*)(dst->data), src->size);
+                }
+                case DTYPE_FLOAT32:{
+                    return VECTOR_NOT_IMPLEMENTED;
+                }
+                default:
+                    return VECTOR_ERROR;
+            }
+        }
+        case DTYPE_FLOAT32:{
+            return VECTOR_NOT_IMPLEMENTED;
+        }
+        default:
+            return VECTOR_ERROR;
+    }   
 }

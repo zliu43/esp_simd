@@ -879,4 +879,124 @@ vector_status_t scalar_copy(vector_t *vec1, vector_t *result){
     return VECTOR_SUCCESS;
 }
 
+vector_status_t scalar_convert(const vector_t *vec1, vector_t *result){
+    if (vec1->size != result->size) { return VECTOR_SIZE_MISMATCH;}
+    if (vec1->type == result->type) { return VECTOR_INVALID_ARGUMENT;}
+    switch (vec1->type){
+        case DTYPE_INT8: {
+            int8_t* vec1_data = (int8_t*)(vec1->data); 
+            switch (result->type){
+                case DTYPE_INT16: {
+                    int16_t* result_data = (int16_t*)(result->data); 
+                    for (int i = 0; i < vec1->size; i++){ 
+                        result_data[i] = (int16_t)vec1_data[i];
+                    }
+                    return VECTOR_SUCCESS;
+                }
+                case DTYPE_INT32: {
+                    int32_t* result_data = (int32_t*)(result->data); 
+                    for (int i = 0; i < vec1->size; i++){ 
+                        result_data[i] = (int32_t)vec1_data[i];
+                    }
+                    return VECTOR_SUCCESS;
+                }
+                case DTYPE_FLOAT32: {
+                    float* result_data = (float*)(result->data); 
+                    for (int i = 0; i < vec1->size; i++){ 
+                        result_data[i] = (float)vec1_data[i];
+                    }
+                    return VECTOR_SUCCESS;
+                }
+                default:
+                    return VECTOR_ERROR;
+            }
+        }
+        case DTYPE_INT16: {
+            int16_t* vec1_data = (int16_t*)(vec1->data); 
+            switch (result->type){
+                case DTYPE_INT8: {
+                    int8_t* result_data = (int8_t*)(result->data); 
+                    for (int i = 0; i < vec1->size; i++){ 
+                        result_data[i] = (int8_t)vec1_data[i];
+                    }
+                    return VECTOR_SUCCESS;
+                }
+                case DTYPE_INT32: {
+                    int32_t* result_data = (int32_t*)(result->data); 
+                    for (int i = 0; i < vec1->size; i++){        
+                        result_data[i] = (int32_t)vec1_data[i];
+                    }
+                    return VECTOR_SUCCESS;
+                }
+                case DTYPE_FLOAT32: {
+                    float* result_data = (float*)(result->data); 
+                    for (int i = 0; i < vec1->size; i++){ 
+                        result_data[i] = (float)vec1_data[i];
+                    }
+                    return VECTOR_SUCCESS;
+                }
+                default:
+                    return VECTOR_ERROR;
+            }
+        }
+        case DTYPE_INT32: {
+            int32_t* vec1_data = (int32_t*)(vec1->data); 
+            switch (result->type){
+                case DTYPE_INT8: {
+                    int8_t* result_data = (int8_t*)(result->data);
+                    for (int i = 0; i < vec1->size; i++){ 
+                        result_data[i] = (int8_t)vec1_data[i];
+                    }
+                    return VECTOR_SUCCESS;
+                }
+                case DTYPE_INT16: {
+                    int16_t* result_data = (int16_t*)(result->data); 
+                    for (int i = 0; i < vec1->size; i++){ 
+                        result_data[i] = (int16_t)vec1_data[i];
+                    }
+                    return VECTOR_SUCCESS;
+                }
+                case DTYPE_FLOAT32: {
+                    float* result_data = (float*)(result->data); 
+                    for (int i = 0; i < vec1->size; i++){   
+                        result_data[i] = (float)vec1_data[i];
+                    }
+                    return VECTOR_SUCCESS;
+                }
+                default:
+                    return VECTOR_ERROR;
+            }
+        }
+        case DTYPE_FLOAT32: {
+            float* vec1_data = (float*)(vec1->data); 
+            switch (result->type){
+                case DTYPE_INT8: {
+                    int8_t* result_data = (int8_t*)(result->data); 
+                    for (int i = 0; i < vec1->size; i++){ 
+                        result_data[i] = (int8_t)vec1_data[i];
+                    }
+                    return VECTOR_SUCCESS;
+                }
+                case DTYPE_INT16: {
+                    int16_t* result_data = (int16_t*)(result->data); 
+                    for (int i = 0; i < vec1->size; i++){ 
+                        result_data[i] = (int16_t)vec1_data[i];
+                    }
+                    return VECTOR_SUCCESS;
+                }
+                case DTYPE_INT32: {
+                    int32_t* result_data = (int32_t*)(result->data); 
+                    for (int i = 0; i < vec1->size; i++){ 
+                        result_data[i] = (int32_t)vec1_data[i];
+                    }
+                    return VECTOR_SUCCESS;
+                }
+                default:
+                    return VECTOR_ERROR;
+            }
+        }
+        default:
+            return VECTOR_ERROR;  
+    }
+}       
 #endif

@@ -9,8 +9,7 @@
 
 // TODO: write test function dispatcher 
 
-void vector_test_add(bool verbose, dtype type){ 
-
+void vector_test_add(bool verbose, dtype type){  
     timer_init();
     set_seed(42);
 
@@ -1497,5 +1496,56 @@ void vector_test_copy(bool verbose, dtype type){
     if (verbose){
             ESP_LOGI("vector_test_copy", "vector_time: %d", vec_time);
             ESP_LOGI("vector_test_copy", "scalar_time: %d", scalar_time);
+    }
+}
+
+void vector_test_convert(bool verbose, dtype type, dtype target_type){
+    timer_init();
+    set_rand_seed();
+
+    uint32_t vec_time = 0;                                              // Runtime logs
+    uint32_t scalar_time = 0;
+
+    for (int run_num = 0; run_num < TEST_RUNS; run_num++){
+        int test_size = 1 + rand() % MAX_SIZE;                          // Random vector sizes 
+        vector_t *vec1 = create_test_vector(test_size, type);           // Allocating the test vectors   
+        vector_t *simd_result = create_test_vector(vec1->size, target_type); 
+        vector_t *scalar_result = create_test_vector(vec1->size, target_type); 
+
+        assert(vec1);                                                   // Check if valid 
+        assert(simd_result);
+        assert(scalar_result);
+
+        fill_test_vector(vec1);                                         // Fill with random values in range 
+
+        vector_t *vec1_copy = vector_create(vec1->size, vec1->type);    // Creating copies (to check for modification of inputs) 
+        vec_copy(vec1, vec1_copy);  
+
+        assert(vector_assert_eq(vec1, vec1_copy));                      // Checking copies, canary regions 
+        assert(vector_check_canary(vec1)); 
+ 
+        timer_start();                                                  // Scalar functions are assumed intended behavior
+        assert(scalar_convert(vec1, scalar_result) == VECTOR_SUCCESS);
+        timer_end(&scalar_time);
+
+        timer_start();                                                  // Running tests
+        assert(vec_convert(vec1, simd_result) == VECTOR_SUCCESS);
+        timer_end(&vec_time); 
+
+        vector_assert_eq(simd_result, scalar_result);                   // Check results
+        vector_assert_eq(vec1, vec1_copy);                              // Check modification of inputs 
+        vector_check_canary(vec1);                                      // Check modification of canary region 
+        vector_check_canary(simd_result);
+        vector_check_canary(scalar_result);
+  
+        vector_destroy(vec1);                                           // Free resources 
+        vector_destroy(vec1_copy); 
+        vector_destroy(simd_result);
+        vector_destroy(scalar_result);
+    } 
+    timer_deinit();
+    if (verbose){
+            ESP_LOGI("vector_test_convert", "vector_time: %d", vec_time);
+            ESP_LOGI("vector_test_convert", "scalar_time: %d", scalar_time);
     }
 }

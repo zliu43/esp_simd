@@ -112,8 +112,26 @@ extern int simd_ceil_f32(const float *a, float *result, const float *max_val, co
 extern int simd_floor_f32(const float *a, float *result, const float *min_val, const size_t size);
 extern int simd_neg_f32(const float *a, float *result, const size_t size);
 extern int simd_mac_f32(const float *a, float *accumulator, const float *multiplier, const size_t size); 
-extern int simd_min(const float* a, const float *b, float *result);
-extern int simd_max(const float* a, const float *b, float *result);
+extern int simd_min_f32(const float* a, const float *b, float *result);
+extern int simd_max_f32(const float* a, const float *b, float *result);
+
+
+//Conversion functions
+extern int simd_i8_to_i16(const int8_t *a, int16_t *result, const size_t size);
+extern int simd_i8_to_i32(const int8_t *a, int32_t *result, const size_t size);
+extern int simd_i16_to_i32(const int16_t *a, int32_t *result, const size_t size);
+extern int simd_i16_to_i8(const int16_t *a, int8_t *result, const size_t size);
+extern int simd_i32_to_i8(const int32_t *a, int8_t *result, const size_t size);
+extern int simd_i32_to_i16(const int32_t *a, int16_t *result, const size_t size); 
+
+/**
+    extern int simd_f32_to_i8(const float *a, int8_t *result, const size_t size);
+    extern int simd_f32_to_i16(const float *a, int16_t *result, const size_t size);
+    extern int simd_f32_to_i32(const float *a, int32_t *result, const size_t size);
+    extern int simd_i8_to_f32(const int8_t *a, float *result, const size_t size);
+    extern int simd_i16_to_f32(const int16_t *a, float *result, const size_t size);
+    extern int simd_i32_to_f32(const int32_t *a, float *result, const size_t size);
+ */
 
 //TODO - NOT YET IMPLEMENTED 
 //extern int simd_bound(const int8_t *a, const int8_t *max_val, const int8_t *min_val, int8_t *result, const size_t size);
