@@ -28,3 +28,4 @@ void vector_test_ones(bool verbose, dtype type);
 void vector_test_fill(bool verbose, dtype type);
 void vector_test_fill_f32(bool verbose, dtype type);
 void vector_test_copy(bool verbose, dtype type);
+void vector_test_convert(bool verbose, dtype type, dtype target_type);

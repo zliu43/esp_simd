@@ -486,6 +486,27 @@ vector_status_t vec_fill_f32(vector_t *vec1, const float val);
  */
 vector_status_t vec_copy(vector_t *vec1, vector_t *result);
  
+
+/**
+ * @brief Creates a copy-converts a vector from one dtype to another.
+ *
+ * Sets all elements of @p result to @p vec1. 
+ * Currently only supports Widening conversions from INT8 -> INT16/INT32 and INT16 -> INT32.
+ * Narrowing conversions and float/integer conversions are not supported and currently return VECTOR_NOT_IMPLEMENTED.
+ * Implementation of additional conversions is planned for future releases.
+ *
+ * @param src   Vector to copy.
+ * @param dst   Target vector.
+ *
+ * @retval VECTOR_SUCCESS 
+ * @retval VECTOR_SIZE_MISMATCH
+ * @retval VECTOR_TYPE_MISMATCH 
+ *
+ * @note Recommend ::vector_ok() before mutating a vector.
+ */ 
+vector_status_t vec_convert(const vector_t *src, vector_t *dst);
+
+
 #ifdef __cplusplus
 }
 #endif
